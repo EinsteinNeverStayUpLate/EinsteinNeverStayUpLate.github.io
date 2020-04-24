@@ -64,6 +64,153 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-计算机组成第一章学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-04-24T16:18:42.997Z" itemprop="datePublished">2020-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">计算机组成第一章学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>冯诺依曼  现代计算机之父</p>
+<p>EDVAC </p>
+<p>冯诺依曼计算机的结构：运算器，存储器，输入设备，输出设备，控制器</p>
+<p>冯诺依曼计算机的特点：</p>
+<p>冯诺依曼核心特征 ：存储程序</p>
+<p>存在：指令放在指令cache ；数据放在数据catch中</p>
+<p>IBM 360</p>
+<p>存储器的内容送到控制器：指令从存储器送到控制器分析</p>
+<p>传统冯诺依曼结构缺点：</p>
+<p>以运算器为核心使得运算器称为瓶颈。因为很多数据过程都要经过运算器</p>
+<p>现代计算机硬件框图</p>
+<p>​    系统复杂性管理的方法-2（3‘Y）</p>
+<p>-层次化（Hierarchy）：将被设计的系统划分为多个模块或子系统</p>
+<p>-模块化（Modularity）：有明确定义的功能和接口</p>
+<p>-规则性（Regularity）：模块更容易被重要</p>
+<p>不可计算机问题：图灵机停机问题</p>
+<p>程序—运算的全部步骤</p>
+<p>指令—每一个步骤</p>
+<p>存储器的基本组成：</p>
+<p>存储体：-存储单元-存储元件</p>
+<p>MAR：一个寄存器，存储地址寄存器，里面保存的是二进制数</p>
+<p>MDR：存储器数据寄存器</p>
+<p>运算器的基本组成：</p>
+<p>ALU：通常是一个组合电路，如果输入撤销了，输出结果也相应的撤销。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ACC</th>
+<th>MQ</th>
+<th>X</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加法</td>
+<td>被加数</td>
+<td></td>
+<td>加数</td>
+</tr>
+<tr>
+<td>减法</td>
+<td>被减数</td>
+<td></td>
+<td>减数</td>
+</tr>
+<tr>
+<td>乘法</td>
+<td>乘机高位</td>
+<td>乘数乘积低位</td>
+<td>被乘数</td>
+</tr>
+<tr>
+<td>除法</td>
+<td>被除数，余数</td>
+<td>商</td>
+<td>除数</td>
+</tr>
+</tbody></table>
+<p>加法操作由ALU来做。</p>
+<p>乘法操作在一开始时被乘数在ACC中，然后将该数据传送到X中。</p>
+<p>’其次在将乘机放进ACC之前要将ACC清零</p>
+<p>除法操作：</p>
+<p>一开始被除数在ACC当中，之后通过除法指令将除数传送到MQ中。</p>
+<p><strong>MQ只在乘法或除法中用到</strong></p>
+<p>控制器的功能：</p>
+<p>​    解释指令</p>
+<p>​    保证指令的按序执行</p>
+<p>控制器的基本组成：</p>
+<p>​    完成一条的阶段：取指令，分析指令，执行指令</p>
+<p>​    组成；CU ,IR ,PC</p>
+<p>运算器，控制器，存储器 构成了主机。</p>
+<p>取指阶段：PC开始  到 IR结束</p>
+<p>分析阶段：</p>
+<p>执行阶段；</p>
+<p>ax^2+bx+c程序的执行过程：</p>
+<ul>
+<li><p>将程序通过输入设备送至计算机</p>
+</li>
+<li><p>程序的首地址——》PC</p>
+</li>
+<li><p>启动程序运行</p>
+</li>
+<li><p>取指令PC——》MAR——》M——》MDR——》IR，（PC）+1——》PC</p>
+</li>
+<li><p>分析指令OP（IR）——》CU</p>
+</li>
+<li><p>执行指令 Ad（IR）——》MAR——》M——》MDR——》ACC</p>
+</li>
+<li><p>….</p>
+<p>计算机的主要技术指标：</p>
+</li>
+<li><p>机器字长：CPU一次能处理数据的位数（通常来说，机器字长的长度与寄存器的长度相同）</p>
+</li>
+<li><p>运算速度：</p>
+<ul>
+<li>主频</li>
+<li>核数，每个核支持的线程数</li>
+<li>吉普森法</li>
+<li>CPI 执行一条指令所需的时钟周期数</li>
+<li>MIPS 每秒执行百万条指令</li>
+<li>FLOPS 每秒浮点运算次数</li>
+<li>软件直接测试法</li>
+</ul>
+</li>
+<li><p>存储容量：存放二进制信息的总位数</p>
+</li>
+</ul>
+<p><img src="C:%5CUsers%5C123%5CDesktop%5C%E6%8D%95%E8%8E%B71.PNG" alt=""></p>
+<p><img src="C:%5CUsers%5C123%5CDesktop%5C%E6%8D%95%E8%8E%B72.PNG" alt=""></p>
+<p>​    </p>
+<p><img src="C:%5CUsers%5C123%5CDesktop%5C%E7%89%A9%E7%90%86%E8%A7%92%E5%BA%A6%E6%8A%BD%E8%B1%A1.PNG" alt="计算机的物理抽象层次"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ck9eegzjd000094u74h1e99g8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-计算机组成与设计：硬件软件接口(Computer Organization and Design  The HardwareSoftware Interface Fifth Edition)名词及重点摘录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/" class="article-date">
@@ -344,6 +491,10 @@
       <ul>
         
           <li>
+            <a href="/2020/04/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">计算机组成第一章学习笔记</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/">计算机组成与设计：硬件软件接口(Computer Organization and Design  The HardwareSoftware Interface Fifth Edition)名词及重点摘录</a>
           </li>
         
@@ -357,10 +508,6 @@
         
           <li>
             <a href="/2020/04/20/My-new-post/">My new post</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/20/hello-world/">Hello World</a>
           </li>
         
       </ul>
