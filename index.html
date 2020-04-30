@@ -64,6 +64,70 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-几种流行的总线标准" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/30/%E5%87%A0%E7%A7%8D%E6%B5%81%E8%A1%8C%E7%9A%84%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86/" class="article-date">
+  <time datetime="2020-04-30T02:17:30.573Z" itemprop="datePublished">2020-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/30/%E5%87%A0%E7%A7%8D%E6%B5%81%E8%A1%8C%E7%9A%84%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86/">几种流行的总线标准</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="ISA总线"><a href="#ISA总线" class="headerlink" title="ISA总线"></a>ISA总线</h3><p>​    ISA（Industiral Standard Architecture)总线是IBM为了采用全16位的CPU而推出的，又称为AT总线，它使用独立于CPU的总线时钟，一年春CPU可以采用比总线频率更高的时钟，有利于CPU性能的提高。由于ISA总线没有支持总线仲裁的硬件逻辑，因此它不能支持多台主设备系统，而且ISA上的所有数据的传送必须通过CPU或DMA接口来管理，因此使CPU花费大量时间来控制与外部设备交换数据。ISA总线时钟频率为8MHz，最大传输率为16MBps，数据线为16位，地址线为24位。</p>
+<hr>
+<h3 id="EISA总线"><a href="#EISA总线" class="headerlink" title="EISA总线"></a>EISA总线</h3><p>​    EISA（Extended Industrial Standard Architecture)是一种在ISA基础上扩充开放的总线标准，与ISA完全兼容，从CPU中分离出了总线控制权，是一种具有智能化的总线，能支持多个总线主控器和突发方式（成块传输）的传输。EISA总线的时钟频率为8MHz，最大传输率可达33MBps，数据总线为32位，地址总线为32位，扩充DMA访问范围达2^32</p>
+<hr>
+<h3 id="VESA总线"><a href="#VESA总线" class="headerlink" title="VESA总线"></a>VESA总线</h3><p>​    VESA是由VESA（Video Electronic Standard Association，视频电子标准协会）提出的局部总线标准，又称为VL-BUS（Local BUS）总线。<strong>所谓的局部总线，是指在系统外为两个以上的模块提供高速传输信息通道。</strong>VL-BUS是由CPU总线演化而来的，采用CPU的时钟频率达33MHz，数据线为32位，可通过扩展槽扩展到64位，配有局部总线控制器，最大传输率达133MBps。通过局部总线控制器，将高速I/O设备直接挂在CPU上，实现CPU与高速I/O设备之间的高速数据交换。</p>
+<hr>
+<h3 id="PCI总线"><a href="#PCI总线" class="headerlink" title="PCI总线"></a>PCI总线</h3><p>​    随着图形用户接口（Graphical User Interface ，GUI）和多媒体技术在PC系统的广泛应用，ISA总线和EISA总线由于受带宽的限制，已不能适应系统工作的要求，成为整个系统的主要瓶颈。因此对总线提出了更高的性能要求，促使总线技术进一步发展。<br>​        1991年下半年，Intel公司首先提出PCI（Peripheral Component Interconnect ，外部部件互连）总线的概念，并联合IBM、COMPAQ、APPLE、DEC、AST、HP等计算机业界大户，成立了PCI集团PCIIG（PIC Special Interest Group)，于1992年6月22日推出了PCI1.0版，1995和1999又先后推出了2.1和2.2版，PCI总线已成为现代计算机中最常用的总线之一，其主要特点如下：</p>
+<pre><code>1. ​    高性能。PCI总线是一种不依附某个具体处理器的局部总线。它为系统提供了一个高速的数据传输通道，与CPU时钟频率无关，自身采用33MHz和66MHz的总线时钟，数据线为32位，可扩展到64位，传输速率从132MBps可升级到528MBps。它支持突发工作方式，这种方式是指若被传送的数据在主存中连续存放，则在访问此组数据时，只需给出第一个数据的地址，占用一个时钟周期，其后每个数据的传送各占一个时钟周期，不必每次给出各个数据的地址，因此可提高传输速率。
+2.    良好的兼容性。PCI总线部件和插件接口相对于处理器是独立的，它支持所有的目前和将来不同结构的处理器，因此具有相对长的生命周期。PCI总线与ISA、EISA总线均可兼容，可以转换为标准的ISA和EISA。
+3.    支持即插即用（Plug and play)，即任何扩展卡只要插入系统便可工作。PCI设备中配有存放设备具体信息的寄存器，这些信息可供BIOS和操作系统层的软件自动配置PCI总线部件和插件，使系统使用方便，无需进行复杂的手动配置。
+4. ​    具有与处理和存储器子系统完全并行操作的能力。PCI总线可视为CPU与外设之间的一个中间层，它通过PCI桥路与CPU相连。PCI桥路有多级缓冲，可把一批数据快速写入缓冲器中，在这些数据不断写入PCI设备过程中，，可真正实现与处理器/存储器子系统的安全并发工作。
+5.    支持多主设备能力。主设备即对总线有控制权的设备，PCI支持多主设备，即允许任何主设备和从设备之间实现点对点对等存取，体现了接纳设备的高度灵活性。
+6.    提供数据和地址奇偶校验功能，保证了数据的完整和准确。
+7.    支持两种电压标准：5V和3.3V。3.3~5V的组件技术可以是电压平滑过渡。3.3V电压的PCI总线可以用于便携式微型计算机中。
+8.    可扩充性好。当PCI总线驱动能力不足时，可以采用层次结构。
+9.    软件兼容性好。PCI部件可以完全兼容现有的驱动程序和应用程序。设备驱动程序可被移植到各类平台上。
+10.    采用多路复用技术，减少了总线引脚个数。</code></pre><p>随着网络的告诉法杖以及其他周边设备的技术革新，诸如千兆网卡之类的设备对PCI总线提出了更高的要求。Intel公司近年来又推出了PCI-Express总线，它采用了类似网络传输TCP/IP协议的分层结构和数据帧逐层传递的模式。</p>
+<hr>
+<h3 id="AGP总线"><a href="#AGP总线" class="headerlink" title="AGP总线"></a>AGP总线</h3><p>​    随着多媒体计算机的普及，对三维技术的应用也越来越广。处理三维数据不仅要求有惊人的数据量，而且要求有更宽广的数据传输带宽。Intel于1996年7月又推出了AGP（Accelerated Graphics Port），这是显示卡专用的局部总线，基于PCI2.1版规范并进行扩充修改而成，它采用点对点通道方式，以66.7MHz的频率直接与主存联系，以主存作为帧缓冲器，实现了高速存取。最大数据传输率为266MBps，是传统PCI总线带宽的2倍。AGP还定义了一种“双激励”（Double Pumping）的传输技术，能在一个时钟的上，下沿双向传递数据，这样，AGP实现的传输频率为133MHz，最大数据传输率可增为533MBps。后来又依次推出了AGP2X, AGP4X, AGP8X多个版本，数据传输速率可达2.1GBps。</p>
+<hr>
+<h3 id="RS-232C总线"><a href="#RS-232C总线" class="headerlink" title="RS-232C总线"></a>RS-232C总线</h3><p>​    RS-232（RS即Recommended Standard ，232位标识号，C表示修改次数）是由美国电子工业协会EIA（Electronic Industries Association）推荐的一种串行通信总线标准，它是应用串行二进制交换的数据终端设备和数据通信设备之间的标准接口。<br>​    众所周知，计算机之间传送的是数字信号，它要求传送的频带很宽，而计算机远程通信通常是通过载波电话传送的，不可能有这样的宽的频带。如果数字信号直接进行通信，经过传输后，必然发生畸变。因此在发送端必须通过调制器将数字信号转换成模拟信号，即对载波电话线上载波进行调制；而在接收端又必须用解调器检出从发送端来的模拟信号，并恢复为原来的数字信号。</p>
+<hr>
+<h3 id="USB总线"><a href="#USB总线" class="headerlink" title="USB总线"></a>USB总线</h3><p>​    USB（Universial Serial Bus）通用串行总线是Compaq，DEC，IBM，Intel，Microsoft，NEC（Japan）和Northe Telecom（Canada）等七大公司于1994年11月联合开发的计算机串行接口总线标准，1996年1月颁布了USB1.0版本。它基于通用连接技术，实现外设的简单快速连接，达到方便用户、降低成本、扩展PC连接外设范围的目的。用户可以将几乎所有的外设装置，包括显示器、键盘、鼠标、打印机、扫描仪、数码相机、U盘、调制解调器等直接插入标准USB插口。还可以将一些USB外设进行串接，使一大堆设备共用PC上的端口。其特点如下：</p>
+<pre><code>1. 具有真正的即插即用特征。用户可以在不关机的情况下很方便地对外设实行安装和拆卸，主机可按外设的增删情况自动配置系统资源，外设装置驱动程序的安装，删除均自动实现。
+2.  具有很强的连接能力。使用USB HUB（USB集线器）实现系统扩展，最多可链式连接127个外设到同一系统。
+3.  数据传输率有两种，即采用普通无屏蔽双绞线，速度可达1.5Mbps，若用带屏蔽的双绞线，速度可达12Mbps。USB2.0的数据传输率最高可达480Mbps。
+4.  标准统一。USB的引入减轻了对目前PC中所有标准接口的需求，如串口的鼠标、键盘、并口的打印机、扫描仪、IDE接口的硬盘，都可以改成以统一的USB标准接入系统，从而减少了对PC插槽的需求，节省空间。
+5. 连接电缆轻巧，电源体积缩小。USB使用的4芯电缆2条用于信号连接，2条用于电源/地，可为外设提供+5V的直流电源，方便用户。
+6. 生命力强。USB是一种开放型的不具有专利版权的工业标准，它是由一个标准化组织“USB实施者论坛”制定出来的，因此不存在专利版权问题，USB规范具有强大的生命力。</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/30/%E5%87%A0%E7%A7%8D%E6%B5%81%E8%A1%8C%E7%9A%84%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86/" data-id="ck9m8iukw0000ogu7dpd54x7x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-控制总线中传输的信号类型" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/29/%E6%8E%A7%E5%88%B6%E6%80%BB%E7%BA%BF%E4%B8%AD%E4%BC%A0%E8%BE%93%E7%9A%84%E4%BF%A1%E5%8F%B7%E7%B1%BB%E5%9E%8B/" class="article-date">
@@ -540,6 +604,10 @@
       <ul>
         
           <li>
+            <a href="/2020/04/30/%E5%87%A0%E7%A7%8D%E6%B5%81%E8%A1%8C%E7%9A%84%E6%80%BB%E7%BA%BF%E6%A0%87%E5%87%86/">几种流行的总线标准</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/29/%E6%8E%A7%E5%88%B6%E6%80%BB%E7%BA%BF%E4%B8%AD%E4%BC%A0%E8%BE%93%E7%9A%84%E4%BF%A1%E5%8F%B7%E7%B1%BB%E5%9E%8B/">控制总线中传输的信号类型</a>
           </li>
         
@@ -553,10 +621,6 @@
         
           <li>
             <a href="/2020/04/25/%E4%BB%8E21%E4%B8%96%E7%BA%AA%E5%88%9D%E6%9D%A5%E7%9C%8B%EF%BC%8C%E5%BD%93%E5%89%8D%E9%80%9A%E7%94%A8%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E5%8F%91%E5%B1%95%E9%87%8D%E7%82%B9%E5%B0%86%E5%9C%A8%E4%BB%A5%E4%B8%8B%E5%87%A0%E4%B8%AA%E6%96%B9%E9%9D%A2%EF%BC%9A/">从21世纪初来看，当前通用微处理器的发展重点将在以下几个方面：</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">计算机组成第一章学习笔记</a>
           </li>
         
       </ul>
