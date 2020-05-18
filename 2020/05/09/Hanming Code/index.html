@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hanming Code | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hanming Code:简介：Richard Hanming与1950提出，它具有一位纠错能力。 编码纠错理论内容： 任何一种编码是否具有检测能力和纠错能力，都与编码的最小距离有关。所谓编码的最小距离，是指在一种编码系统中，任意两组合法代码之间的最少二进制位数的差异。由纠错理论的 ​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hanming Code">
+<meta property="og:url" content="http://yoursite.com/2020/05/09/Hanming%20Code/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hanming Code:简介：Richard Hanming与1950提出，它具有一位纠错能力。 编码纠错理论内容： 任何一种编码是否具有检测能力和纠错能力，都与编码的最小距离有关。所谓编码的最小距离，是指在一种编码系统中，任意两组合法代码之间的最少二进制位数的差异。由纠错理论的 ​">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-09T09:11:44.948Z">
+<meta property="article:modified_time" content="2020-05-09T09:11:44.948Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hanming Code" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/09/Hanming%20Code/" class="article-date">
+  <time datetime="2020-05-09T09:11:44.948Z" itemprop="datePublished">2020-05-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hanming Code
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Hanming-Code"><a href="#Hanming-Code" class="headerlink" title="Hanming Code:"></a>Hanming Code:</h4><p>简介：Richard Hanming与1950提出，它具有一位纠错能力。</p>
+<p>编码纠错理论内容：</p>
+<p>任何一种编码是否具有检测能力和纠错能力，都与编码的最小距离有关。所谓编码的最小距离，是指在一种编码系统中，任意两组合法代码之间的最少二进制位数的差异。<br>由纠错理论的</p>
+<p>​                                                               L-1=D+C     且D&gt;=C</p>
+<p>L表示最小距离，D（detection）检测错误的位数，C（correct）纠正错误的位数。<br>故通过加入检测位，可以有效提高检错能力和纠错能力。</p>
+<hr>
+<p>Hanming Code插入检测位过程：</p>
+<p>假设欲传送的信息n位，则根据 2^k&gt;=n+k+1，可以得出所要加入检测位的位数k。k确定后，就要知道这k位的位置和信息（0或1）。k位检测为插入二进制串后，形成n+k为的一个二进制串，此时还没确定位置和信息，只知道有一个n+k位的二进制串。这里规定，这个二进制串从左到右进行位置编号，从1到n+k。<br>注意，Hanming Code一种非划分的分组检测方式，这意味着k位检测位需要承担各自小组的检测任务，这里的意思就是将n+k位的二进制串分成k组，但是组与组之间有重叠的。<br>接下来讨论k位检测码的插入位置。对于一个n+k位的二进制串，检测码在位置编号为2^(i-1)处，即1,2,4,8,16…都是检测位。（<strong>IT’s rule ，don’t ask why</strong>）<br>那么每一位检测码引领的组是哪些编号上的bit呢？<br>第2^(i-1)(i=1,2,3,4,…)位上的的检测位所引领的bit的位置编号具有以下特点：这个位置编号转化为二进制后，从右到左数，第 i 位是1。（<strong>位置和小组确定</strong>）<br>接下来讨论，检测位上是0还是1。<br>通常来说，我们假设对于每一个检测位和其所引领的小组会形成一个奇偶纠错系统。这意味着对于每一个小组，我们通过奇原则（1的个数为奇数）或偶原则（1的个数为偶数）去检测，能够发现这一个小组（包括检测位在内）是否在传送过程中发生了错误。（<strong>注意，一般而言我们认为一串二进制出错只出错一位，而不会出错两个位，这是一种概率超过百分之九十的事件</strong>）。<br>回到开头，我们如何确定检测位是0还是1？这里我们假设利用偶原则进行检验，则检测位Ci（i=1,2,4,8,16…)为</p>
+<p>​                                 Ci=其所引领的小组内的所有bit（不包括Ci）进行连续异或所得到的的结果</p>
+<hr>
+<p>下面用一个例题概述上面过程，并给出接受方进行纠错的过程。</p>
+<p>假设发送方欲发送信息0101，则经过Hanming 编码后，发送出去的信息是什么？</p>
+<p>首先： C1 C2 0 C4 1 0 1 确认了位置。</p>
+<p>C1=0⊕1⊕1=0  （第3,5,7位的bit）</p>
+<p>C2=0⊕0⊕1=1 （第3,6,7位的bit）</p>
+<p>C4=1⊕0⊕1=0（第5,6,7位的bit）</p>
+<p>故最终传送出去的信息位：0100101</p>
+<hr>
+<p>假设接受方接到传送过来信息位：0110101，且双方已按偶原则编码，试问欲传送的信息是什么？</p>
+<p>首先，这串信息不能直接拿来就用，要像纠错。纠错过程实际上是对传送后的Hanming code形成新的检测位Pi（i=1,2,4,8,16，…），本质是将每一小组拿出来单独进行奇偶校验。</p>
+<p>P1=第一位⊕第三位⊕第五位⊕第七位=0⊕1⊕1⊕1=1</p>
+<p>P2=第二位⊕第三位⊕第六位⊕第七位=1⊕1⊕0⊕1=1</p>
+<p>P3=第四位⊕第五位⊕第六位⊕第七位=0⊕1⊕0⊕1=0</p>
+<p>（<strong>这里注意，对于连续的⊕，如果其中有偶数个1，则所得结果必是0</strong>）</p>
+<p>由上可知第一组，第二组出错了。则出错位那一位？<br>注意：我们上面已经说了，一般一位出错的概率最大。那么又因为第一，第二组出错，由此可知第一，第二组所共有的那一位（编号为3）出错。为什么不是编号为7的bit？因为假设编号为7出错，第三组也应该出错。所以将接收到的信息纠正为：0100101.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/09/Hanming%20Code/" data-id="ckacpwnyr0004uou79s8l5yet" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/12/IO%E6%8C%87%E4%BB%A4%E7%9A%84%E4%B8%80%E8%88%AC%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%90%84%E4%B8%AA%E5%AD%97%E6%AE%B5%E7%9A%84%E4%BD%9C%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          IO指令的一般格式的各个字段的作用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/08/%E9%9D%99%E6%80%81RAM%E5%92%8C%E5%8A%A8%E6%80%81RAM%E5%9F%BA%E6%9C%AC%E5%8D%95%E5%85%83%E7%94%B5%E8%B7%AF%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E8%A7%A3%E9%87%8A/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">静态RAM和动态RAM基本单元电路工作原理解释</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/19/could%20and%20could%20have/">could and could have</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/19/could%20and%20was(or%20were)%20able%20to%20do/">could and was(or were) able to do</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/18/Difference%20between%20will%20and%20going%20to/">Difference between will and going to</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/">计算机组成原理——系统总线学习笔记：</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/14/%E6%80%BB%E7%BA%BF/">总线</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

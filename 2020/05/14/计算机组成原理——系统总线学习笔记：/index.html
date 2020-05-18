@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>计算机组成原理——系统总线学习笔记： | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="计算机组成原理——系统总线学习笔记：计算机部件之间的连接方式：  各部件之间使用单独的连线 将各部件连到一组公共信息传输线上，称为总线（Bus）  什么是总线？ 总线是连接多个部件的信息传输线，是各部件共享的传输介质。 组成： 由许多传输线或通路组成，每条线可一位一位地传输二进制代码。 总线结构：  面向CPU的双总线结构 单总线结构 以存储器为中心的双总线结构  总线分类：  片内总线（如CPU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理——系统总线学习笔记：">
+<meta property="og:url" content="http://yoursite.com/2020/05/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机组成原理——系统总线学习笔记：计算机部件之间的连接方式：  各部件之间使用单独的连线 将各部件连到一组公共信息传输线上，称为总线（Bus）  什么是总线？ 总线是连接多个部件的信息传输线，是各部件共享的传输介质。 组成： 由许多传输线或通路组成，每条线可一位一位地传输二进制代码。 总线结构：  面向CPU的双总线结构 单总线结构 以存储器为中心的双总线结构  总线分类：  片内总线（如CPU">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-14T08:01:05.280Z">
+<meta property="article:modified_time" content="2020-04-27T08:09:49.123Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-计算机组成原理——系统总线学习笔记：" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/" class="article-date">
+  <time datetime="2020-05-14T08:01:05.280Z" itemprop="datePublished">2020-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      计算机组成原理——系统总线学习笔记：
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="计算机组成原理——系统总线学习笔记："><a href="#计算机组成原理——系统总线学习笔记：" class="headerlink" title="计算机组成原理——系统总线学习笔记："></a>计算机组成原理——系统总线学习笔记：</h1><p><em>计算机部件之间的连接方式</em>：</p>
+<ul>
+<li>各部件之间使用单独的连线</li>
+<li>将各部件连到一组公共信息传输线上，称为总线（Bus）</li>
+</ul>
+<p><em>什么是总线？</em></p>
+<p>总线是连接多个部件的信息传输线，是各部件共享的传输介质。</p>
+<p><em>组成：</em></p>
+<p>由许多传输线或通路组成，每条线可一位一位地传输二进制代码。</p>
+<p><em>总线结构：</em></p>
+<ul>
+<li>面向CPU的双总线结构</li>
+<li>单总线结构</li>
+<li>以存储器为中心的双总线结构</li>
+</ul>
+<p><em>总线分类：</em></p>
+<ul>
+<li>片内总线（如CPU芯片内部，寄存器之间，寄存器与ALU之间的连线）</li>
+<li>系统总线：指CPU，主存，I/O设备（通过I/O接口）各大部件之间的信息传输线。<ul>
+<li>数据总线：是双向传输总线，其位数与机器字长、存储字长有关</li>
+<li>地址总线：其位数与MAR位数相同</li>
+<li>控制总线</li>
+</ul>
+</li>
+<li>通信总线：用于计算机系统之间或计算机系统与其他系统之间的通信。</li>
+</ul>
+<hr>
+<p>What is DMA?</p>
+<p>DMA(direct memory access)is a <strong>hardware feature</strong> that allows memory access to occur independently of the program currently run by the micro processor. It can either be used by I/O devices to directly read from or write to memory <strong>without executing any micro processor instructions.</strong>  Or, it can be used to efficiently copy blocks of memory. During DMA transfers,the micro processor can execute and unrelated program at the same time.</p>
+<hr>
+<p><em>总线特性：</em></p>
+<ul>
+<li>机械特性：如插头与插座使用的标准</li>
+<li>电器特性：每一根传输线上信号的传递方向和有效地电平范围</li>
+<li>功能特性：总线每根传输线的功能</li>
+<li>时间特性：什么时候有效</li>
+</ul>
+<p><em>总线性能指标：</em></p>
+<ul>
+<li>总线宽度：其实就是数据总线的根数</li>
+<li>总想带宽：即总线的数据传输速率</li>
+<li>时钟同步/异步 ：总线上的数据与时钟同步工作的总线称为同步总线，与时钟不同步工作的总线称为异步总线</li>
+<li>总线复用：总线的共用</li>
+<li>信号线数：地址总线，数据总线和控制总线三种总线数的总和</li>
+<li>总线控制方式</li>
+<li>其他指标</li>
+</ul>
+<hr>
+<p>奇偶校验（Parity Check）：一种校验代码传输正确性的方法。根据被传输的一组二进制代码的数位中“1”的个数是奇数还是偶数来进行校验，采用奇数校验则称为奇校验，反之偶校验。采用何种校验方式是提前约定的。</p>
+<hr>
+<p><em>总线标准：</em> 可视为系统与各模块、模块与模块之间的一个互连的标准界面。</p>
+<p><em>总线结构：</em>  通常分为单总线结构和多总线结构两种。</p>
+<p><em>总线控制：</em></p>
+<p>​    总线上连接着多个部件，什么时候由哪个部件发送信息，如何给信息传送定时，如何防止信息丢失，如何避免多个部件同时发送，如何规定接收信息的部件等一系列问题都需要由<strong>总线控制器</strong>统一控制。主要包括<strong>判优控制（或称逻辑仲裁）</strong>和<strong>通信控制</strong>。</p>
+<ul>
+<li><em>判优控制：</em>包括集中式和分布式</li>
+</ul>
+<p>​    集中式包括：链式查询；计数器定时查询；独立请求方式。</p>
+<ul>
+<li><em>通信控制</em>：主要解决通信双方如何获知传输开始和传输结束，以及通信双方如何协调如何配合。you四种方式：<ul>
+<li>同步通信</li>
+<li>异步通信</li>
+<li>半同步通信</li>
+<li>分离式通信</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>通常将完成一次总线操作的时间称为总线周期，可分为以下四个阶段：</p>
+<ul>
+<li>申请分配阶段：由需要使用总线的主模块提出申请，经总线仲裁机构决定下一传输周期的总线使用权授予某一申请者。</li>
+<li>寻址阶段：取得了使用权的主模块通过总线发出本次要访问的从模块的地址及有关命令，启动参与本次传输的从模块。</li>
+<li>传数阶段：主模块和从模块进行数据交换，数据由原模块发出，经数据总线流入目的模块。</li>
+<li>结束阶段：主模块的有关信息均从系统总线上撤除，让出总线使用权。</li>
+</ul>
+<hr>
+<p>同步通信：优点是，规定明确、统一，模块间的配合简单一致。缺点是，两模块同步的速度必须按较慢的一方，故降低了总线的工作效率。</p>
+<p>异步通信：采用应答方式（又称为握手方式），当主模块发出Request信号后，一直等待从模块反馈回来Acknowledge信号，才开始通信。 </p>
+<ul>
+<li>不互锁方式</li>
+<li>半互锁方式</li>
+<li>全互锁方式</li>
+</ul>
+<p>异步串行通信的数据传送速率用波特率来衡量。波特率指单位时间内传送二进制的位数（包括起始低电平位，奇偶校验位，和终止高电平位），单位用bps（位/秒）表示，记为波特。</p>
+<p>若只考虑有效数据位，可用比特率来衡量异步串行通信的数据传输速率。</p>
+<p>半同步通信：</p>
+<p>在同步通信的基础上加入一条“等待”响应信号线，采用插入时钟（等待）周期的措施来协调通信双方的配合问题。以输入为例，主模块在T1 发出地址，在T2发出命令，在T3传输数据，T4结束传输。如果从模块在T3到来无法提供数据，则必须在T3到来前通知主模块，给出Wait信号（低电平）。主模块在T3到来时刻测得WAIT为低电平，则等待一个时钟周期，结束后再测响应信号线，若还是低电平，再等待。反之则进行数据的传输。</p>
+<p>分离式通信：</p>
+<p>进一步分析读命令传输周期，发现除了申请总线这一阶段外，其余时间主要花费在如下3个方面：</p>
+<ol>
+<li>主模块通过传输总线向从模块发送地址和命令</li>
+<li>从模块按照命令进行读数据的必要准备</li>
+<li>从模块经数据总线向主模块提供数据</li>
+</ol>
+<p>这里注意到，2中是不需要用到总线的，但是前几种通信方式都是这一时刻占用着总线，故可以充分利用这一阶段的总线空闲时间。</p>
+<p>思路是：将一个传输周期分解为两个子周期。在第一个子周期中，主模块A在获得总线使用权后将命令、地址以及其他有关信息，包括该主模块的编号发到系统总线上，经总线传输后，由有关的从模块B接受下来。然后从模块A放弃对总线的使用权。供其他模块使用。然后模块B根据A发送过来的各种信息，经选择，译码，读取等一些列内部操作，将A模块所需的数据准备好，再有B申请使用总线。<br>显然在这种情况下，上面的每个模块都变成了主模块。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/" data-id="ckacpwnyp0003uou7ben5cwpl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/18/Difference%20between%20will%20and%20going%20to/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Difference between will and going to
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/14/%E6%80%BB%E7%BA%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">总线</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/19/could%20and%20could%20have/">could and could have</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/19/could%20and%20was(or%20were)%20able%20to%20do/">could and was(or were) able to do</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/18/Difference%20between%20will%20and%20going%20to/">Difference between will and going to</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/">计算机组成原理——系统总线学习笔记：</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/14/%E6%80%BB%E7%BA%BF/">总线</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
