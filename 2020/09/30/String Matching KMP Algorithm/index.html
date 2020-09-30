@@ -5,17 +5,17 @@
   
 
   
-  <title>MAY and MIGHT | Hexo</title>
+  <title>String Matching KMP Algorithm | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MAY and MIGHTWe use may or might to say that something is a possibility. Usually you can use may or mightyou can say:  It may be true . or It might be true. She might know. or She might know.  Sometim">
+  <meta name="description" content="String Matching: KMP AlgorithmKMP算法利用子串的结构特点（前后缀有相同的部分）来减少子串与主串的比较次数。 前缀：必包含主串的第一个字符，且不包含主串的最后一个字符的主串的子串。后缀：必包含主串的最后一个字符，且不包含主串的第一个字符的主串的子串。例如：    主串：a               后缀&#x3D;前缀&#x3D;∅    主串：abab        前缀&#x3D;{a,ab">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MAY and MIGHT">
-<meta property="og:url" content="http://yoursite.com/2020/05/20/MAY%20and%20MIGHT/index.html">
+<meta property="og:title" content="String Matching KMP Algorithm">
+<meta property="og:url" content="http://yoursite.com/2020/09/30/String%20Matching%20KMP%20Algorithm/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="MAY and MIGHTWe use may or might to say that something is a possibility. Usually you can use may or mightyou can say:  It may be true . or It might be true. She might know. or She might know.  Sometim">
+<meta property="og:description" content="String Matching: KMP AlgorithmKMP算法利用子串的结构特点（前后缀有相同的部分）来减少子串与主串的比较次数。 前缀：必包含主串的第一个字符，且不包含主串的最后一个字符的主串的子串。后缀：必包含主串的最后一个字符，且不包含主串的第一个字符的主串的子串。例如：    主串：a               后缀&#x3D;前缀&#x3D;∅    主串：abab        前缀&#x3D;{a,ab">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-20T01:48:40.521Z">
-<meta property="article:modified_time" content="2020-09-28T05:21:47.290Z">
+<meta property="article:published_time" content="2020-09-30T01:34:13.405Z">
+<meta property="article:modified_time" content="2020-09-30T01:33:47.932Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -66,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-MAY and MIGHT" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-String Matching KMP Algorithm" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/05/20/MAY%20and%20MIGHT/" class="article-date">
-  <time datetime="2020-05-20T01:48:40.521Z" itemprop="datePublished">2020-05-20</time>
+    <a href="/2020/09/30/String%20Matching%20KMP%20Algorithm/" class="article-date">
+  <time datetime="2020-09-30T01:34:13.405Z" itemprop="datePublished">2020-09-30</time>
 </a>
     
   </div>
@@ -80,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      MAY and MIGHT
+      String Matching KMP Algorithm
     </h1>
   
 
@@ -88,40 +88,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MAY-and-MIGHT"><a href="#MAY-and-MIGHT" class="headerlink" title="MAY and MIGHT"></a>MAY and MIGHT</h1><p>We use <strong>may</strong> or <strong>might</strong> to say that something is a possibility. Usually you can use <strong>may</strong> or <strong>might</strong><br>you can say:</p>
-<ul>
-<li>It <strong>may</strong> be true . or It <strong>might</strong> be true.</li>
-<li>She <strong>might</strong> know. or She <strong>might</strong> know.</li>
-</ul>
-<p>Sometimes <strong>could</strong> has a similar meaning to <strong>may</strong> and  <strong>might</strong><br>But <strong>couldn’t</strong> is different from <strong>may not ** and **might not</strong>.</p>
-<ul>
-<li><p>She was too far away, so she couldn’t have seen you .</p>
-</li>
-<li><p>A:I wonder why she didn’t say hello.</p>
-<p>She might not have seen you.</p>
-</li>
-</ul>
-<p>But we use only <strong>might</strong> (not may) when the situation is <strong>not real</strong>.</p>
-<ul>
-<li><p>If I knew them better, I might invite them to dinner.</p>
-<p>(The situation here is not real because I don’t know them very well,so I’m not going to invite them.’May’ is not possible in this example)</p>
-</li>
-</ul>
-<hr>
-<h3 id="Might-as-well-may-as-well"><a href="#Might-as-well-may-as-well" class="headerlink" title="Might as well / may as well"></a>Might as well / may as well</h3><ul>
-<li>What shall we do?Shall we walk?</li>
-<li>We might as well. It’s a nice day and I don’t want to wait here for an hour.</li>
-</ul>
-<p>‘(We) might as well do something’ =(We) should do something because  there is nothing better to do and there is no reason not to do it. You can also say ‘may as well (do)’.</p>
-<ul>
-<li>A: What time  are you going?</li>
-<li>Well , I’m ready, so I might as well go now.</li>
-</ul>
+        <h1 id="String-Matching-KMP-Algorithm"><a href="#String-Matching-KMP-Algorithm" class="headerlink" title="String Matching: KMP Algorithm"></a>String Matching: KMP Algorithm</h1><p>KMP算法利用子串的结构特点（前后缀有相同的部分）来减少子串与主串的比较次数。</p>
+<p>前缀：必包含主串的第一个字符，且不包含主串的最后一个字符的主串的子串。<br>后缀：必包含主串的最后一个字符，且不包含主串的第一个字符的主串的子串。<br>例如：<br>    主串：a               后缀=前缀=∅<br>    主串：abab        前缀={a,ab,aba}  后缀={b,ab,bab}  故前后缀公共部分为{ab}</p>
+<p>算法的基本思想为：（设主串为s，子串为p）<br>利用指向主串的指针i，和指向子串的指针j，当s[i] != p[j]时，子串指针退回到某个已知位置<strong>next[j]</strong>，而i指针不需要回退。<strong>next[j]</strong>的形成是利用子串本身的特殊结构，即p[1…j]具有相同的前后缀。该算法的难以理解的地方在于<strong>next</strong>数组的递归求出。</p>
+<p><strong>next</strong>数组的递归求解：<br>（1）：求解next[j+1]时，设next[j]=k，若p[k]=p[j]，则next[j+1]=next[j]+1;<br>（2）：若p[k] != p[j]。此时，尝试p[next[k]] 是否等于p[j]。这样做的原因在于，在每次求解next[j+1]时，都将该问题看作是一个新的模式匹配，而主串和子串都是原题中的子串。故，在比较p[k]=p[j] 失败时，继续往后推导，使得在第二个问题中，当主串（即子串）的p[j+1]与子串的p[k]不匹配时，通过继续往低位子串寻找，找到一个位置<strong>k’</strong>，同时有<strong>p[k’]=p[j+1]</strong>，这样就意味着，主串（即子串）j+1前面有<strong>k’-1</strong>个和子串的<strong>k’</strong>前的<strong>k’-1</strong>相匹配，故next[j+1]=<strong>k’+1</strong>。<br>（3）： 若一直往后递归都没有找到某个位置的字符p[t]=p[j+1]，则<strong>next[j+1]=1</strong>。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/20/MAY%20and%20MIGHT/" data-id="ckfm87n0a0009nsu73d9j4nut" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/30/String%20Matching%20KMP%20Algorithm/" data-id="ckfopvz7s000068u7ahjl2lwt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -130,19 +105,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/05/20/needn't%20%20have%20done%20AND%20could%20have%20done/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          needn&#39;t  have done AND could have done
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/19/COULD%20and%20COULD%20HAVE/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/09/26/Transform%20infix%20expression%20into%20prefix%20expression(with%20Stack)%20/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">COULD and COULD HAVE</div>
+      <div class="article-nav-title">Transform infix expression into prefix expression(with Stack) </div>
     </a>
   
 </nav>
