@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Basic concepts and properties of Tree | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Basic concepts and properties of Tree1. Basic concepts节点和树的度（Degree）树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。 树的层次（Level），深度（Depth）和高度严蔚敏的书规定，根节点所在的层次是第一层。故，深度&#x3D;高度。 有序树和无序树若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Basic concepts and properties of Tree">
+<meta property="og:url" content="http://yoursite.com/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Basic concepts and properties of Tree1. Basic concepts节点和树的度（Degree）树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。 树的层次（Level），深度（Depth）和高度严蔚敏的书规定，根节点所在的层次是第一层。故，深度&#x3D;高度。 有序树和无序树若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-06T13:27:58.459Z">
+<meta property="article:modified_time" content="2020-10-06T09:39:09.014Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Basic concepts and properties of Tree" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/" class="article-date">
+  <time datetime="2020-10-06T13:27:58.459Z" itemprop="datePublished">2020-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Basic concepts and properties of Tree
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Basic-concepts-and-properties-of-Tree"><a href="#Basic-concepts-and-properties-of-Tree" class="headerlink" title="Basic concepts and properties of Tree"></a>Basic concepts and properties of Tree</h1><h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
+<h5 id="树的层次（Level），深度（Depth）和高度"><a href="#树的层次（Level），深度（Depth）和高度" class="headerlink" title="树的层次（Level），深度（Depth）和高度"></a>树的层次（Level），深度（Depth）和高度</h5><p>严蔚敏的书规定，根节点所在的层次是第一层。故，深度=高度。</p>
+<h5 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h5><p>若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树，否则为无序树。</p>
+<h5 id="路径和路径长度"><a href="#路径和路径长度" class="headerlink" title="路径和路径长度"></a>路径和路径长度</h5><p>树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数。<br>树的路径长度是从树根到每个结点的路径长度。</p>
+<h3 id="2-Basic-properties"><a href="#2-Basic-properties" class="headerlink" title="2. Basic properties"></a>2. Basic properties</h3><h5 id="任意树的结点数与其最小高度的关系"><a href="#任意树的结点数与其最小高度的关系" class="headerlink" title="任意树的结点数与其最小高度的关系"></a>任意树的结点数与其最小高度的关系</h5><p>具有n个结点的m叉树的最小高度为：<br>$$<br>\lceil\log_m (n(m-1)+1)\rceil<br>$$</p>
+<h5 id="二叉树与度为2的有序树的区别"><a href="#二叉树与度为2的有序树的区别" class="headerlink" title="二叉树与度为2的有序树的区别"></a>二叉树与度为2的有序树的区别</h5><ul>
+<li>度为2的树至少有3个结点，而二叉树可以为空</li>
+<li>度为2的有序树的孩子的左右次序是相对于另一孩子而言的，若某个结点只有一个孩子，则这个孩子就无须区分其左右次序，而二叉树无论孩子数是否为2，均需确定其左右次序，即二叉树的结点次序不是相对另一结点而言，而是确定的。</li>
+</ul>
+<h5 id="二叉树结点关系-常用"><a href="#二叉树结点关系-常用" class="headerlink" title="二叉树结点关系(常用)"></a>二叉树结点关系(常用)</h5><p>非空二叉树上的叶子结点数等于度为2的结点数加1，即<br>$$<br>n_0=n_2+1<br>$$</p>
+<h5 id="某一层的结点数上限"><a href="#某一层的结点数上限" class="headerlink" title="某一层的结点数上限"></a>某一层的结点数上限</h5><p>非空二叉树第k层上至多有<br>$$<br>2^{k-1}个结点<br>$$</p>
+<h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
+<h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
+<h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/" data-id="ckg1zkm8t0001psu76h7y6pe0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/06/The%20proof%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          The proof process of number relationship between child and parent in Tree
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/30/String%20Matching%20KMP%20Algorithm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">String Matching KMP Algorithm</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/09/Traversal%20of%20binary%20tree/">Traversal of binary tree</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/09/Notes%20of%20the%20features%20of%20C/">Notes of the features of C</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/06/The%20proof%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/">The proof process of number relationship between child and parent in Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/">Basic concepts and properties of Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/String%20Matching%20KMP%20Algorithm/">String Matching KMP Algorithm</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

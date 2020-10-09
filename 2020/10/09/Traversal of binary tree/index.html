@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Traversal of binary tree | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Traversal of binary treeChain storage definition1234typedef struct BiTNode&amp;#123;	ElemType data;    struct BiTNode *lchild,*rchild;&amp;#125;BitNode,*BiTree;   PreOrder (recursive)1234567void preOrder(BiTr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Traversal of binary tree">
+<meta property="og:url" content="http://yoursite.com/2020/10/09/Traversal%20of%20binary%20tree/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Traversal of binary treeChain storage definition1234typedef struct BiTNode&amp;#123;	ElemType data;    struct BiTNode *lchild,*rchild;&amp;#125;BitNode,*BiTree;   PreOrder (recursive)1234567void preOrder(BiTr">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-09T08:26:20.229Z">
+<meta property="article:modified_time" content="2020-10-09T08:25:55.687Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Traversal of binary tree" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/09/Traversal%20of%20binary%20tree/" class="article-date">
+  <time datetime="2020-10-09T08:26:20.229Z" itemprop="datePublished">2020-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Traversal of binary tree
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Traversal-of-binary-tree"><a href="#Traversal-of-binary-tree" class="headerlink" title="Traversal of binary tree"></a>Traversal of binary tree</h1><h4 id="Chain-storage-definition"><a href="#Chain-storage-definition" class="headerlink" title="Chain storage definition"></a>Chain storage definition</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BitNode,*BiTree;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="PreOrder-recursive"><a href="#PreOrder-recursive" class="headerlink" title="PreOrder (recursive)"></a>PreOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        visit(T);</span><br><span class="line">        preOrder(T-&gt;lchild);</span><br><span class="line">        preOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="InOrder-recursive"><a href="#InOrder-recursive" class="headerlink" title="InOrder (recursive)"></a>InOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">    inOrder(T-&gt;lchild);</span><br><span class="line">    visit(T);</span><br><span class="line">    inOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="AfterOrder-recursive"><a href="#AfterOrder-recursive" class="headerlink" title="AfterOrder(recursive)"></a>AfterOrder(recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        afterOrder(T-&gt;lchild);</span><br><span class="line">        afterOrder(T-&gt;rchild);</span><br><span class="line">        visit(T);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="InOrder-non-recursive"><a href="#InOrder-non-recursive" class="headerlink" title="InOrder(non-recursive)"></a>InOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;   <span class="comment">// moving pointer</span></span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;    </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            visit(p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="PreOrder-non-recursive"><a href="#PreOrder-non-recursive" class="headerlink" title="PreOrder(non-recursive)"></a>PreOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;</span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            visit(p);</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="LevelOrder"><a href="#LevelOrder" class="headerlink" title="LevelOrder"></a>LevelOrder</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    InitQueue Q; <span class="comment">//initialize a queue;</span></span><br><span class="line">    BiTree p;</span><br><span class="line">    enQueue(Q,p);</span><br><span class="line">    <span class="keyword">while</span>(!isEmpty(Q))&#123;</span><br><span class="line">        deQueue(Q,p);</span><br><span class="line">        visit(p);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild!=null)</span><br><span class="line">            enQueue(Q,p-&gt;lchild);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild!=null)</span><br><span class="line">            enQueue(Q.p-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/09/Traversal%20of%20binary%20tree/" data-id="ckg1zkm8k0000psu71r6fappk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/10/09/Notes%20of%20the%20features%20of%20C/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Notes of the features of C</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/09/Traversal%20of%20binary%20tree/">Traversal of binary tree</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/09/Notes%20of%20the%20features%20of%20C/">Notes of the features of C</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/06/The%20proof%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/">The proof process of number relationship between child and parent in Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/">Basic concepts and properties of Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/String%20Matching%20KMP%20Algorithm/">String Matching KMP Algorithm</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -64,6 +64,217 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Traversal of binary tree" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/09/Traversal%20of%20binary%20tree/" class="article-date">
+  <time datetime="2020-10-09T08:26:20.229Z" itemprop="datePublished">2020-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/09/Traversal%20of%20binary%20tree/">Traversal of binary tree</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Traversal-of-binary-tree"><a href="#Traversal-of-binary-tree" class="headerlink" title="Traversal of binary tree"></a>Traversal of binary tree</h1><h4 id="Chain-storage-definition"><a href="#Chain-storage-definition" class="headerlink" title="Chain storage definition"></a>Chain storage definition</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BitNode,*BiTree;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="PreOrder-recursive"><a href="#PreOrder-recursive" class="headerlink" title="PreOrder (recursive)"></a>PreOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        visit(T);</span><br><span class="line">        preOrder(T-&gt;lchild);</span><br><span class="line">        preOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="InOrder-recursive"><a href="#InOrder-recursive" class="headerlink" title="InOrder (recursive)"></a>InOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">    inOrder(T-&gt;lchild);</span><br><span class="line">    visit(T);</span><br><span class="line">    inOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="AfterOrder-recursive"><a href="#AfterOrder-recursive" class="headerlink" title="AfterOrder(recursive)"></a>AfterOrder(recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        afterOrder(T-&gt;lchild);</span><br><span class="line">        afterOrder(T-&gt;rchild);</span><br><span class="line">        visit(T);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="InOrder-non-recursive"><a href="#InOrder-non-recursive" class="headerlink" title="InOrder(non-recursive)"></a>InOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;   <span class="comment">// moving pointer</span></span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;    </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            visit(p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="PreOrder-non-recursive"><a href="#PreOrder-non-recursive" class="headerlink" title="PreOrder(non-recursive)"></a>PreOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;</span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            visit(p);</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="LevelOrder"><a href="#LevelOrder" class="headerlink" title="LevelOrder"></a>LevelOrder</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    InitQueue Q; <span class="comment">//initialize a queue;</span></span><br><span class="line">    BiTree p;</span><br><span class="line">    enQueue(Q,p);</span><br><span class="line">    <span class="keyword">while</span>(!isEmpty(Q))&#123;</span><br><span class="line">        deQueue(Q,p);</span><br><span class="line">        visit(p);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild!=null)</span><br><span class="line">            enQueue(Q,p-&gt;lchild);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild!=null)</span><br><span class="line">            enQueue(Q.p-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/09/Traversal%20of%20binary%20tree/" data-id="ckg1zkm8k0000psu71r6fappk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Notes of the features of C" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/09/Notes%20of%20the%20features%20of%20C/" class="article-date">
+  <time datetime="2020-10-09T06:30:40.446Z" itemprop="datePublished">2020-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/09/Notes%20of%20the%20features%20of%20C/">Notes of the features of C</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Notes-of-the-features-of-C"><a href="#Notes-of-the-features-of-C" class="headerlink" title="Notes of the features of C"></a>Notes of the features of C</h1><h4 id="1-const关键字在声明指针时不同位置形成的不同指针"><a href="#1-const关键字在声明指针时不同位置形成的不同指针" class="headerlink" title="1.const关键字在声明指针时不同位置形成的不同指针"></a>1.const关键字在声明指针时不同位置形成的不同指针</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> *pc;  <span class="comment">//意味着不能通过该指针来修改其所指向的变量</span></span><br><span class="line"><span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//意味着在初始化后，pc不能指向其他变量，但能通过该指针改变其指向的值</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//同上</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-指针与多维数组的一个范例"><a href="#2-指针与多维数组的一个范例" class="headerlink" title="2.指针与多维数组的一个范例"></a>2.指针与多维数组的一个范例</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zippo[<span class="number">2</span>][<span class="number">1</span>]==*(*(zippo+<span class="number">2</span>)+<span class="number">1</span>) <span class="comment">//zippo视为一个指针</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-声明指针数组和指向多维数组的指针"><a href="#3-声明指针数组和指向多维数组的指针" class="headerlink" title="3.声明指针数组和指向多维数组的指针"></a>3.声明指针数组和指向多维数组的指针</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *pax[<span class="number">2</span>];<span class="comment">//数组pax中含有两个int类型的指针</span></span><br><span class="line"><span class="keyword">int</span> (*pz)[<span class="number">2</span>];<span class="comment">//pz指针可以指向zippo[4][2]即pz=zippo</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-多维数组作函数形参"><a href="#4-多维数组作函数形参" class="headerlink" title="4.多维数组作函数形参"></a>4.多维数组作函数形参</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对于二维数组做函数形参，必须标明列数，行数是可选择性声明的，但compiler会忽略函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ar[][<span class="number">4</span>],<span class="keyword">int</span> rows)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ar[<span class="number">3</span>][<span class="number">4</span>],<span class="keyword">int</span> rows)</span></span>;<span class="comment">//可编译通过，但是compiler会忽略行数3</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum4d</span><span class="params">(<span class="keyword">int</span> ar[][<span class="number">12</span>][<span class="number">20</span>][<span class="number">30</span>],<span class="keyword">int</span> rows)</span></span>;<span class="comment">//一般而言，声明多维数组只省略最左边的括号</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-复合字面量-compound-literal"><a href="#5-复合字面量-compound-literal" class="headerlink" title="5.复合字面量(compound literal)"></a>5.复合字面量(compound literal)</h4><p>字面量是除符号常量外的常量。例如，5是int类型字面量，81.3是double类型的字面量，’Y’是char类型字面量。数组也有复合字面量。复合字面量是指提供临时需要的值的一种手段，复合字面量具有块作用域，这意味着一旦离开定义复合字面量的快，程序将无法保证该字面量是否存在。也就是说，复合字面量的定义在最内层的花括号中。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">int</span>[])&#123;<span class="number">50</span>,<span class="number">20</span>,<span class="number">90</span>&#125;<span class="comment">//内含3个元素的符合字面量</span></span><br><span class="line"><span class="keyword">int</span> *pt1=(<span class="keyword">int</span>[<span class="number">2</span>])&#123;<span class="number">10</span>,<span class="number">20</span>&#125;;<span class="comment">//复合字面量是匿名的，不能先创建然后再使用它，必须在创建的同时						  使用它</span></span><br><span class="line"><span class="comment">//还可以把复合字面量作为实际参数传递给带有匹配形式参数的函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> ar[],<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">sum((<span class="keyword">int</span> [])&#123;<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">5</span>&#125;,<span class="number">6</span>);</span><br><span class="line"><span class="comment">//结构的复合字面量</span></span><br><span class="line">(struct <span class="built_in">rect</span>)&#123;<span class="number">10.5</span>,<span class="number">20.0</span>&#125;;</span><br><span class="line"><span class="comment">//也可以进行取址操作</span></span><br><span class="line">&amp;(struct <span class="built_in">rect</span>)&#123;<span class="number">10.5</span>,<span class="number">20.0</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-结构变量允许相互赋值，但数组不允许"><a href="#6-结构变量允许相互赋值，但数组不允许" class="headerlink" title="6.结构变量允许相互赋值，但数组不允许"></a>6.结构变量允许相互赋值，但数组不允许</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结构这样赋值是将captain的各个字段都变成和rightFiled中的各个字段相同的值</span></span><br><span class="line"><span class="comment">//对captain的修改不影响rightFiled</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">names</span> <span class="title">rightFiled</span>=&#123;</span><span class="string">"Ruthie"</span>,<span class="string">"George"</span>&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">names</span> <span class="title">captain</span>=<span class="title">rightFiled</span>;</span> <span class="comment">// correct</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]=b;  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="7-伸缩性数组成员-flexible-array-member-（C99）"><a href="#7-伸缩性数组成员-flexible-array-member-（C99）" class="headerlink" title="7. 伸缩性数组成员(flexible array member)（C99）"></a>7. 伸缩性数组成员(flexible array member)（C99）</h4><p>定义：</p>
+<ul>
+<li>伸缩性数组必须是结构的最后一个成员；</li>
+<li>结构中必须至少有一个成员；</li>
+<li>伸缩数组的声明类似于普通数组，只是它的方括号中是空的</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">flex</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> count;</span><br><span class="line">    <span class="keyword">double</span> average;</span><br><span class="line">    <span class="keyword">double</span> scores[]; <span class="comment">//flexible array member</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//注意具有伸缩性数组的结构体不能像普通结构体那样赋值</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">flex</span> *<span class="title">pf1</span>,*<span class="title">pf2</span>;</span></span><br><span class="line">*pf2=*pf1; <span class="comment">// flase;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="8-联合（Union）的初始化"><a href="#8-联合（Union）的初始化" class="headerlink" title="8.联合（Union）的初始化"></a>8.联合（Union）的初始化</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//WARNING: Union can just only store one memeber,even it has enought space for other members ,it can't store two members at the same time.</span></span><br><span class="line"><span class="keyword">union</span> hold&#123;</span><br><span class="line">    <span class="keyword">int</span> digit;</span><br><span class="line">    <span class="keyword">double</span> bigfl;</span><br><span class="line">    <span class="keyword">char</span> letter;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">union</span> hold=valA;</span><br><span class="line">ValA.letter=<span class="string">'R'</span>;</span><br><span class="line"><span class="keyword">union</span> hold valB=valA; <span class="comment">//the first method;</span></span><br><span class="line"><span class="keyword">union</span> hold valC=&#123;<span class="number">88</span>&#125;; <span class="comment">//initialize the 'digit' member</span></span><br><span class="line"><span class="keyword">union</span> hold valD=&#123;.bigfl=<span class="number">118.2</span>&#125; <span class="comment">//disignate initializer</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="9-Anonymous-Union-and-structure"><a href="#9-Anonymous-Union-and-structure" class="headerlink" title="9.Anonymous Union and structure"></a>9.Anonymous Union and structure</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// if declare a structure or union,which can contain anomymous union or struct</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">carData</span>&#123;</span></span><br><span class="line">   <span class="keyword">char</span> make[<span class="number">15</span>];</span><br><span class="line">   <span class="keyword">int</span> status;</span><br><span class="line">   <span class="keyword">union</span>&#123;</span><br><span class="line">       <span class="class"><span class="keyword">struct</span> <span class="title">owner</span> <span class="title">owncar</span>;</span></span><br><span class="line">       <span class="class"><span class="keyword">struct</span> <span class="title">leasecompany</span> <span class="title">leasecar</span>;</span></span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">       <span class="keyword">char</span> first[<span class="number">20</span>];</span><br><span class="line">       <span class="keyword">char</span> last[<span class="number">20</span>];</span><br><span class="line">   &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//use . to access members of anonymous Union and structure</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">carData</span> <span class="title">flits</span>;</span></span><br><span class="line">flits.onwcar;</span><br><span class="line">flits.first;</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-Difference-between-include-lt-gt-and-include””"><a href="#10-Difference-between-include-lt-gt-and-include””" class="headerlink" title="10. Difference between #include&lt;&gt; and #include””"></a>10. Difference between #include&lt;&gt; and #include””</h4><p>&lt;&gt; :reference header files contained in library in complier</p>
+<p>“”  :reference header files contained in programm relative directory</p>
+<h4 id="11-Difference-between-define-and-type"><a href="#11-Difference-between-define-and-type" class="headerlink" title="11. Difference between #define and type"></a>11. Difference between #define and type</h4><ul>
+<li>different with <strong>#define</strong>, <strong>typedef</strong> can just only create type symbol name,not value</li>
+<li><strong>typedef</strong> is interpreted by complier , not preprocessor</li>
+<li><strong>typedef</strong> is flexible than <strong>#define</strong></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/09/Notes%20of%20the%20features%20of%20C/" data-id="ckg1zkm8w0003psu77zk39ehr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-The proof process of number relationship between child and parent in Tree" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/06/The%20proof%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/" class="article-date">
+  <time datetime="2020-10-06T13:27:58.462Z" itemprop="datePublished">2020-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/06/The%20proof%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/">The proof process of number relationship between child and parent in Tree</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="The-proof-process-of-number-relationship-between-child-and-parent-in-Tree"><a href="#The-proof-process-of-number-relationship-between-child-and-parent-in-Tree" class="headerlink" title="The proof process of number relationship between child and parent in Tree"></a>The proof process of number relationship between child and parent in Tree</h1><h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
+<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
+<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
+<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
+<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/06/The%20proof%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/" data-id="ckg1zkm8v0002psu72roy5i91" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Basic concepts and properties of Tree" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/" class="article-date">
+  <time datetime="2020-10-06T13:27:58.459Z" itemprop="datePublished">2020-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/">Basic concepts and properties of Tree</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Basic-concepts-and-properties-of-Tree"><a href="#Basic-concepts-and-properties-of-Tree" class="headerlink" title="Basic concepts and properties of Tree"></a>Basic concepts and properties of Tree</h1><h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
+<h5 id="树的层次（Level），深度（Depth）和高度"><a href="#树的层次（Level），深度（Depth）和高度" class="headerlink" title="树的层次（Level），深度（Depth）和高度"></a>树的层次（Level），深度（Depth）和高度</h5><p>严蔚敏的书规定，根节点所在的层次是第一层。故，深度=高度。</p>
+<h5 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h5><p>若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树，否则为无序树。</p>
+<h5 id="路径和路径长度"><a href="#路径和路径长度" class="headerlink" title="路径和路径长度"></a>路径和路径长度</h5><p>树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数。<br>树的路径长度是从树根到每个结点的路径长度。</p>
+<h3 id="2-Basic-properties"><a href="#2-Basic-properties" class="headerlink" title="2. Basic properties"></a>2. Basic properties</h3><h5 id="任意树的结点数与其最小高度的关系"><a href="#任意树的结点数与其最小高度的关系" class="headerlink" title="任意树的结点数与其最小高度的关系"></a>任意树的结点数与其最小高度的关系</h5><p>具有n个结点的m叉树的最小高度为：<br>$$<br>\lceil\log_m (n(m-1)+1)\rceil<br>$$</p>
+<h5 id="二叉树与度为2的有序树的区别"><a href="#二叉树与度为2的有序树的区别" class="headerlink" title="二叉树与度为2的有序树的区别"></a>二叉树与度为2的有序树的区别</h5><ul>
+<li>度为2的树至少有3个结点，而二叉树可以为空</li>
+<li>度为2的有序树的孩子的左右次序是相对于另一孩子而言的，若某个结点只有一个孩子，则这个孩子就无须区分其左右次序，而二叉树无论孩子数是否为2，均需确定其左右次序，即二叉树的结点次序不是相对另一结点而言，而是确定的。</li>
+</ul>
+<h5 id="二叉树结点关系-常用"><a href="#二叉树结点关系-常用" class="headerlink" title="二叉树结点关系(常用)"></a>二叉树结点关系(常用)</h5><p>非空二叉树上的叶子结点数等于度为2的结点数加1，即<br>$$<br>n_0=n_2+1<br>$$</p>
+<h5 id="某一层的结点数上限"><a href="#某一层的结点数上限" class="headerlink" title="某一层的结点数上限"></a>某一层的结点数上限</h5><p>非空二叉树第k层上至多有<br>$$<br>2^{k-1}个结点<br>$$</p>
+<h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
+<h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
+<h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/" data-id="ckg1zkm8t0001psu76h7y6pe0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-String Matching KMP Algorithm" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/30/String%20Matching%20KMP%20Algorithm/" class="article-date">
@@ -428,353 +639,6 @@
 
 
   
-    <article id="post-the .. the.. structure" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/24/the%20..%20the..%20structure/" class="article-date">
-  <time datetime="2020-05-24T03:24:40.450Z" itemprop="datePublished">2020-05-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/24/the%20..%20the..%20structure/">the .. the.. structure</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="The…the…-structure"><a href="#The…the…-structure" class="headerlink" title="The…the… structure"></a>The…the… structure</h2><p>It’s comparison structure. We use it to say that one thing depends on another thing:</p>
-<ul>
-<li>The warmer the weather, the better I feel.</li>
-<li>The sooner we leave, the sooner we will arrive.</li>
-<li>The younger you are, the easier it is to learn.</li>
-<li>The more expensive the hotel, the better the service.</li>
-</ul>
-<p><strong><em>Note:</em></strong>  本质来说，前后两个<strong>the</strong> 句子都是一个完整的正常语序的句子在进行倒装，同时由上述例子可以看出，will be /be  可以省略。</p>
-<hr>
-<h3 id="Older-and-elder"><a href="#Older-and-elder" class="headerlink" title="Older and elder"></a>Older and elder</h3><p>The comparative of old is older:</p>
-<ul>
-<li>Tom looks older than he really is.</li>
-</ul>
-<p>You can use elder(or older) when you talk about people in a family. You can say <strong>(my) elder brother/sister/son/daughter</strong>:</p>
-<ul>
-<li>My elder brother is a pilot.</li>
-</ul>
-<p>We say ‘my elder brother’ but we don’t say that ‘somebody is elder’:</p>
-<ul>
-<li>My brother is older than me(not ‘elder than me’)</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/24/the%20..%20the..%20structure/" data-id="ckfm87n0r000nnsu70arq8p4z" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Some structures for composition" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/24/Some%20structures%20for%20composition/" class="article-date">
-  <time datetime="2020-05-24T03:24:40.447Z" itemprop="datePublished">2020-05-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/24/Some%20structures%20for%20composition/">Some structures for composition</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Some-structures-for-composition"><a href="#Some-structures-for-composition" class="headerlink" title="Some structures for composition"></a>Some structures for composition</h1><ol>
-<li>It’s time you did something = you should have done it already or started  it. <strong>We often use this structure to criticize or complain:</strong></li>
-</ol>
-<ul>
-<li><p>It’s 10 o’clock and he’s still in bed. It’s time  he got up.</p>
-</li>
-<li><p>You’re very selfish. It’s high time you realized that you’re not the most important person in the world. </p>
-</li>
-</ul>
-<hr>
-<ol start="2">
-<li>If…should…:</li>
-</ol>
-<ul>
-<li>If Tom should phone while I’m out, tell him I’ll phone him back later. (<em>If Tom should phone</em> is similar to <em>if Tom phones</em> .With should, the speaker feels that the possibility is <strong>smaller</strong> )</li>
-<li>I’ve left the washing outside. If it should rain, can you bring it in?</li>
-</ul>
-<p><strong><em>You can also put should at the beginning of these sentences (Should something happen… ):</em></strong></p>
-<ul>
-<li>Should Tom phone, can you tell him I’ll phone him back later?</li>
-</ul>
-<hr>
-<ol start="3">
-<li>You can use <strong>any</strong> and <strong>no</strong> + comparatives (any longer/no bigger etc.):</li>
-</ol>
-<ul>
-<li>I’ve waited long enough. I’m not waiting <strong>any longer</strong></li>
-<li>We expected their house to be very big  but it’s no bigger than ours.</li>
-<li>Yesterday you said you felt ill. Do you feel any better today?</li>
-<li>This hotel is better than the other one and it’s no more expensive.</li>
-</ul>
-<hr>
-<ol start="4">
-<li><p><strong>may</strong>  and <strong>might</strong></p>
-<p>We use <strong>may</strong> or <strong>might</strong> to say that something is a possibility. Usually you can use may or might, so you can say:</p>
-<ul>
-<li>It may be true. or  It might be true.</li>
-<li>She might know. or She may know.</li>
-</ul>
-<p>For the past we use <strong>may have (done)</strong> or <strong>might have (done)</strong>:</p>
-<ul>
-<li><p>A: I wonder why Kay didn’t answer the phone.</p>
-<p>B: She <strong>may have</strong> been asleep. (= perhaps you left it in the shop).</p>
-</li>
-<li><p>A: I can’t find my bag anywhere.</p>
-<p>B: You <strong>might have</strong> left it in the shop. (= perhaps you left it in the shop).</p>
-</li>
-<li><p>A: I was surprised that Sarah wasn’t  at the meeting.</p>
-<p>B: She <strong>might not have</strong> known about it.</p>
-</li>
-<li><p>A: I wonder why Colin was in such a bad mood yesterday.</p>
-<p>B: He <strong>may not have</strong> been feeling well.</p>
-</li>
-</ul>
-</li>
-</ol>
-<hr>
-<ol start="5">
-<li><strong>should</strong> and <strong>should have (done)</strong></li>
-</ol>
-<ul>
-<li><strong>should</strong>: We use <strong>should</strong> when something is not right or what we expect. <strong><em>OR</em></strong> We use should to say that we expect something to happen:<ul>
-<li>Those boys shouldn’t be playing football at this time. They should be at school. </li>
-<li>She’s been studying hard for the exam, so she should pass.</li>
-</ul>
-</li>
-<li><strong>should have (done)</strong>:  ‘You should have done something’ = <strong>you didn’t do it</strong> but it would have been the right thing to do:<ul>
-<li>I’m feeling sick. I <strong>shouldn’t have eaten</strong> so much chocolate.</li>
-<li>I wonder why they ‘re so late. They <strong>should have been here</strong> an hour ago.</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ol start="6">
-<li>Subjunctive Structures (虚拟语气结构)</li>
-</ol>
-<ul>
-<li><p><strong>If sb did … , sb would do something. ** We are talking about the **present</strong>.</p>
-</li>
-<li><p>If I found a wallet in the street, I would take it to the police.<br>  (NOTE: Here, I am not thinking about a <strong>real</strong> possibility; I’m <strong>imagining</strong> the situation and doesn’t expect to find a wallet in the street.)</p>
-</li>
-<li><p>I’d be very frightened if somebody pointed a gun at me.</p>
-</li>
-<li><p><strong>if sb had done something, sb would have done something.</strong>  It’s like the above structure, but we are talking about the <strong>past</strong> at this moment.</p>
-<ul>
-<li>If he had been looking where he was going , he wouldn’t have walked into the wall.</li>
-<li>The view was wonderful. If I had had a camera, I would have taken some photographs. </li>
-</ul>
-</li>
-</ul>
-<hr>
-<ol start="7">
-<li>about wish …. next time to note…</li>
-</ol>
-<hr>
-<ol start="8">
-<li>would like to have done something (=I regret now that I <strong>didn’t</strong> or I <strong>couldn’t</strong> do something):</li>
-</ol>
-<ul>
-<li>It’s a pity we didn’t see Val when we were in London. I <strong>would like to have seen</strong> her again.</li>
-<li>We’d like to have gone on holiday but we didn’t have enough money.</li>
-</ul>
-<p><strong><em>Also: You can use the same structure after would love/ would hate/ would prefer</em></strong></p>
-<p><strong><em>Although would love/hate/prefer are usually followed by to (infinitive), would mind is followed by -ing</em></strong>  </p>
-<hr>
-<ol start="9">
-<li>Something needs doing = <strong>something needs to be done</strong></li>
-</ol>
-<ul>
-<li>The batteries in the radio need changing. (=they need to be changed)</li>
-<li>Do you think my jacket needs cleaning?  (=…needs to be cleaned)</li>
-<li>It’s a difficult problem. It needs thinking about very carefully.</li>
-</ul>
-<hr>
-<ol start="10">
-<li>We often use hardly +any/anybody/anyone/anything/anywhere:</li>
-</ol>
-<ul>
-<li><p>A: How much money have you got?</p>
-<p>B: <strong>Hardly any.</strong></p>
-</li>
-<li><p>I’ll have to go shopping. We’ve got <strong>hardly any</strong> food.</p>
-</li>
-<li><p>The exam results were very bad. <strong>Hardly anybody</strong> in our class passed.</p>
-</li>
-</ul>
-<hr>
-<ol start="11">
-<li><strong>in case</strong> AND <strong>in case of</strong></li>
-</ol>
-<ul>
-<li>Ann might phone tonight. I don’t want to go out in case she phones.(because it’s possible she will phone)</li>
-<li>I’ll draw a map for you in case you can’t find our house.(=because it’s possible you won’t be able to find it)</li>
-</ul>
-<p><em>We use just in case for a smaller possibility</em></p>
-<ul>
-<li>I don’t think it will rain but I’ll take an umbrella just in case.(=just in case it rains)</li>
-</ul>
-<p><em>in case of is not the same as in case. In case of …=’if there is’  (especially in notices etc)</em></p>
-<ul>
-<li>In case of fire, please leave the building as quickly as possible.</li>
-<li>In case of emergency, telephone this number.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/24/Some%20structures%20for%20composition/" data-id="ckfm87n0d000cnsu7afpd174g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-modals + have done" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/22/modals%20+%20have%20done/" class="article-date">
-  <time datetime="2020-05-21T18:41:19.134Z" itemprop="datePublished">2020-05-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/22/modals%20+%20have%20done/">modals + have done</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="modals-have-done"><a href="#modals-have-done" class="headerlink" title="modals + have done"></a>modals + have done</h1><h3 id="could-not-have-done"><a href="#could-not-have-done" class="headerlink" title="could (not) have done"></a>could (not) have done</h3><p>Most often, we use could have (done)  for things which were possible <strong>but did not happen</strong></p>
-<ul>
-<li>Why did you stay at a hotel when you went to New York?You <strong>could have stayed</strong> with Barbara.</li>
-</ul>
-<hr>
-<h3 id="may-have-done-and-might-have-done"><a href="#may-have-done-and-might-have-done" class="headerlink" title="may have done and might have done"></a>may have done and might have done</h3><p>Both of them  just express a possibility (whatever positive or negative)</p>
-<ul>
-<li>A: I wonder why Kay didn’t answer the phone.</li>
-<li>B: She may have been asleep.</li>
-</ul>
-<ul>
-<li>A: I was surprised that Sarah wasn’t at the meeting.</li>
-<li>B: She might not have known about it.</li>
-</ul>
-<p><strong><em>NOTE:</em></strong>  couldn’t (negative) is different from <strong>may not</strong> and <strong>might not</strong></p>
-<ul>
-<li>She was too far away, so she couldn’t have seen you.(=it is not possible that she saw you)</li>
-</ul>
-<ul>
-<li>A: I wonder why she didn’t say hello.</li>
-<li>B: She might not have seen you.</li>
-</ul>
-<hr>
-<h3 id="needn’t-have-done"><a href="#needn’t-have-done" class="headerlink" title="needn’t have done"></a>needn’t have done</h3><p>It means you really did something but now you know it was not necessary. So, you really did.<br>But ,comparing to <strong>could have done</strong> ,which means you didn’t do something that could happen probably  , this sentence is opposite to <strong>could have done</strong>. (in a sense).</p>
-<ul>
-<li>I got up very early because  I had to get ready to go away. But in fact it didn’t take me long to get ready. So, I *<em>needn’t have got up *</em> so early. I *<em>could have stayed *</em> in bed  longer.</li>
-</ul>
-<hr>
-<h3 id="should-not-have-done"><a href="#should-not-have-done" class="headerlink" title="should (not) have done"></a>should (not) have done</h3><p>You didn’t do it but it would have been the right thing to do. (for positive)</p>
-<ul>
-<li>(positive): It was a great party last night. You *<em>should have *</em> come. Why didn’t you?</li>
-<li>(negative): I’m feeling sick. I *<em>shouldn’t have eaten *</em> so much chocolate.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/22/modals%20+%20have%20done/" data-id="ckfm87n0q000lnsu73kc052wi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-needn&#39;t  have done AND could have done" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/20/needn't%20%20have%20done%20AND%20could%20have%20done/" class="article-date">
-  <time datetime="2020-05-20T06:03:25.433Z" itemprop="datePublished">2020-05-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/needn't%20%20have%20done%20AND%20could%20have%20done/">needn&#39;t  have done AND could have done</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="needn’t-have-done-and-could-have-done"><a href="#needn’t-have-done-and-could-have-done" class="headerlink" title="needn’t  have done and could have done"></a>needn’t  have done and could have done</h1><ul>
-<li>needn’t have done:  I needn’t have (done)  something  = I <strong>did</strong> something but now I know that it was not necessary.</li>
-<li>could have done:  Most often, we use *<em>could have (done) *</em> for things which were possible but did not happen.</li>
-</ul>
-<p><strong><em>Example</em></strong></p>
-<p>I got up very early because I had to get ready to go away. But in fact it didn’t take me long to get ready. So, I <strong>needn’t have got up</strong> so early. I *<em>could have stayed *</em> in bed longer.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/20/needn't%20%20have%20done%20AND%20could%20have%20done/" data-id="ckfm87n0q000mnsu740799we3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -798,7 +662,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
     </div>
   </div>
 
@@ -811,23 +675,23 @@
       <ul>
         
           <li>
+            <a href="/2020/10/09/Traversal%20of%20binary%20tree/">Traversal of binary tree</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/09/Notes%20of%20the%20features%20of%20C/">Notes of the features of C</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/06/The%20proof%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/">The proof process of number relationship between child and parent in Tree</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/">Basic concepts and properties of Tree</a>
+          </li>
+        
+          <li>
             <a href="/2020/09/30/String%20Matching%20KMP%20Algorithm/">String Matching KMP Algorithm</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/26/Transform%20infix%20expression%20into%20prefix%20expression(with%20Stack)%20/">Transform infix expression into prefix expression(with Stack) </a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/03/AS%20LONG%20AS/">AS LONG AS</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/03/In%20case%20(of)/">In case (of)</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/25/The%20whole%20process%20of%20IO%20interruption%20/">The whole process of IO interruption </a>
           </li>
         
       </ul>
