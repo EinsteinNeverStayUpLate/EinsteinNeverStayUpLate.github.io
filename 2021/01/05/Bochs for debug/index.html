@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Bochs for debug | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Bochs for debugIntroduction​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bochs for debug">
+<meta property="og:url" content="http://yoursite.com/2021/01/05/Bochs%20for%20debug/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Bochs for debugIntroduction​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-05T05:26:45.603Z">
+<meta property="article:modified_time" content="2021-01-05T03:18:36.630Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Bochs for debug" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/05/Bochs%20for%20debug/" class="article-date">
+  <time datetime="2021-01-05T05:26:45.603Z" itemprop="datePublished">2021-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Bochs for debug
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Bochs-for-debug"><a href="#Bochs-for-debug" class="headerlink" title="Bochs for debug"></a>Bochs for debug</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug kernel codes. So, its  usage may not friendly. Before using it to virtualize physical machine, it need configuring a configure file, which contains many parameters you want to emulate.</p>
+<h3 id="Downloading-website"><a href="#Downloading-website" class="headerlink" title="Downloading website"></a>Downloading website</h3><p><a href="http://bochs.sourceforge.net/" target="_blank" rel="noopener">http://bochs.sourceforge.net/</a></p>
+<p><strong>NOTE: dlxlinux, demo of usage , of version 2.6.11 can’t be successfully run.</strong></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>​    Using Bochs to debug, two files are inevitable and should be generated manually, configure file and image file.<br>​    For config file, the following is an example. Each parameter’s meaning can be looked up from bochsrc-smaple.txt in Bochs directory.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># how much memory the emulated machine will have</span></span><br><span class="line">megs: <span class="number">32</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># filename of ROM images</span></span><br><span class="line">romimage: file=../BIOS-bochs-latest</span><br><span class="line">vgaromimage: file=../VGABIOS-lgpl-latest</span><br><span class="line"></span><br><span class="line"># what disk images will be used </span><br><span class="line">floppya: <span class="number">1</span>_44=floppya.img, status=inserted</span><br><span class="line">floppyb: <span class="number">1</span>_44=floppyb.img, status=inserted</span><br><span class="line"></span><br><span class="line"># hard disk</span><br><span class="line">ata0: enabled=<span class="number">1</span>, ioaddr1=<span class="number">0x1f0</span>, ioaddr2=<span class="number">0x3f0</span>, irq=<span class="number">14</span></span><br><span class="line">ata0-master: type=disk, path=<span class="string">"a.img"</span>, cylinders=<span class="number">306</span>, heads=<span class="number">4</span>, spt=<span class="number">17</span></span><br><span class="line"></span><br><span class="line"># choose the boot disk.</span><br><span class="line">boot: c</span><br><span class="line"></span><br><span class="line"># <span class="keyword">default</span> <span class="built_in">config</span> interface is textconfig.</span><br><span class="line">#config_interface: textconfig</span><br><span class="line">#config_interface: wx</span><br><span class="line"></span><br><span class="line">#display_library: x</span><br><span class="line"># other choices: win32 sdl wx carbon amigaos beos macintosh nogui rfb term svga</span><br><span class="line"></span><br><span class="line"># where <span class="keyword">do</span> we send <span class="built_in">log</span> messages?</span><br><span class="line"><span class="built_in">log</span>: bochsout.txt</span><br><span class="line"></span><br><span class="line"># disable the mouse, since DLX is <span class="built_in">text</span> only</span><br><span class="line">mouse: enabled=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># <span class="built_in">set</span> up IPS value <span class="keyword">and</span> clock sync</span><br><span class="line">cpu: ips=<span class="number">15000000</span></span><br><span class="line">clock: sync=both</span><br><span class="line">    </span><br><span class="line">keyboard: keymap=../keymaps/x11-pc-us.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-fr.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-de.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-es.<span class="built_in">map</span></span><br></pre></td></tr></table></figure>
+
+<p>​    For image file, it could be floppy, hard disk and CDROM, all of which should be written with binary file which can appear with NASM compiling .asm file to .bin file.<br>​    To utilize debug function, open <strong>bochsdbg.exe</strong>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2021/01/05/Bochs%20for%20debug/" data-id="ckjquwg6j000278u77qn76amr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/01/10/x86%20Instructions/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          x86 Instructions
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/01/03/Software%20can't%20run%20on%20different%20OS%20based%20the%20same%20architecture/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Software can&#39;t run on different OS based the same architecture</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/10/x86%20Instructions/">x86 Instructions</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/05/Bochs%20for%20debug/">Bochs for debug</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/03/Software%20can't%20run%20on%20different%20OS%20based%20the%20same%20architecture/">Software can&#39;t run on different OS based the same architecture</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/15/#%20Function%20Pointer/"># Function Pointer</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/14/The%20Contents%20of%20C%20Head%20File/">The Contents of C Head File</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
