@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>kernel | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Somethings importantInto Protection Mode12345678910111213141516171819202122232425From real mode into protection mode, there are five necessary steps:1: load global descriptor register	xor eax,eax	mov">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kernel">
+<meta property="og:url" content="http://yoursite.com/2021/01/30/kernel/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Somethings importantInto Protection Mode12345678910111213141516171819202122232425From real mode into protection mode, there are five necessary steps:1: load global descriptor register	xor eax,eax	mov">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-30T08:22:21.333Z">
+<meta property="article:modified_time" content="2021-01-27T04:37:40.560Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-kernel" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/30/kernel/" class="article-date">
+  <time datetime="2021-01-30T08:22:21.333Z" itemprop="datePublished">2021-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      kernel
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Somethings-important"><a href="#Somethings-important" class="headerlink" title="Somethings important"></a>Somethings important</h2><h3 id="Into-Protection-Mode"><a href="#Into-Protection-Mode" class="headerlink" title="Into Protection Mode"></a>Into Protection Mode</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">From real mode into protection mode, there are five necessary steps:</span><br><span class="line"></span><br><span class="line">1: load global descriptor register</span><br><span class="line"><span class="code">	xor eax,eax</span></span><br><span class="line"><span class="code">	mov ax,cs	</span></span><br><span class="line"><span class="code">	shl eax,4</span></span><br><span class="line"><span class="code">	add eax,LABEL_GDT</span></span><br><span class="line"><span class="code">	mov dword [GdtPtr+0x02],eax</span></span><br><span class="line"><span class="code">	lgdt	[GdtPtr]</span></span><br><span class="line"></span><br><span class="line">2:	switch off interrupt</span><br><span class="line"><span class="code">	cli</span></span><br><span class="line"><span class="code">	</span></span><br><span class="line">3:	open A20</span><br><span class="line"><span class="code">	in al,92h</span></span><br><span class="line"><span class="code">	or al,0000_0010h</span></span><br><span class="line"><span class="code">	out 92h,al</span></span><br><span class="line"></span><br><span class="line">4:	set PE in cr0 to 1</span><br><span class="line"><span class="code">	mov eax,cr0</span></span><br><span class="line"><span class="code">	or eax,1</span></span><br><span class="line"><span class="code">	mov cr0,eax</span></span><br><span class="line"><span class="code">	</span></span><br><span class="line">5:	jump into protected mode</span><br><span class="line"><span class="code">	jmp dword SelectorCode32:0</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Set-up-paging"><a href="#Set-up-paging" class="headerlink" title="Set up paging"></a>Set up paging</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1: initialize page directory table and page page table.</span><br><span class="line">2: set cr3 to the initial position of page directory table</span><br><span class="line">3: set the PG -the highest bit in CR0 to 1</span><br><span class="line">4: nop</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Interrupt-under-protected-mode"><a href="#Interrupt-under-protected-mode" class="headerlink" title="Interrupt under protected mode"></a>Interrupt under protected mode</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1:Interrupt Descriptor Table(IDT) replaces Interrupt Vector(IVT).</span><br><span class="line">2:BIOS interrupt is invalid.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Interrupt-and-Exception"><a href="#Interrupt-and-Exception" class="headerlink" title="Interrupt and Exception"></a>Interrupt and Exception</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Exception has three forms:</span><br><span class="line">Fault , Trap , Abort</span><br><span class="line"></span><br><span class="line">Interrupt has two forms:</span><br><span class="line">external interrupt(whether to be maskable) , int n</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Special-descriptor-in-GDT"><a href="#Special-descriptor-in-GDT" class="headerlink" title="Special descriptor in GDT"></a>Special descriptor in GDT</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1: Local descriptor table(LDT) descriptor</span><br><span class="line">2: Task-state segment(TSS) descriptor</span><br><span class="line">3: Gate descriptor</span><br><span class="line">4: Page directory descriptor</span><br><span class="line">5: Page table descriptor</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Pass-parameters-with-STACK"><a href="#Pass-parameters-with-STACK" class="headerlink" title="Pass parameters with STACK"></a>Pass parameters with STACK</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="FAT12-recognized-by-Linux"><a href="#FAT12-recognized-by-Linux" class="headerlink" title="FAT12 recognized by Linux"></a>FAT12 recognized by Linux</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">If we organize a floppy with FAT12, it needn't writing for .bin file with dd. This floppy can be mounted then we use cp to copy file into this floppy. Linux will automatically complete root directory,FAT1 and FAT2.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="what’s-going-to-do-in-loader"><a href="#what’s-going-to-do-in-loader" class="headerlink" title="what’s going to do in loader"></a>what’s going to do in loader</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1: get memory info</span><br><span class="line">2: find out kernel.bin in root directory and load it</span><br><span class="line">3: into protect mode</span><br><span class="line">4: display memory info (not necessary)</span><br><span class="line">5: set up paging </span><br><span class="line">6: after loading kernel into memory, place it according to program header table.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="BIOS-Interrupt"><a href="#BIOS-Interrupt" class="headerlink" title="BIOS Interrupt"></a>BIOS Interrupt</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int 10h      ah=13h</span><br><span class="line">Function: display char</span><br><span class="line">al:output pattern</span><br><span class="line">bl:display property</span><br><span class="line">bh:page number</span><br><span class="line">cx:string length</span><br><span class="line">dh:row </span><br><span class="line">dl:col</span><br><span class="line">es:bp string address</span><br><span class="line"></span><br><span class="line">int 13h      ah=02h</span><br><span class="line">Function: read section</span><br><span class="line">al:how many sections to read</span><br><span class="line">es:bx buffer address</span><br><span class="line">ch: cylinder number</span><br><span class="line">cl: section number</span><br><span class="line">dh:	header number</span><br><span class="line">dl: driver</span><br><span class="line">output:</span><br><span class="line">CF=0 succeed.  ah=0  al=how many section to read</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2021/01/30/kernel/" data-id="ckkjhc6qt0001msu7ezj43nev" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/01/30/Linux%20commands/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linux commands
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/01/10/x86%20Instructions/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">x86 Instructions</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/30/Linux%20commands/">Linux commands</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/30/kernel/">kernel</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/10/x86%20Instructions/">x86 Instructions</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/05/Bochs%20for%20debug/">Bochs for debug</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/03/Software%20can't%20run%20on%20different%20OS%20based%20the%20same%20architecture/">Software can&#39;t run on different OS based the same architecture</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
