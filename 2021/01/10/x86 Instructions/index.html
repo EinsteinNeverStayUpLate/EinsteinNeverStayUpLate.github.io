@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>x86 Instructions | Virux</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="" />
+    
+    <meta name="description" content="x86 InstructionsMaster boot sector123456&#x2F;&#x2F;Nomally, 0 head 0 cylinder 1 sector is the Master boot sector&#x2F;&#x2F;to prevent reading fault data, master boot sector&#39;s last two binary&#x2F;&#x2F;must be 0x55aa&#x2F;&#x2F;use db or">
+<meta property="og:type" content="article">
+<meta property="og:title" content="x86 Instructions">
+<meta property="og:url" content="http://yoursite.com/2021/01/10/x86%20Instructions/index.html">
+<meta property="og:site_name" content="Virux">
+<meta property="og:description" content="x86 InstructionsMaster boot sector123456&#x2F;&#x2F;Nomally, 0 head 0 cylinder 1 sector is the Master boot sector&#x2F;&#x2F;to prevent reading fault data, master boot sector&#39;s last two binary&#x2F;&#x2F;must be 0x55aa&#x2F;&#x2F;use db or">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-10T08:08:35.998Z">
+<meta property="article:modified_time" content="2021-01-22T11:55:28.360Z">
+<meta property="article:author" content="Virux">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/" title="Virux" type="application/atom+xml" />
+    
+
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                    
+                                
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    uncategorized
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-x86 Instructions" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        x86 Instructions
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2021/01/10/x86%20Instructions/" class="article-date">
+       <time datetime="2021-01-10T08:08:35.998Z" itemprop="datePublished">2021-01-10</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2021/01/10/x86%20Instructions/" class="article-date">
+     <time datetime="2021-01-22T11:55:28.360Z" itemprop="dateModified">2021-01-22</time>
+  </a>
+</div>
+
+
+                
+
+                
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <h2 id="x86-Instructions"><a href="#x86-Instructions" class="headerlink" title="x86 Instructions"></a>x86 Instructions</h2><h3 id="Master-boot-sector"><a href="#Master-boot-sector" class="headerlink" title="Master boot sector"></a>Master boot sector</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Nomally, 0 head 0 cylinder 1 sector is the Master boot sector</span></span><br><span class="line"><span class="comment">//to prevent reading fault data, master boot sector's last two binary</span></span><br><span class="line"><span class="comment">//must be 0x55aa</span></span><br><span class="line"><span class="comment">//use db or dw can complete it</span></span><br><span class="line">db <span class="number">0x55</span>,<span class="number">0xaa</span></span><br><span class="line">dw <span class="number">0xaa55</span>      <span class="comment">//cause,write a word into memory with low byte alignment</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="div-process-unsigned-number"><a href="#div-process-unsigned-number" class="headerlink" title="div(process unsigned number)"></a>div(process unsigned number)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// div has two different methods to use</span></span><br><span class="line"><span class="comment">// div followed by regiseter or memoryaddress </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// No1: 16-bit dividend is divided by 8-bit divisor</span></span><br><span class="line"><span class="comment">//the 16-bit dividend need loading into ax</span></span><br><span class="line"><span class="comment">//quotient in al , remainder in ah</span></span><br><span class="line">div cl</span><br><span class="line">div <span class="keyword">byte</span> [<span class="number">0x0023</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// No2: 32-bit dividend is divided by 16</span></span><br><span class="line"><span class="comment">// under this situation, divident can't be placed in ax</span></span><br><span class="line"><span class="comment">//so,it's divided two parts, the hightest 16 bit is placed in dx</span></span><br><span class="line"><span class="comment">// the lowest 16 bit is placed in ax</span></span><br><span class="line"><span class="comment">// then,quotient in ax , remainder in dx</span></span><br><span class="line">div cx</span><br><span class="line">div <span class="keyword">word</span> [<span class="number">0x0230</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="mul"><a href="#mul" class="headerlink" title="mul"></a>mul</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//It makes the value contained in parameter multiply al or ax.Bit width should be identical. If al ,put result into ax, while if ax , put result into dx:ax</span></span><br><span class="line"><span class="comment">//parameter can be regs or memaddr</span></span><br><span class="line">mul bx</span><br><span class="line">mul <span class="keyword">word</span> [<span class="number">0x2000</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="idiv-process-signed-number"><a href="#idiv-process-signed-number" class="headerlink" title="idiv(process signed number)"></a>idiv(process signed number)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//when caculating signed number division, especially 32 bit dividend, dx's value need noting</span></span><br><span class="line"><span class="keyword">xor</span> dx,dx</span><br><span class="line">mov ax,<span class="number">0xf0c0</span></span><br><span class="line">mov bx,<span class="number">0x10</span></span><br><span class="line">idiv bl</span><br><span class="line"><span class="comment">//WRONG!dx:ax=0000 f0c0,dx:ax is a positive number</span></span><br><span class="line"><span class="comment">//Correct way</span></span><br><span class="line">mov ax,<span class="number">0xf0c0</span></span><br><span class="line">cwd</span><br><span class="line">mov bx,<span class="number">0x10</span></span><br><span class="line">idiv bl</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="xor"><a href="#xor" class="headerlink" title="xor"></a>xor</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//xor has two parameters, the first of which should be register or memAddress</span></span><br><span class="line"><span class="comment">//the second of which could be register , memAddress or immediate.</span></span><br><span class="line"><span class="comment">//But they couldn't be immediate or memAddress at the same time.</span></span><br><span class="line"><span class="comment">//Both of parameters have the same bit width.</span></span><br><span class="line"><span class="keyword">xor</span> <span class="keyword">word</span> [<span class="number">0x2002</span>], <span class="number">0x55aa</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="infinite-loop"><a href="#infinite-loop" class="headerlink" title="infinite loop"></a>infinite loop</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">infi: jmp near infi</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="times-pseudo"><a href="#times-pseudo" class="headerlink" title="times (pseudo)"></a>times (pseudo)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//this pseudoinstruction repeat its following instructions with many times</span></span><br><span class="line">times <span class="number">20</span> mov ax,bx</span><br><span class="line">times <span class="number">203</span> db <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="line-continuation"><a href="#line-continuation" class="headerlink" title="/ : line continuation"></a>/ : line continuation</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// In NASM, '\' is line continuation. When a single line can't contain all codes, '\' is put in line rear, which indicates this line and the next line shouble be conbined into a line.</span></span><br><span class="line"></span><br><span class="line">mytext: db <span class="string">'L'</span>,<span class="number">0x07</span>,<span class="string">'b'</span>,<span class="number">0x07</span>,<span class="string">'a'</span>,<span class="number">0x07</span>,<span class="string">'e'</span>,<span class="number">0x07</span>,<span class="string">'l'</span>,<span class="number">0x07</span>,<span class="string">' '</span>,<span class="number">0x07</span>,<span class="string">'o'</span>,<span class="number">0x07</span>,\</span><br><span class="line">    		<span class="string">'f'</span>,<span class="number">0x07</span>,<span class="string">'f'</span>,<span class="number">0x07</span>,<span class="string">'s'</span>,<span class="number">0x07</span>,<span class="string">'e'</span>,<span class="number">0x07</span>,<span class="string">'t'</span>,<span class="number">0x07</span>,<span class="string">':'</span>,<span class="number">0x07</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="movsw-movsb-cld-clear-direction-flag-std-set-direction-flag-rep"><a href="#movsw-movsb-cld-clear-direction-flag-std-set-direction-flag-rep" class="headerlink" title="movsw,movsb,cld(clear direction flag),std(set direction flag),rep"></a>movsw,movsb,cld(clear direction flag),std(set direction flag),rep</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Both of them can make bulk transfer from one memory address to another address. movsw transfers a word once while movsb delivers a byte at a time. The destination, starting point and times of transfer depend on ES:DI, DS:SI and CX</span></span><br><span class="line"></span><br><span class="line">mov ax,<span class="number">0x7c0</span></span><br><span class="line">mov ds,ax</span><br><span class="line">    </span><br><span class="line">mov ax,<span class="number">0xb800</span></span><br><span class="line">mov es,ax</span><br><span class="line"></span><br><span class="line">cld             <span class="comment">//this instruction is to set FLAGS(register)to indicate 					        //transfer</span></span><br><span class="line">    			<span class="comment">// direction, from low binary to high binary or the opposite</span></span><br><span class="line">    			<span class="comment">// cld sets the tenth bit-direction flag to 0 (positive)</span></span><br><span class="line">    			<span class="comment">//while std have the opposite function</span></span><br><span class="line">mov si,mytext</span><br><span class="line">mov di,<span class="number">0</span></span><br><span class="line">mov cx,(number-mytext)/<span class="number">2</span></span><br><span class="line">rep movsw       <span class="comment">//rep is a instruction instruction prefix, its following 						instruction continue working until cx decreases to 0.</span></span><br><span class="line"><span class="comment">//<span class="doctag">NOTE:</span>after movsw, the value of di has been changed, pointing out the empty positioni.</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="lodsb-lodsw"><a href="#lodsb-lodsw" class="headerlink" title="lodsb,lodsw*"></a>lodsb,lodsw*</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lodsb or lodsw transfer a byte or a word into al or ax in accordance with the positioin of DS:SI and then increase or decrease SI according to DF(direction flag).</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="stosb-stosw-stosd"><a href="#stosb-stosw-stosd" class="headerlink" title="stosb, stosw, stosd"></a>stosb, stosw, stosd</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">b-&gt;byte</span><br><span class="line">w-&gt;word</span><br><span class="line">d-&gt;double word</span><br><span class="line">transfer eax(byte, word or dword) to es:edi</span><br><span class="line">then increase or decrease di according to DF</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="loop"><a href="#loop" class="headerlink" title="loop"></a>loop</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Two steps it will make:</span></span><br><span class="line"><span class="comment">//the first is to descrease cx by one;</span></span><br><span class="line"><span class="comment">//the other is checking out wheter to continue loop on the value of cx.</span></span><br><span class="line">loop label</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id=""><a href="#" class="headerlink" title="$"></a>$</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//$ is label offered by NASM. It represents the offset of current line.</span></span><br><span class="line">jmp near $   <span class="comment">// equal to infi: jmp near infi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//$$ represents the assembly address of current assembly segment.</span></span><br><span class="line">times <span class="number">510</span>-($-$$) db <span class="number">0</span></span><br><span class="line">db <span class="number">0x55</span>,<span class="number">0xaa</span></span><br><span class="line"><span class="comment">//the two line can fill master boot sector so that the last two binary can be recognized as the flag of master boot sector.</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="neg-negative"><a href="#neg-negative" class="headerlink" title="neg(negative)"></a>neg(negative)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//neg is used to convert a number to its opposite</span></span><br><span class="line"><span class="comment">//al=8</span></span><br><span class="line">neg al  <span class="comment">// al=-8</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="cbw-Convert-Byte-to-Word-cwd-Convert-Word-to-Double-Word"><a href="#cbw-Convert-Byte-to-Word-cwd-Convert-Word-to-Double-Word" class="headerlink" title="cbw(Convert Byte to Word),cwd(Convert Word to Double-Word)"></a>cbw(Convert Byte to Word),cwd(Convert Word to Double-Word)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//cbw will extend a signed number in al into ax while cwd extend a signed number in ax into dx:ax. Actually, it just fills ah or dx with signed bit of al or ax</span></span><br><span class="line"><span class="comment">//<span class="doctag">NOTE:</span> cbw and cwd don't have operand with implicit operand-al or ax.</span></span><br><span class="line">cbw</span><br><span class="line">cwd</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="jns-js"><a href="#jns-js" class="headerlink" title="jns , js"></a>jns , js</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//jns is a conditional branch instruction based on SF(sign flag) of FLAGS(flag register). </span></span><br><span class="line"><span class="comment">//Many arithmetic and logical instruction can sway SF, such as add, sub, xor and so on. When the highest bit of a result outputted by A&amp;L instruction is 1, CPU will set SF to 1, while set 0 under the other situation.</span></span><br><span class="line"><span class="comment">// SF=0, jns vaild, tranferring</span></span><br><span class="line"><span class="comment">//ZF(zero flag) be set when result is 0</span></span><br><span class="line">dec si</span><br><span class="line">jns show</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="jo-jno-jc-jnc-jp-jnp"><a href="#jo-jno-jc-jnc-jp-jnp" class="headerlink" title="jo,jno,jc,jnc,jp,jnp"></a>jo,jno,jc,jnc,jp,jnp</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// all of them similar to jns and js</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="jcxz-jump-if-cx-is-zero"><a href="#jcxz-jump-if-cx-is-zero" class="headerlink" title="jcxz (jump if cx is zero)"></a>jcxz (jump if cx is zero)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="cmp"><a href="#cmp" class="headerlink" title="cmp"></a>cmp</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//compare two operands, not keep result but set flag bit in accordace with result</span></span><br><span class="line">cmp al,<span class="number">0x08</span> equal to sub al,<span class="number">0x08</span> <span class="comment">//but dont keep value into al</span></span><br><span class="line">cmp ax,bx</span><br><span class="line"><span class="comment">//ax is the hero. We do care about if ax &gt; bx, if ax &lt; bx or if ax = bx.</span></span><br><span class="line"><span class="comment">//bx is a baseline.</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="push-pop"><a href="#push-pop" class="headerlink" title="push,pop"></a>push,pop</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//push and pop used for munipulating stack(in memory)</span></span><br><span class="line"><span class="comment">//There are two steps to define a stack segment:</span></span><br><span class="line"><span class="comment">//mov ss,ax ;ax=0</span></span><br><span class="line"><span class="comment">//mov sp,ax</span></span><br><span class="line"><span class="comment">//Both of two instructions just manipulate 16-bit register or  memory unit, with 8-bit register impossible</span></span><br><span class="line"><span class="comment">//working mechanism:</span></span><br><span class="line"><span class="comment">//In spite of defining in 0x00000, push stores value after decreasing sp by 2,so, stack grows from top to down-from FFFF0 to 00000.</span></span><br><span class="line"><span class="comment">//Because master boot sector is loaded in 0x07c00, stack should be paied attention not to grow into MBS'area, which programmers should control carefully.</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="push-in-32-mode"><a href="#push-in-32-mode" class="headerlink" title="push (in 32 mode)"></a>push (in 32 mode)</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">In 16 mode, push cant have immediate operand, while 32 mode dose.</span><br><span class="line"></span><br><span class="line">push byte 0x55</span><br><span class="line">Whatever in 16 mode or 32 mode, pushing in stack will never be byte 0x55. In 16 mode, 0x0055 is pushed ,while in 32 mode, 0x00000055 is pushed. These work is what compiler dose and transparent to programmer.</span><br><span class="line">Although under 32 mode 8-bit immi can be pushed, when it is poped, it couldn't pop to 8-bit register, while into 32-bit register.</span><br><span class="line"></span><br><span class="line">;under 32-bit mode </span><br><span class="line">push byt '.'</span><br><span class="line">pop eax      ;correct</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//8086 supports four calling ways</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//1:Relative near calling: parameters offered by label. It just can call procedure in the same segment.</span></span><br><span class="line">call near proc_1 <span class="comment">//near is dispensable.Without near. compiler deems near call.</span></span><br><span class="line">call <span class="number">0x0500</span>      <span class="comment">//different from indirect absolute near calling</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2:Indirect absolute near calling: parameter offered by regs or mem</span></span><br><span class="line">call cx</span><br><span class="line">call [<span class="number">0x3000</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">//3:Direct absolute far calling: parameter offered by two parts, the first of which is offset while the other is segement base address. It can call procedure from inter-segment.</span></span><br><span class="line">call <span class="number">0x2000</span>:<span class="number">0x0030</span>   <span class="comment">//0x2000 is offset ,0x0030 is base address</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4.Indirect absolute far calling, keyword far is necessary.parameter offered by regs or mem.</span></span><br><span class="line">call far [bx]</span><br><span class="line">call far [proc_1]  ;proc_1 dw <span class="number">0x0102</span>,<span class="number">0x2000</span> <span class="comment">//0x0102 offset  0x2000 base add</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="jmp-unconditional"><a href="#jmp-unconditional" class="headerlink" title="jmp (unconditional)"></a>jmp (unconditional)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//five different ways</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//1: relative short jmp: jump range is 8-bit length</span></span><br><span class="line">jmp short infinite   <span class="comment">//short is necessary</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2: 16-bit relative near jump: jump range is 16-bit length</span></span><br><span class="line">jmp near infinite   <span class="comment">//near can be removed, compiler generates machine code </span></span><br><span class="line">    				<span class="comment">//with regard to jmp's length of parameter</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3: 16-bit indirect absolute jump: its parameter is regs or memAddr which offers real offset that needn't caculating by compiler,which means the offset will be sent to IP directly </span></span><br><span class="line"> jmp near bx</span><br><span class="line"> jmp [jump_dest]  <span class="comment">//jump_dest dw 0xc000</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">//4: 16-bit direct absolute far jump:</span></span><br><span class="line">    jmp <span class="number">0x0000</span>:<span class="number">0x7c00</span> <span class="comment">//0x0000 base addr put in CS directly, 0x7c00 offset</span></span><br><span class="line">        			  <span class="comment">// put in IP directly</span></span><br><span class="line"><span class="comment">//5: 16-bit indirect absolute far jump: access to memory to get segment basic address and intro-segment offset, not register.</span></span><br><span class="line">	jump_far dw <span class="number">0x33c0</span>,<span class="number">0xf000</span> <span class="comment">//0x33c0 offset 0xf000 basic addr</span></span><br><span class="line">    jmp far [jump_far]        <span class="comment">// far is indispensable</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="ret-retf"><a href="#ret-retf" class="headerlink" title="ret,retf"></a>ret,retf</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ret is near return while retf is far return</span></span><br><span class="line"><span class="comment">//when executing ret, stack will pop a 16-bit operand to IP</span></span><br><span class="line"><span class="comment">//but when retf, stack will pop two words into CS and IP</span></span><br><span class="line"><span class="comment">//<span class="doctag">NOTE:</span> So-called stack is just current segment's stack which can be accessed by sp and ss</span></span><br><span class="line">ret</span><br><span class="line">retf</span><br><span class="line"><span class="comment">// for retf, the fisrt pop is ip the second is cs</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="cli-sti"><a href="#cli-sti" class="headerlink" title="cli, sti"></a>cli, sti</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cli: clear interrupt flag will ignore interrupt</span><br><span class="line">sti: set interrupt flag  will open interrupt</span><br><span class="line">Both of them change IF in FLAG register</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="hlt-halt"><a href="#hlt-halt" class="headerlink" title="hlt(halt)"></a>hlt(halt)</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">no operand, let computer stay in halt situation and low power state</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.w0:</span><br><span class="line"><span class="code">	mov al,0x0a</span></span><br><span class="line"><span class="code">	or al,0x80</span></span><br><span class="line"><span class="code">	out 0x70,al</span></span><br><span class="line"><span class="code">	in al,0x71</span></span><br><span class="line"><span class="code">	test al,0x80</span></span><br><span class="line"><span class="code">	jnz .w0</span></span><br><span class="line">If the seventh bit of al is 1, then jump to .w0. otherwise,execute sequentially.</span><br><span class="line">test actually is similar to 'and' ,set FLAG according result but discard it.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="bits-16-bits-32"><a href="#bits-16-bits-32" class="headerlink" title="[bits 16], [bits 32]"></a>[bits 16], [bits 32]</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[bits 16]  [bits 32] are pseudoinstruction, which indicate default compiling mode. [] is dispensible.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="org"><a href="#org" class="headerlink" title="org **"></a>org **</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">org makes label assembly offset plus org's argument.</span><br><span class="line">Without org, label represents offset relative to segment or programm start.</span><br><span class="line">While with org, such as org 0x7c00, every offset label represents will be added by 0x7c00.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="rep"><a href="#rep" class="headerlink" title="%rep"></a>%rep</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pre-instruction:</span><br><span class="line">%rep 255</span><br><span class="line"><span class="code">	Gate SelectorCode 32, SpuriousHandler , 0 , DA_386_IGate</span></span><br><span class="line">%endrep</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="Tips-1"><a href="#Tips-1" class="headerlink" title="Tips 1"></a>Tips 1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//If you want to use register to offer offset, there are just a few registers capable,which are BX,SI,DI,SP. It is a hardware rule.</span></span><br><span class="line"><span class="comment">//Besides, instruction mov ax,[bx] is actually equal to mov ax,[ds:bx] while you can appoint segment explicitly, such as mov ax,[es:bx]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Tips-2"><a href="#Tips-2" class="headerlink" title="Tips 2"></a>Tips 2</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Segment reigsters, like ss,cs,ds and es, can't be operand of arithmetic and logical instructions.</span></span><br><span class="line"><span class="keyword">xor</span> ss,ss</span><br><span class="line">add cs,cs <span class="comment">// both wrong</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-3"><a href="#Tips-3" class="headerlink" title="Tips 3"></a>Tips 3</h3><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Logical segment like header,code,data,stack ,is declared with vstart=0.</span><br><span class="line">So that,we just need to get this segment base address and then can obtain data there by intro-segment offset.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-4"><a href="#Tips-4" class="headerlink" title="Tips 4"></a>Tips 4</h3><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">When changing the value of ss, cpu will disable interrupt within this instruction and the next instruction. The next instrction is usually to change  the value of sp. Disabling interrupt has significance. Imagine that after finishing the change of the value of ss, an interrupt occurs so that the relevant register in current segment must be pushed into stack. However the ss has changed. push into a fault position.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-5"><a href="#Tips-5" class="headerlink" title="Tips 5"></a>Tips 5</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Under 32 protected mode, we can point out effective address by using general register (EAX,EBX,ECX,EDX,ESP,EBP,ESI,EDI) plus general registers other than ESP, the latter part can multiply a factor (1,2,4,8), and then can add a offset</span><br><span class="line"></span><br><span class="line">mov ecx,[eax+ebx*8+0x02]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-6"><a href="#Tips-6" class="headerlink" title="Tips 6"></a>Tips 6</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">After finishing global descriptor table, there are some tasks to do for into protect mode.</span><br><span class="line">1: resolve historical issue, open A20</span><br><span class="line"></span><br><span class="line">in al,0x92</span><br><span class="line">or al,0000_0010B</span><br><span class="line">out 0x92,al</span><br><span class="line"> </span><br><span class="line">2: IVT in real mode isn't situable. switch off interrupt</span><br><span class="line"></span><br><span class="line">cli</span><br><span class="line"></span><br><span class="line">3:cr0 (control register):  save flags for controling CPU mode and running situation. The zero bit is Protection Enable. 1 :into protect mode.</span><br><span class="line"></span><br><span class="line">mov eax,cr0</span><br><span class="line">or eax,1</span><br><span class="line">mov cro,eax</span><br><span class="line"></span><br><span class="line">4:from real mode into protect mode</span><br><span class="line"></span><br><span class="line">jmp dword 0x0008:flush   ;0x0008 is selector while flush is 32-bit offset</span><br><span class="line"></span><br><span class="line">NOTE: dword is to embellish offset and has nothing to do with selector.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-7"><a href="#Tips-7" class="headerlink" title="Tips 7"></a>Tips 7</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">To be compatible with 16-bit real mode, in 16-bit real mode, segment liner base address in descriptor high-speed buffer validate the low 20 bits, while the high 16 bit is invalid.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-8"><a href="#Tips-8" class="headerlink" title="Tips 8"></a>Tips 8</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">With regard to master boot sector, when it is loaded into memory address 0x7c00, whether to use pseudo-instruction org 0x7c00, initially, cs is 0x0000 and ip is 0x7c00.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-9"><a href="#Tips-9" class="headerlink" title="Tips 9"></a>Tips 9</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">If a label starts with dot(.), it's a local label and must follow after global label.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-10"><a href="#Tips-10" class="headerlink" title="Tips 10"></a>Tips 10</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Programm habits:      </span><br><span class="line"></span><br><span class="line">LABEL<span class="emphasis">_SEG_</span>CODE32:</span><br><span class="line"><span class="code">	...</span></span><br><span class="line">SegCode32Len  equ $-LABEL<span class="emphasis">_SEG_</span>CODE32</span><br><span class="line"></span><br><span class="line">SegCode32Len: These len label is to set segment limit conveniently</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Tips-11"><a href="#Tips-11" class="headerlink" title="Tips 11*"></a>Tips 11*</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Under real mode, label could be offset relative to the start of programm or segment. However, under protect mode, label must represent offset relative to segment start.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="Addressing-Mode"><a href="#Addressing-Mode" class="headerlink" title="Addressing Mode"></a>Addressing Mode</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Four modes to address:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//1. Register Addressing</span></span><br><span class="line">mov ax,cx</span><br><span class="line">inc dx</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. Immediate Addressing</span></span><br><span class="line">mov bx,<span class="number">0xf000</span></span><br><span class="line">mov dx,label_a</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. Memory Addressing</span></span><br><span class="line"><span class="comment">//3.1 Direct Addressing</span></span><br><span class="line">mov ax,[<span class="number">0x5c0f</span>]</span><br><span class="line">add <span class="keyword">word</span> [<span class="number">0x0230</span>],<span class="number">0x5000</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//3.2 Base Addressing</span></span><br><span class="line"><span class="comment">//base register:bx bp -offer offset</span></span><br><span class="line">mov [bx],dx</span><br><span class="line">add <span class="keyword">byte</span> [bx],<span class="number">0x55</span></span><br><span class="line">mov [bx+<span class="number">0x100</span>],al</span><br><span class="line">    </span><br><span class="line"><span class="comment">//3.3 Indexed Addressing</span></span><br><span class="line"><span class="comment">//indexed register:si di -offer offset</span></span><br><span class="line">mov [si],dx</span><br><span class="line">add ax,[di]</span><br><span class="line">mov [si+<span class="number">0x100</span>],al</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.4 Base Indexed Addressing</span></span><br><span class="line">add <span class="keyword">word</span> [bx+di],<span class="number">0x3000</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Manipulate-disk-to-read-data"><a href="#Manipulate-disk-to-read-data" class="headerlink" title="Manipulate disk to read data"></a>Manipulate disk to read data</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CPU accesses disk by manipulate I/O ports that are addressed independent to memory address. A I/O port actually is a 8-bit or 16-bit register.</span></span><br><span class="line"><span class="comment">//All ports are unified addressing, from 0x0001 to 0xffff. Every I/O interface is assigned some ports. </span></span><br><span class="line"><span class="comment">//0x1f0-0x1f7 are assigned master hard disk interface</span></span><br><span class="line"><span class="comment">//while slave hard disk with 0x170-0x177</span></span><br><span class="line"><span class="comment">//0x1f0: data port</span></span><br><span class="line"><span class="comment">//0x1f1: fault information port</span></span><br><span class="line"><span class="comment">//0x1f2: indicate how many sectors to read</span></span><br><span class="line"><span class="comment">//0x1f3-0x1f6: save 24-bit LBA address,the high four bits of 0x1f6 have extra meaning,which don't indicate location.</span></span><br><span class="line"><span class="comment">//0x1f6: the seveth and the fifths bit are 1. The sixth bit: 0 CHS  1 LBA</span></span><br><span class="line"><span class="comment">//the fourth bit: 0 master disk  1 slave disk</span></span><br><span class="line"><span class="comment">//0x1f7: command and situation port. 0x20 is reading command.</span></span><br><span class="line"><span class="comment">//About 0x1f7: the seveth bit means whether busy,the third bit means whether to be ready to exchange with cpu. CPU can read this port frequently, if it is 0x08 , that means hard disk gets ready to exchange data with cpu. While if it's the highest bit is 1, it can't transfer data.</span></span><br><span class="line"><span class="comment">//Instruction format: in  out :dx save port number , ax or al save data</span></span><br><span class="line">in al,dx</span><br><span class="line">in ax,dx</span><br><span class="line"></span><br><span class="line">out dx,al</span><br><span class="line">out dx,ax</span><br><span class="line"></span><br><span class="line">out <span class="number">0x37</span>,al <span class="comment">//;this is possible but impossible in in</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Control-cursor-by-modifying-ports-in-video-card"><a href="#Control-cursor-by-modifying-ports-in-video-card" class="headerlink" title="Control cursor by modifying ports in video card"></a>Control cursor by modifying ports in video card</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Since video card have many ports, we don't manipulate port as I/O interface, which means we dont write target port number into dx to point out which to operate. Pointing out target register by index register-0x3d4. While cursor position is kept in port 0x0e and 0x0f.</span></span><br><span class="line"><span class="comment">//0x0e: high 8 bit , 0x0f: low 8 bit. data port: 0x3d5</span></span><br><span class="line">;<span class="built_in">get</span> <span class="built_in">position</span> of current <span class="built_in">cursor</span></span><br><span class="line">mov dx,<span class="number">0x3d4</span></span><br><span class="line">mov al,<span class="number">0x0e</span></span><br><span class="line">out dx,al</span><br><span class="line">mov dx,<span class="number">0x3d5</span></span><br><span class="line">in al,dx</span><br><span class="line">mov ah,al</span><br><span class="line"></span><br><span class="line">mov dx,<span class="number">0x3d4</span></span><br><span class="line">mov al,<span class="number">0x0f</span></span><br><span class="line">out dx,al</span><br><span class="line">mov dx,<span class="number">0x3d5</span></span><br><span class="line">in al,dx</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="User-program-basic-framework"><a href="#User-program-basic-framework" class="headerlink" title="User program basic framework"></a>User program basic framework</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//when cpu jumps from loader to usr program, ds and es point out user program header segment basic address</span></span><br><span class="line"></span><br><span class="line">SECTION header vstart=<span class="number">0</span></span><br><span class="line">   	program_length: dd program_end</span><br><span class="line">   	code_entry:    dw start</span><br><span class="line">   				   dd section.code_1.start</span><br><span class="line">    realloc_tb1_len: dw (header_end-code_1_segment)/<span class="number">4</span></span><br><span class="line">    </span><br><span class="line">     code_1_segment: dd section.code_1.start</span><br><span class="line">     code_2_segment: dd section.code_2.start</span><br><span class="line">     data_1_segment: dd section.data_1.start</span><br><span class="line">     data_2_segment: dd section.data_2.start</span><br><span class="line">header_end:</span><br><span class="line"></span><br><span class="line">SECTION code_1 align=<span class="number">16</span> vstart=<span class="number">0</span></span><br><span class="line">	start:           <span class="comment">//this label is for jumping here easily</span></span><br><span class="line">		<span class="comment">//valid codes</span></span><br><span class="line">	</span><br><span class="line">SECTION code_2 align=<span class="number">16</span> vstart=<span class="number">0</span></span><br><span class="line">    <span class="built_in">begin</span>:			 <span class="comment">//this label is for jump here easily</span></span><br><span class="line"></span><br><span class="line">SECTION data_1 align=<span class="number">16</span> vstart=<span class="number">0</span></span><br><span class="line">    </span><br><span class="line">SECTION data_2 align=<span class="number">16</span> vstart=<span class="number">0</span></span><br><span class="line">    </span><br><span class="line">SECTION <span class="built_in">stack</span> align=<span class="number">16</span> vstart=<span class="number">0</span></span><br><span class="line">    resb <span class="number">256</span>      <span class="comment">//declare stack space, can change</span></span><br><span class="line">stack_end:        <span class="comment">//this label is put into sp.</span></span><br><span class="line"></span><br><span class="line">SECTION trail align=<span class="number">16</span></span><br><span class="line">program_end:      <span class="comment">//this label is for caculating program length.</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="BCD-code-Binary-coded-Decimal"><a href="#BCD-code-Binary-coded-Decimal" class="headerlink" title="BCD  code (Binary coded Decimal)"></a>BCD  code (Binary coded Decimal)</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">For a decimal number 25, its normal binary format is 00011001</span><br><span class="line">but the BCD format changes 2 and 5 to binary respectively, which is 00100101.</span><br><span class="line">Obviously, four bit represent up to 15, but decimal up to 9, so more than 1001 impossible</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Interrupt"><a href="#Interrupt" class="headerlink" title="Interrupt"></a>Interrupt</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1: Interrupt is sent into CPU with two leads which are NMI(NOn Maskable Interrupt, NMI) and INTR(Maskable Interrupt)</span><br><span class="line"></span><br><span class="line">2:8259 programmable Interrupt Controller (PIC) can be set sitation and interrupt number in every lead. There are two chips in every PC.</span><br><span class="line"></span><br><span class="line">3:8259 contains Interrupt Mask Register(IMR), a 8-bit register which corresponds eight leads, deciding whether the interrupt is vaild, 0: INTR avalible 1: INTR unavabilable</span><br><span class="line">Master port: 0x20 0x21   Slave port: 0xa0 0xa1 </span><br><span class="line"></span><br><span class="line">Example: read IMR from in 0xa1 in slave</span><br><span class="line">in al,0xa1	 // read before write</span><br><span class="line">and al,0xfe  // lead 0 allows interrupt from RTC</span><br><span class="line">out 0xa1,al  //underlying information:0xa1 saves IMR</span><br><span class="line"></span><br><span class="line">4:Lead IR0 has the highest priority, while Lead IR7 has the lowest priority. Every lead has a Interrpt number which is programmable by the whole chip.</span><br><span class="line"></span><br><span class="line">5:8259 controller has a Interrupt Service Register(ISR), 8 bit, its every bit correspond to an interrupt lead. When processing interrupt, 8259 will set corresponding bit 1 indicating doing serevice for the interrupt from this lead</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="IVT-Interrupt-Vector-Table"><a href="#IVT-Interrupt-Vector-Table" class="headerlink" title="IVT(Interrupt Vector Table)"></a>IVT(Interrupt Vector Table)</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IVT is put within 00000-003ff, including up to 256 interrupt service program,</span><br><span class="line">After 8256 sends interrupt number to CPU, CPU will get the entry of interrupt service programm according to interrupt number.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="CMOS-RAM-inside-RTC-Real-Time-Clock"><a href="#CMOS-RAM-inside-RTC-Real-Time-Clock" class="headerlink" title="CMOS RAM inside RTC(Real-Time Clock)"></a>CMOS RAM inside RTC(Real-Time Clock)</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0x70 , 0x74 indexed port</span><br><span class="line">0x71 , 0x75 data port</span><br><span class="line"></span><br><span class="line">Example: obtain week</span><br><span class="line">mov al,0x06   ; the 0x06 byte keeps what week</span><br><span class="line">out 0x70,al</span><br><span class="line">in al,0x71</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8086-Memory-Layout"><a href="#8086-Memory-Layout" class="headerlink" title="8086 Memory Layout"></a>8086 Memory Layout</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1:  0x00000 ~ 0x003ff   :Interrupt vector table 1024B</span><br><span class="line">2:  0x00400 ~ 0x004ff   :BIOS data area            256B</span><br><span class="line">3:  0x00500 ~ 0x07bff   :Free area                 1280B</span><br><span class="line">4:  0x07c00 ~ 0x07dff   :Boot sector entry         512B</span><br><span class="line">5:  0x07e00 ~ 0x9ffff   :Free area                 32256B</span><br><span class="line">6:  0xa0000 ~ 0xaffff   :Graph and video buffer    64KB</span><br><span class="line">7:  0xb0000 ~ 0xb7fff   :mono text video buffer    32KB</span><br><span class="line">8:  0xb8000 ~ 0xbffff   :chroma text video buffer  32KB</span><br><span class="line">9:  0xc0000 ~ 0xc7fff   :video card bios           32KB</span><br><span class="line">10: 0xc8000 ~ 0xcbfff   :IDE controller BISO       16KB</span><br><span class="line">11: 0xcc000 ~ 0xeffff                              143KB</span><br><span class="line">12: 0xf0000 ~ 0xfffff   :system BIOS               64KBs</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Real-mode-into-Protect-mode-reference-code"><a href="#Real-mode-into-Protect-mode-reference-code" class="headerlink" title="Real mode into Protect mode reference code"></a>Real mode into Protect mode reference code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">SECTION mbr align=<span class="number">16</span> vstart=<span class="number">0x7c00</span></span><br><span class="line">   [bits <span class="number">16</span>]</span><br><span class="line">	mov ax,cs</span><br><span class="line">	mov ss,ax</span><br><span class="line">	mov sp,<span class="number">0x7c00</span></span><br><span class="line"></span><br><span class="line">	mov ax,[cs:gdt_base]</span><br><span class="line">	mov dx,[cs:gdt_base+<span class="number">0x02</span>]</span><br><span class="line">	mov bx,<span class="number">16</span></span><br><span class="line">	div bx</span><br><span class="line">	mov ds,ax</span><br><span class="line">	mov bx,dx</span><br><span class="line"></span><br><span class="line">	mov dword [bx],<span class="number">0x00000000</span></span><br><span class="line">	mov dword [bx+<span class="number">0x04</span>],<span class="number">0x00000000</span></span><br><span class="line"></span><br><span class="line">	mov dword [bx+<span class="number">0x08</span>],<span class="number">0x7c0001ff</span></span><br><span class="line">	mov dword [bx+<span class="number">0x0c</span>],<span class="number">0x00409800</span></span><br><span class="line"></span><br><span class="line">	mov dword [bx+<span class="number">0x10</span>],<span class="number">0x8000ffff</span></span><br><span class="line">	mov dword [bx+<span class="number">0x14</span>],<span class="number">0x0040920b</span></span><br><span class="line"></span><br><span class="line">	mov dword [bx+<span class="number">0x18</span>],<span class="number">0x00007a00</span></span><br><span class="line">	mov dword [bx+<span class="number">0x1c</span>],<span class="number">0x00409600</span></span><br><span class="line">	mov <span class="keyword">word</span> [cs:gdt_size],<span class="number">31</span></span><br><span class="line"></span><br><span class="line">	lgdt [cs:gdt_size]     ;load gdt <span class="keyword">register</span> <span class="number">48</span> <span class="built_in">bit</span></span><br><span class="line"></span><br><span class="line">	;<span class="built_in">connect</span> A20</span><br><span class="line">	in al,<span class="number">0x92</span></span><br><span class="line">	<span class="keyword">or</span> al,<span class="number">0000</span>_0010B</span><br><span class="line">	out <span class="number">0x92</span>,al</span><br><span class="line"></span><br><span class="line">	cli</span><br><span class="line"></span><br><span class="line">	mov eax,cr0</span><br><span class="line">	<span class="keyword">or</span> eax,<span class="number">1</span></span><br><span class="line">	mov cr0,eax</span><br><span class="line"></span><br><span class="line">	jmp dword <span class="number">0x0008</span>:<span class="built_in">flush</span><span class="number">-0x7c00</span></span><br><span class="line"></span><br><span class="line">	[bits <span class="number">32</span>]</span><br><span class="line"> <span class="built_in">flush</span>:</span><br><span class="line">	mov  cx,<span class="number">00000000000</span>_10_000B</span><br><span class="line">	mov ds,cx</span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x00</span>],<span class="string">'P'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x02</span>],<span class="string">'r'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x04</span>],<span class="string">'o'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x06</span>],<span class="string">'t'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x08</span>],<span class="string">'e'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x0a</span>],<span class="string">'c'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x0c</span>],<span class="string">'t'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x0e</span>],<span class="string">'m'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x10</span>],<span class="string">'o'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x12</span>],<span class="string">'d'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x14</span>],<span class="string">'e'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x16</span>],<span class="string">' '</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x18</span>],<span class="string">'O'</span></span><br><span class="line">	mov <span class="keyword">byte</span> [<span class="number">0x1a</span>],<span class="string">'K'</span></span><br><span class="line"></span><br><span class="line">	mov cx,<span class="number">00000000000</span>_11_000B</span><br><span class="line">	mov ss,cx</span><br><span class="line">	mov esp,<span class="number">0x7c00</span></span><br><span class="line">	mov ebp,esp</span><br><span class="line">	push <span class="keyword">byte</span> <span class="string">'.'</span></span><br><span class="line">	sub ebp,<span class="number">4</span></span><br><span class="line">	cmp ebp,esp</span><br><span class="line">	jnz ghalt</span><br><span class="line">	pop eax</span><br><span class="line">	mov [<span class="number">0x1c</span>],al</span><br><span class="line"> ghalt:</span><br><span class="line">	hlt</span><br><span class="line"></span><br><span class="line">	gdt_size: dw <span class="number">0</span></span><br><span class="line">	gdt_base: dd <span class="number">0x00007e00</span></span><br><span class="line"></span><br><span class="line">	times <span class="number">510</span>-($-$$) db <span class="number">0</span></span><br><span class="line">	db <span class="number">0x55</span>,<span class="number">0xaa</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Macro"><a href="#Macro" class="headerlink" title="Macro*"></a>Macro*</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1: define a Macro</span><br><span class="line"></span><br><span class="line">%macro Descriptor 3   ; 3 is 3 parameter number</span><br><span class="line"><span class="code">	dw     %2 &amp; 0ffffh</span></span><br><span class="line"><span class="code">	dw     %1 &amp; 0ffffh</span></span><br><span class="line"><span class="code">	db     (%1 &gt;&gt; 16) &amp; 0ffh</span></span><br><span class="line"><span class="code">	dw     ((%2 &gt;&gt; 8) &amp; 0f00h) | (%3 &amp; 0f0ffh)</span></span><br><span class="line"><span class="code">	db     (%1 &gt;&gt; 24) &amp; 0ffh</span></span><br><span class="line">%endmacro</span><br><span class="line"></span><br><span class="line">2: use it in asm file</span><br><span class="line"></span><br><span class="line">LABEL_GDT:   Descriptor   0,     0     ,0</span><br><span class="line"></span><br><span class="line">Preprocessor will receive 3 parameters into macro definition and then substitute Descriptor for the macro code, which is there dw, dw, db, dw, db.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="CPL-DPL-RPL"><a href="#CPL-DPL-RPL" class="headerlink" title="CPL, DPL, RPL*"></a>CPL, DPL, RPL*</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CPL: Current Privilege Level saved in cs or ss. It may be equal to current segment descriptor privilege but may not. If one app shifts to another lower privilege app, CPL will change.</span><br><span class="line"></span><br><span class="line">DPL: Descriptor Privilege Level saved in segment descriptor</span><br><span class="line"></span><br><span class="line">RPL: Request Privilege Level saved in selector.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Gate"><a href="#Gate" class="headerlink" title="Gate*"></a>Gate*</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Calling a gate has two parts:from lower privilege to higher with call</span><br><span class="line"><span class="code">							:from higher privilege to lower with ret</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="CR-0-4"><a href="#CR-0-4" class="headerlink" title="CR 0-4*"></a>CR 0-4*</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CR0: include flags to control CPU mode and system control</span><br><span class="line">CR1: kept</span><br><span class="line">CR2: include liner address leading to page fault</span><br><span class="line">CR3: Page Directory Base address Register</span><br><span class="line"></span><br><span class="line">CR3 just has 20 bits page directory base address, which means page directory table will be 4-KB alignment as PDE and PTE be.</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2021/01/10/x86%20Instructions/" data-id="cknor6qr300103wu76uxxdapq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Virux"
+        },
+        "headline": "x86 Instructions",
+        "image": "http://yoursite.com",
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2021-01-10",
+        "dateCreated": "2021-01-10",
+        "dateModified": "2021-01-22",
+        "url": "http://yoursite.com/2021/01/10/x86 Instructions/",
+        "description": "x86 InstructionsMaster boot sector123456//Nomally, 0 head 0 cylinder 1 sector is the Master boot sector//to prevent reading fault data, master boot sector's last two binary//must be 0x55aa//use db or ",
+        "wordCount": 4922
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="stack-overflow" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-stack-overflow"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2021/01/30/kernel/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            kernel
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2021/01/05/Bochs%20for%20debug/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Bochs for debug</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/01/30/Linux%20commands/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2021/01/30/Linux%20commands/" class="title">Linux commands</a></p>
+                            <p class="item-date"><time datetime="2021-01-30T08:22:21.368Z" itemprop="datePublished">2021-01-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/01/30/kernel/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2021/01/30/kernel/" class="title">kernel</a></p>
+                            <p class="item-date"><time datetime="2021-01-30T08:22:21.333Z" itemprop="datePublished">2021-01-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/01/10/x86%20Instructions/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2021/01/10/x86%20Instructions/" class="title">x86 Instructions</a></p>
+                            <p class="item-date"><time datetime="2021-01-10T08:08:35.998Z" itemprop="datePublished">2021-01-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/01/05/Bochs%20for%20debug/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2021/01/05/Bochs%20for%20debug/" class="title">Bochs for debug</a></p>
+                            <p class="item-date"><time datetime="2021-01-05T05:26:45.603Z" itemprop="datePublished">2021-01-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/01/03/Software%20can't%20run%20on%20different%20OS%20based%20the%20same%20architecture/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2021/01/03/Software%20can't%20run%20on%20different%20OS%20based%20the%20same%20architecture/" class="title">Software can&#39;t run on different OS based the same architecture</a></p>
+                            <p class="item-date"><time datetime="2021-01-03T07:58:15.251Z" itemprop="datePublished">2021-01-03</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2021 Virux</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2021/01/10/x86%20Instructions/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
