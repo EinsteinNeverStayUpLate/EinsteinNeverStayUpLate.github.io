@@ -1395,4 +1395,13 @@
     <url>/2021/04/20/Grammar/</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title>test3</title>
+    <url>/2021/04/20/test3/</url>
+    <content><![CDATA[<p>These is excerpt.</p>
+<a id="more"></a>]]></content>
+      <tags>
+        <tag>nontarget</tag>
+      </tags>
+  </entry>
 </search>
