@@ -1398,7 +1398,8 @@
   <entry>
     <title>test3</title>
     <url>/2021/04/20/test3/</url>
-    <content><![CDATA[<p>These is excerpt.</p>
+    <content><![CDATA[<p><img src="/2021/04/20/test3/1.png" alt="1"></p>
+<p>These is excerpt.</p>
 <a id="more"></a>
 
 <p>This is Hueman, a free responsive, high resolution and pretty flexible theme for you to use to write about things you love. Make sure to check all the examples out! To download this theme or to check the full feature list, just go here. Feel free to leave a comment there if you digg it!</p>
