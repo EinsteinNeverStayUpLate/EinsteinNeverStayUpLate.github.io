@@ -381,22 +381,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Linux commands</title>
-    <url>/2021/01/30/Linux%20commands/</url>
-    <content><![CDATA[<h2 id="Linux-commands"><a href="#Linux-commands" class="headerlink" title="Linux commands"></a>Linux commands</h2><h3 id="File-color"><a href="#File-color" class="headerlink" title="File color"></a>File color</h3><p>Blue  :  Directory </p>
-<p>Green: Executable file</p>
-<p>Light blue: Link file</p>
-<p>Red:       Compressed file</p>
-<p>Yellow:   Device file</p>
-<p>Gray:      others</p>
-<h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">;unzip compressed file</span><br><span class="line">1:bz2</span><br><span class="line">tar jxvf filename.tar.bz2</span><br><span class="line">2:gz</span><br><span class="line">tar zxvf filename.tar.gz</span><br></pre></td></tr></table></figure>
-
-
-
-<p><a href="https://nchc.dl.sourceforge.net/project/bochs/bochs/2.6.11/bochs-2.6.11.tar.gz" target="_blank" rel="noopener">https://nchc.dl.sourceforge.net/project/bochs/bochs/2.6.11/bochs-2.6.11.tar.gz</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>In case (of)</title>
     <url>/2020/06/03/In%20case%20(of)/</url>
     <content><![CDATA[<h2 id="In-case-of"><a href="#In-case-of" class="headerlink" title="In case (of)"></a>In case (of)</h2><p>Some examples of in case:</p>
@@ -445,7 +429,7 @@
   <entry>
     <title>Notes of the features of C</title>
     <url>/2020/10/09/Notes%20of%20the%20features%20of%20C/</url>
-    <content><![CDATA[<h1 id="Notes-of-the-features-of-C"><a href="#Notes-of-the-features-of-C" class="headerlink" title="Notes of the features of C"></a>Notes of the features of C</h1><h4 id="1-const关键字在声明指针时不同位置形成的不同指针"><a href="#1-const关键字在声明指针时不同位置形成的不同指针" class="headerlink" title="1.const关键字在声明指针时不同位置形成的不同指针"></a>1.const关键字在声明指针时不同位置形成的不同指针</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> *pc;  <span class="comment">//意味着不能通过该指针来修改其所指向的变量</span></span><br><span class="line"><span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//意味着在初始化后，pc不能指向其他变量，但能通过该指针改变其指向的值</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//同上</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="Notes-C-features"><a href="#Notes-C-features" class="headerlink" title="Notes: C features"></a>Notes: C features</h1><h4 id="1-const关键字在声明指针时不同位置形成的不同指针"><a href="#1-const关键字在声明指针时不同位置形成的不同指针" class="headerlink" title="1.const关键字在声明指针时不同位置形成的不同指针"></a>1.const关键字在声明指针时不同位置形成的不同指针</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> *pc;  <span class="comment">//意味着不能通过该指针来修改其所指向的变量</span></span><br><span class="line"><span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//意味着在初始化后，pc不能指向其他变量，但能通过该指针改变其指向的值</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//同上</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="2-指针与多维数组的一个范例"><a href="#2-指针与多维数组的一个范例" class="headerlink" title="2.指针与多维数组的一个范例"></a>2.指针与多维数组的一个范例</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">zippo[<span class="number">2</span>][<span class="number">1</span>]==*(*(zippo+<span class="number">2</span>)+<span class="number">1</span>) <span class="comment">//zippo视为一个指针</span></span><br></pre></td></tr></table></figure>
 
@@ -492,7 +476,7 @@
   <entry>
     <title>Software can&#39;t run on different OS based the same architecture</title>
     <url>/2021/01/03/Software%20can&#39;t%20run%20on%20different%20OS%20based%20the%20same%20architecture/</url>
-    <content><![CDATA[<h2 id="Software-can’t-run-on-different-OS-based-the-same-architecture"><a href="#Software-can’t-run-on-different-OS-based-the-same-architecture" class="headerlink" title="Software can’t run on different OS based the same architecture"></a>Software can’t run on different OS based the same architecture</h2><p>​    A software that dose run on Windows but not on Linux , both of which are based on x86 architecture might make people feel confused. Because after being assembled into machine code, the most of result are alike. So why the same software ,no any changes, can’t run on different OS?<br>​    One of  reasons is with regard to different OS, software need adding specific information to instruct OS how to load itself.</p>
+    <content><![CDATA[<h2 id="Software-can’t-run-on-different-OS-based-on-the-same-architecture"><a href="#Software-can’t-run-on-different-OS-based-on-the-same-architecture" class="headerlink" title="Software can’t run on different OS based on the same architecture"></a>Software can’t run on different OS based on the same architecture</h2><p>​    A software that dose run on Windows but not on Linux , both of which are based on x86 architecture might make people feel confused. Because after being assembled into machine code, the most of result are alike. So why the same software ,no any changes, can’t run on different OS?<br>​    One of  reasons is with regard to different OS, software need adding specific information to instruct OS how to load itself.</p>
 ]]></content>
   </entry>
   <entry>
@@ -1407,9 +1391,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>test1</title>
-    <url>/2021/04/20/test1/</url>
-    <content><![CDATA[<p><img src="/2021/04/20/test1/1.jpg" alt="1"></p>
-]]></content>
+    <title>Grammar</title>
+    <url>/2021/04/20/Grammar/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
