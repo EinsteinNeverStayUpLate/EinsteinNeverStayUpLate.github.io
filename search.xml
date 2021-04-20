@@ -1369,7 +1369,6 @@
     <title>C features</title>
     <url>/2021/04/20/C%20features/</url>
     <content><![CDATA[<p><img src="/2021/04/20/C%20features/2.png" alt="2"></p>
-<p>Some important C language features.</p>
 <a id="more"></a>
 
 <h4 id="1-const关键字在声明指针时不同位置形成的不同指针"><a href="#1-const关键字在声明指针时不同位置形成的不同指针" class="headerlink" title="1.const关键字在声明指针时不同位置形成的不同指针"></a>1.const关键字在声明指针时不同位置形成的不同指针</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> *pc;  <span class="comment">//意味着不能通过该指针来修改其所指向的变量</span></span><br><span class="line"><span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//意味着在初始化后，pc不能指向其他变量，但能通过该指针改变其指向的值</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//同上</span></span><br></pre></td></tr></table></figure>
