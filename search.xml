@@ -892,9 +892,12 @@
 ]]></content>
   </entry>
   <entry>
-    <title>x86 Instructions</title>
-    <url>/2021/01/10/x86%20Instructions/</url>
-    <content><![CDATA[<h2 id="x86-Instructions"><a href="#x86-Instructions" class="headerlink" title="x86 Instructions"></a>x86 Instructions</h2><h3 id="Master-boot-sector"><a href="#Master-boot-sector" class="headerlink" title="Master boot sector"></a>Master boot sector</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Nomally, 0 head 0 cylinder 1 sector is the Master boot sector</span></span><br><span class="line"><span class="comment">//to prevent reading fault data, master boot sector's last two binary</span></span><br><span class="line"><span class="comment">//must be 0x55aa</span></span><br><span class="line"><span class="comment">//use db or dw can complete it</span></span><br><span class="line">db <span class="number">0x55</span>,<span class="number">0xaa</span></span><br><span class="line">dw <span class="number">0xaa55</span>      <span class="comment">//cause,write a word into memory with low byte alignment</span></span><br></pre></td></tr></table></figure>
+    <title>x86 instruction</title>
+    <url>/2021/04/20/x86%20Instructions/</url>
+    <content><![CDATA[<p><img src="/2021/04/20/x86%20Instructions/3.jpg" alt="3"></p>
+<a id="more"></a>
+
+<h3 id="Master-boot-sector"><a href="#Master-boot-sector" class="headerlink" title="Master boot sector"></a>Master boot sector</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Nomally, 0 head 0 cylinder 1 sector is the Master boot sector</span></span><br><span class="line"><span class="comment">//to prevent reading fault data, master boot sector's last two binary</span></span><br><span class="line"><span class="comment">//must be 0x55aa</span></span><br><span class="line"><span class="comment">//use db or dw can complete it</span></span><br><span class="line">db <span class="number">0x55</span>,<span class="number">0xaa</span></span><br><span class="line">dw <span class="number">0xaa55</span>      <span class="comment">//cause,write a word into memory with low byte alignment</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -1121,6 +1124,13 @@
 <h3 id="CR-0-4"><a href="#CR-0-4" class="headerlink" title="CR 0-4*"></a>CR 0-4*</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">CR0: include flags to control CPU mode and system control</span><br><span class="line">CR1: kept</span><br><span class="line">CR2: include liner address leading to page fault</span><br><span class="line">CR3: Page Directory Base address Register</span><br><span class="line"></span><br><span class="line">CR3 just has 20 bits page directory base address, which means page directory table will be 4-KB alignment as PDE and PTE be.</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>Assembly language</category>
+      </categories>
+      <tags>
+        <tag>x86</tag>
+        <tag>mbr</tag>
+      </tags>
   </entry>
   <entry>
     <title>计算机组成与设计：硬件软件接口(Computer Organization and Design  The HardwareSoftware Interface Fifth Edition)名词及重点摘录</title>
