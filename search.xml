@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Bochs usage</title>
+    <url>/2021/04/21/Bochs%20usage/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/Bochs%20usage/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug kernel codes. So, its  usage may not friendly. Before using it to virtualize physical machine, it need configuring a configure file, which contains many parameters you want to emulate.</p>
+<h3 id="Downloading-website"><a href="#Downloading-website" class="headerlink" title="Downloading website"></a>Downloading website</h3><p><a href="http://bochs.sourceforge.net/" target="_blank" rel="noopener">http://bochs.sourceforge.net/</a></p>
+<p><strong>NOTE: dlxlinux, demo of usage , of version 2.6.11 can’t be successfully run.</strong></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>​    Using Bochs to debug, two files are inevitable and should be generated manually, configure file and image file.<br>​    For config file, the following is an example. Each parameter’s meaning can be looked up from bochsrc-smaple.txt in Bochs directory.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># how much memory the emulated machine will have</span></span><br><span class="line">megs: <span class="number">32</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># filename of ROM images</span></span><br><span class="line">romimage: file=../BIOS-bochs-latest</span><br><span class="line">vgaromimage: file=../VGABIOS-lgpl-latest</span><br><span class="line"></span><br><span class="line"># what disk images will be used </span><br><span class="line">floppya: <span class="number">1</span>_44=floppya.img, status=inserted</span><br><span class="line">floppyb: <span class="number">1</span>_44=floppyb.img, status=inserted</span><br><span class="line"></span><br><span class="line"># hard disk</span><br><span class="line">ata0: enabled=<span class="number">1</span>, ioaddr1=<span class="number">0x1f0</span>, ioaddr2=<span class="number">0x3f0</span>, irq=<span class="number">14</span></span><br><span class="line">ata0-master: type=disk, path=<span class="string">"a.img"</span>, cylinders=<span class="number">306</span>, heads=<span class="number">4</span>, spt=<span class="number">17</span></span><br><span class="line"></span><br><span class="line"># choose the boot disk.</span><br><span class="line">boot: c</span><br><span class="line"></span><br><span class="line"># <span class="keyword">default</span> <span class="built_in">config</span> interface is textconfig.</span><br><span class="line">#config_interface: textconfig</span><br><span class="line">#config_interface: wx</span><br><span class="line"></span><br><span class="line">#display_library: x</span><br><span class="line"># other choices: win32 sdl wx carbon amigaos beos macintosh nogui rfb term svga</span><br><span class="line"></span><br><span class="line"># where <span class="keyword">do</span> we send <span class="built_in">log</span> messages?</span><br><span class="line"><span class="built_in">log</span>: bochsout.txt</span><br><span class="line"></span><br><span class="line"># disable the mouse, since DLX is <span class="built_in">text</span> only</span><br><span class="line">mouse: enabled=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># <span class="built_in">set</span> up IPS value <span class="keyword">and</span> clock sync</span><br><span class="line">cpu: ips=<span class="number">15000000</span></span><br><span class="line">clock: sync=both</span><br><span class="line">    </span><br><span class="line">keyboard: keymap=../keymaps/x11-pc-us.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-fr.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-de.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-es.<span class="built_in">map</span></span><br></pre></td></tr></table></figure>
+
+<p>​    For image file, it could be floppy, hard disk and CDROM, all of which should be written with binary file which can appear with NASM compiling .asm file to .bin file.<br>​    To utilize debug function, open <strong>bochsdbg.exe</strong>.</p>
+]]></content>
+      <categories>
+        <category>OSDev</category>
+      </categories>
+  </entry>
+  <entry>
     <title>bus</title>
     <url>/2021/04/21/Bus/</url>
     <content><![CDATA[<p><img src="/2021/04/21/Bus/0.jpg" alt="0"></p>
@@ -101,47 +119,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Bochs usage</title>
-    <url>/2021/04/21/Bochs%20usage/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/Bochs%20usage/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug kernel codes. So, its  usage may not friendly. Before using it to virtualize physical machine, it need configuring a configure file, which contains many parameters you want to emulate.</p>
-<h3 id="Downloading-website"><a href="#Downloading-website" class="headerlink" title="Downloading website"></a>Downloading website</h3><p><a href="http://bochs.sourceforge.net/" target="_blank" rel="noopener">http://bochs.sourceforge.net/</a></p>
-<p><strong>NOTE: dlxlinux, demo of usage , of version 2.6.11 can’t be successfully run.</strong></p>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>​    Using Bochs to debug, two files are inevitable and should be generated manually, configure file and image file.<br>​    For config file, the following is an example. Each parameter’s meaning can be looked up from bochsrc-smaple.txt in Bochs directory.</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># how much memory the emulated machine will have</span></span><br><span class="line">megs: <span class="number">32</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># filename of ROM images</span></span><br><span class="line">romimage: file=../BIOS-bochs-latest</span><br><span class="line">vgaromimage: file=../VGABIOS-lgpl-latest</span><br><span class="line"></span><br><span class="line"># what disk images will be used </span><br><span class="line">floppya: <span class="number">1</span>_44=floppya.img, status=inserted</span><br><span class="line">floppyb: <span class="number">1</span>_44=floppyb.img, status=inserted</span><br><span class="line"></span><br><span class="line"># hard disk</span><br><span class="line">ata0: enabled=<span class="number">1</span>, ioaddr1=<span class="number">0x1f0</span>, ioaddr2=<span class="number">0x3f0</span>, irq=<span class="number">14</span></span><br><span class="line">ata0-master: type=disk, path=<span class="string">"a.img"</span>, cylinders=<span class="number">306</span>, heads=<span class="number">4</span>, spt=<span class="number">17</span></span><br><span class="line"></span><br><span class="line"># choose the boot disk.</span><br><span class="line">boot: c</span><br><span class="line"></span><br><span class="line"># <span class="keyword">default</span> <span class="built_in">config</span> interface is textconfig.</span><br><span class="line">#config_interface: textconfig</span><br><span class="line">#config_interface: wx</span><br><span class="line"></span><br><span class="line">#display_library: x</span><br><span class="line"># other choices: win32 sdl wx carbon amigaos beos macintosh nogui rfb term svga</span><br><span class="line"></span><br><span class="line"># where <span class="keyword">do</span> we send <span class="built_in">log</span> messages?</span><br><span class="line"><span class="built_in">log</span>: bochsout.txt</span><br><span class="line"></span><br><span class="line"># disable the mouse, since DLX is <span class="built_in">text</span> only</span><br><span class="line">mouse: enabled=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># <span class="built_in">set</span> up IPS value <span class="keyword">and</span> clock sync</span><br><span class="line">cpu: ips=<span class="number">15000000</span></span><br><span class="line">clock: sync=both</span><br><span class="line">    </span><br><span class="line">keyboard: keymap=../keymaps/x11-pc-us.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-fr.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-de.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-es.<span class="built_in">map</span></span><br></pre></td></tr></table></figure>
-
-<p>​    For image file, it could be floppy, hard disk and CDROM, all of which should be written with binary file which can appear with NASM compiling .asm file to .bin file.<br>​    To utilize debug function, open <strong>bochsdbg.exe</strong>.</p>
-]]></content>
-      <categories>
-        <category>OSDev</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C head file contents</title>
-    <url>/2021/04/21/C%20head%20file%20contents/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/C%20head%20file%20contents/1.jpg" alt="1"></p>
-<a id="more"></a>
-
-<ul>
-<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
-</li>
-<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
-</li>
-<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
-</li>
-<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
-</li>
-<li><p><strong>类型定义</strong>——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-  </entry>
-  <entry>
     <title>C features</title>
     <url>/2021/04/20/C%20features/</url>
     <content><![CDATA[<p><img src="/2021/04/20/C%20features/1.png" alt="1"></p>
@@ -196,6 +173,29 @@
       <tags>
         <tag>C</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>C head file contents</title>
+    <url>/2021/04/21/C%20head%20file%20contents/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/C%20head%20file%20contents/1.jpg" alt="1"></p>
+<a id="more"></a>
+
+<ul>
+<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
+</li>
+<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
+</li>
+<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
+</li>
+<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
+</li>
+<li><p><strong>类型定义</strong>——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
   </entry>
   <entry>
     <title>Hanming code</title>
@@ -256,6 +256,19 @@
       </categories>
   </entry>
   <entry>
+    <title>MOS and TTL</title>
+    <url>/2021/04/21/MOS%20and%20TTL/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>MOS：金属氧化半导体场效应晶体管</p>
+<p>TTL：Transistor-Transistor logic 晶体管-晶体管逻辑电路</p>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
     <title>MIPS addressing modes</title>
     <url>/2021/04/21/MIPS%20addressing%20modes/</url>
     <content><![CDATA[<p><img src="/2021/04/21/MIPS%20addressing%20modes/0.jpg" alt="0"></p>
@@ -271,19 +284,6 @@
 <p><img src="/2021/04/21/MIPS%20addressing%20modes/4.png" alt="PC-relative addressing"></p>
 <h3 id="伪直接寻址"><a href="#伪直接寻址" class="headerlink" title="伪直接寻址"></a>伪直接寻址</h3><p>伪直接寻址(pseudodirect addressing)，跳转地址由指令中26位字段和PC高位相连而成。</p>
 <p><img src="/2021/04/21/MIPS%20addressing%20modes/5.png" alt="pseudodirect addressing"></p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>MOS and TTL</title>
-    <url>/2021/04/21/MOS%20and%20TTL/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>MOS：金属氧化半导体场效应晶体管</p>
-<p>TTL：Transistor-Transistor logic 晶体管-晶体管逻辑电路</p>
 ]]></content>
       <categories>
         <category>computer hardware</category>
@@ -308,6 +308,50 @@
       </categories>
   </entry>
   <entry>
+    <title>access cycle and access time</title>
+    <url>/2021/04/21/access%20cycle%20and%20access%20time/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/access%20cycle%20and%20access%20time/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>存取时间：存取时间是指从启动一次存储器操作到完成该操作所经历的时间，分为读出时间和写入时间。</p>
+<p>存取周期：存取周期又称为读写周期或访问周期。它是指存储器进行一次完整的读写操作所需的全部时间，即<strong>连续两次独立访问存储器操作之间所需的最小时间间隔。</strong></p>
+<p>上面两个概念乍一看基本相同，其实不一样。关键在于存取周期=存取时间+恢复时间。</p>
+<p>那么What is recover time？</p>
+<p>对任何一种存储器，在读写操作之后，总要有一段恢复内部状态的复原时间。对于破坏性读出的存储器，存取周期往往比存取大得多（这意味着恢复时间较长）。故通常来说存取周期是大于存取时间的。（图在王道P94）</p>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>computer organization noun excerpts</title>
+    <url>/2021/04/21/computer%20organization%20noun%20excerpts/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/computer%20organization%20noun%20excerpts/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>服务器(server)：用于为多用户运行大型程序的计算机，通常由多个用户并行使用，并且一般通过网络访问。</p>
+<p>云计算(Cloud Computing)：在网络上提供服务的大服务器集群，它依赖于称为仓储规模计算机(Warehouse Scale Computer ,WSC)的巨型数据中心。一些运营商根据应用需求出租不同的服务器。</p>
+<p>软件即服务(Software as a Service,SaaS)：在网络上以服务的方式提供软件和数据。其运行方式通常不是在本地设备上运行所有的二进制代码，而是通过诸如运行在本地客户端的浏览器的小程序登录到远程服务器上执行。典型的例子是Web搜索和社交网络。</p>
+<p>程序性能影响因素：程序所用算法的有效性，用来建立程序并将其翻译成机器指令的软件系统，计算机执行机器指令的有效性。</p>
+<p><strong>计算机系统结构中的8个伟大思想</strong>：面向摩尔定律的设计（Moore’ Law）；使用抽象简化设计；加速大概率事件（common case fast）；通过并行提高性能；通过流水线提高性能（pipelining）；通过预测提高性能（prediction）；存储器层次（hierarchy of memory）；通过冗余提高可靠性。</p>
+<p>编译程序(Compiler)：将高级语言翻译为计算机所能识别的机器语言的程序。</p>
+<p>指令(Instruction)：计算机硬件所能理解并服从的命令。</p>
+<p><strong>重点1</strong>：组成计算机的5个经典部件是输入，输出，存储器，数据通路(datapath)（在计算机也称为运算器）和控制器，其中最后两个部件通常合称为处理器。你总能够把任何计算机（无论是现在的还是过去的）中的任何部件归于这五种之一。</p>
+<p>集成电路（Integrated Circuit）：也叫芯片（chip），一种将几十个至几百万格晶体管连接起来的设备。</p>
+<p>指令集体系结构（instruction set architecture）：也叫体系结构，是低层次软件和硬件之间的抽象接口，包含了需要编写正确运行的机器语言程序所需要的全部信息，包括指令，寄存器，存储访问和I/O等。</p>
+<p>应用二进制接口（Application Binary interface）：用户部分的指令加上应用程序员调用的操作系统接口，定义了二进制层次可移植的计算机的标准。</p>
+<p><strong>重点2</strong>：无论是硬件还是软件都可以使用抽象分成多个层次，每个较低的层次把细节对上层隐藏起来。抽象层次中的一个关键接口是指令集体系结构–硬件和底层软件之间的接口。这一抽象接口使得同一软件可以由成本不同，性能也不同的实现方法来完成。</p>
+<p>易失性存储器(volatile memory)：类似于DRAM的存储器，仅在加电时保存数据。</p>
+<p>非易失性存储器(nonvolatile memory)：在断电时仍可保持数据的存储器。如DVD。</p>
+<p>晶体管（transistor）：是一种收电流控制的开关。</p>
+<p>响应时间（response time）：也叫执行时间（execution time），是计算机完成某任务所需的总时间，包括硬盘访问，内存访问，I/O活动，操作系统开销和CPU执行时间等。</p>
+<p>吞吐率（throughput）：也叫带宽（bandwidth），性能的另一种度量参数，表示单位时间内完成的任务数量。</p>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
     <title>develpment aspects of microprocessors</title>
     <url>/2021/04/21/develpment%20aspects%20of%20microprocessors/</url>
     <content><![CDATA[<p><img src="/2021/04/21/develpment%20aspects%20of%20microprocessors/0.jpg" alt="0"></p>
@@ -320,6 +364,20 @@
 <li>将存储器集成到处理器芯片来提高处理器性能</li>
 <li>发展嵌入式处理器</li>
 </ul>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>difference between computer architecture and computer organization</title>
+    <url>/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>计算机体系结构(Computer Architecture)是指机器语言或汇编语言程序所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，<strong>大多属于抽象的属性</strong></p>
+<p>计算机组成（Computer Organization）是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构的问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为他们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，即可以认为它们的组成方式是不同的。<strong>例如，一台机器是否具备乘法指令是一个结构的问题，但实现乘法指令采用什么方式则是一个组成的问题。</strong></p>
+<h2 id="王道解释："><a href="#王道解释：" class="headerlink" title="王道解释："></a>王道解释：</h2><p>计算机体系结构（Computer architecture)，是指机器语言或汇编语言程序员所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，大都属于抽象属性。<br>    计算机组成（Computer Organization），是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为它们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，既可以认为它们的组成方式是不同的。例如，一个机器是否具备乘法指令是一个结构问题，但实现乘法指令采用什么方式（例如直接采用乘法器，亦或者采用加法器实现）则是一个组成的问题。<br>    许多计算机厂商提供一系列结构相同的解散及，而它们的组成却又相当大的差别，即使是同一系列的不同型号机器，其性能和价格差异也很大。例如，IBM System/370结构就包含了多种价位和性能的机位。</p>
 ]]></content>
       <categories>
         <category>computer hardware</category>
@@ -351,20 +409,6 @@
       </categories>
   </entry>
   <entry>
-    <title>difference between computer architecture and computer organization</title>
-    <url>/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>计算机体系结构(Computer Architecture)是指机器语言或汇编语言程序所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，<strong>大多属于抽象的属性</strong></p>
-<p>计算机组成（Computer Organization）是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构的问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为他们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，即可以认为它们的组成方式是不同的。<strong>例如，一台机器是否具备乘法指令是一个结构的问题，但实现乘法指令采用什么方式则是一个组成的问题。</strong></p>
-<h2 id="王道解释："><a href="#王道解释：" class="headerlink" title="王道解释："></a>王道解释：</h2><p>计算机体系结构（Computer architecture)，是指机器语言或汇编语言程序员所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，大都属于抽象属性。<br>    计算机组成（Computer Organization），是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为它们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，既可以认为它们的组成方式是不同的。例如，一个机器是否具备乘法指令是一个结构问题，但实现乘法指令采用什么方式（例如直接采用乘法器，亦或者采用加法器实现）则是一个组成的问题。<br>    许多计算机厂商提供一系列结构相同的解散及，而它们的组成却又相当大的差别，即使是同一系列的不同型号机器，其性能和价格差异也很大。例如，IBM System/370结构就包含了多种价位和性能的机位。</p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
     <title>SRAM and DRAM basic unit circuity  working principle</title>
     <url>/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/</url>
     <content><![CDATA[<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/0.jpg" alt="0"></p>
@@ -386,6 +430,27 @@
 ]]></content>
       <categories>
         <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>infix expression into prefix expression</title>
+    <url>/2021/04/21/infix%20expression%20into%20prefix%20expression/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/infix%20expression%20into%20prefix%20expression/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
+<p>遇到一个操作符则与栈顶元素比较优先级，若大于栈顶操作符的优先级则将该操作符入栈，否则不断将操作符出栈直至该操作符优先级小于栈顶操作符（注意，同等优先级，左边的操作符优先级高）。举例如下：</p>
+<p>将如下中缀表达式转化成后缀表达式：2+9/3-5</p>
+<p>输出：2                                    栈：</p>
+<p>输出：2                                    栈：+</p>
+<p>输出：29                                  栈：+</p>
+<p>输出：29                                  栈：+/</p>
+<p>输出：293                                栈：+/</p>
+<p>输出：293/+                            栈：-</p>
+<p>输出：293/+5-</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
       </categories>
   </entry>
   <entry>
@@ -568,23 +633,6 @@
       </categories>
   </entry>
   <entry>
-    <title>string matching KMP algorithm</title>
-    <url>/2021/04/21/string%20matching%20KMP%20algorithm/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/string%20matching%20KMP%20algorithm/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>KMP算法利用子串的结构特点（前后缀有相同的部分）来减少子串与主串的比较次数。</p>
-<p>前缀：必包含主串的第一个字符，且不包含主串的最后一个字符的主串的子串。<br>后缀：必包含主串的最后一个字符，且不包含主串的第一个字符的主串的子串。<br>例如：<br>    主串：a               后缀=前缀=∅<br>    主串：abab        前缀={a,ab,aba}  后缀={b,ab,bab}  故前后缀公共部分为{ab}</p>
-<p>算法的基本思想为：（设主串为s，子串为p）<br>利用指向主串的指针i，和指向子串的指针j，当s[i] != p[j]时，子串指针退回到某个已知位置<strong>next[j]</strong>，而i指针不需要回退。<strong>next[j]</strong>的形成是利用子串本身的特殊结构，即p[1…j]具有相同的前后缀。该算法的难以理解的地方在于<strong>next</strong>数组的递归求出。</p>
-<p><strong>next</strong>数组的递归求解：<br>（1）：求解next[j+1]时，设next[j]=k，若p[k]=p[j]，则next[j+1]=next[j]+1;<br>（2）：若p[k] != p[j]。此时，尝试p[next[k]] 是否等于p[j]。这样做的原因在于，在每次求解next[j+1]时，都将该问题看作是一个新的模式匹配，而主串和子串都是原题中的子串。故，在比较p[k]=p[j] 失败时，继续往后推导，使得在第二个问题中，当主串（即子串）的p[j]与子串的p[k]不匹配时，通过继续往低位子串寻找，找到一个位置<strong>k’</strong>，同时有<strong>p[k’]=p[j]</strong>，这样就意味着，主串（即子串）j+1前面有<strong>k’</strong>个和子串的<strong>k’</strong>前的<strong>所有</strong>相匹配，故next[j+1]=<strong>k’+1</strong>。<br>（3）： 若一直往后递归都没有找到某个位置的字符p[t]=p[j]，则<strong>next[j+1]=1</strong>。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stringmatching.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kmpMatching</span><span class="params">(<span class="keyword">char</span> mstr[],<span class="keyword">int</span> msize, <span class="keyword">char</span>* sstr,<span class="keyword">int</span> ssize)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>* next = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * msize);</span><br><span class="line">	constructNext(sstr, ssize, next);</span><br><span class="line">	<span class="keyword">int</span> mpointer = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> spointer = <span class="number">1</span>;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	char mstr[] = &#123; '0','a','b','a','a','b','c','a','b','a' &#125;;</span></span><br><span class="line"><span class="comment">	char sstr[] = &#123;'0','a','b','b'&#125;;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="keyword">for</span> (; mpointer &lt;= msize; mpointer++) &#123;</span><br><span class="line">		<span class="keyword">while</span> (spointer != <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">while</span> (mstr[mpointer++] == sstr[spointer++]&amp;&amp;spointer&lt;=ssize);</span><br><span class="line">			<span class="keyword">if</span> (spointer &gt; ssize&amp;&amp;mstr[mpointer<span class="number">-1</span>]==sstr[spointer<span class="number">-1</span>])</span><br><span class="line">				<span class="keyword">return</span> mpointer - ssize;</span><br><span class="line">			mpointer--;</span><br><span class="line">			spointer = next[--spointer];</span><br><span class="line">		&#125;</span><br><span class="line">		spointer = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">constructNext</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* sstr,<span class="keyword">int</span> ssize,<span class="keyword">int</span>*  next)</span> </span>&#123;</span><br><span class="line">	next[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	next[<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= ssize; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> k = next[i - <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">while</span> (sstr[i - <span class="number">1</span>] != sstr[k]) &#123;</span><br><span class="line">			k = next[k];</span><br><span class="line">			<span class="keyword">if</span> (k == <span class="number">0</span>)&#123;</span><br><span class="line">				next[i] = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (k!=<span class="number">0</span>&amp;&amp;sstr[i - <span class="number">1</span>] == sstr[k])</span><br><span class="line">			next[i] = k + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-  </entry>
-  <entry>
     <title>signal types in control bus</title>
     <url>/2021/04/21/signal%20types%20in%20control%20bus/</url>
     <content><![CDATA[<p><img src="/2021/04/21/signal%20types%20in%20control%20bus/0.jpg" alt="0"></p>
@@ -607,6 +655,50 @@
 ]]></content>
       <categories>
         <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>string matching KMP algorithm</title>
+    <url>/2021/04/21/string%20matching%20KMP%20algorithm/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/string%20matching%20KMP%20algorithm/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>KMP算法利用子串的结构特点（前后缀有相同的部分）来减少子串与主串的比较次数。</p>
+<p>前缀：必包含主串的第一个字符，且不包含主串的最后一个字符的主串的子串。<br>后缀：必包含主串的最后一个字符，且不包含主串的第一个字符的主串的子串。<br>例如：<br>    主串：a               后缀=前缀=∅<br>    主串：abab        前缀={a,ab,aba}  后缀={b,ab,bab}  故前后缀公共部分为{ab}</p>
+<p>算法的基本思想为：（设主串为s，子串为p）<br>利用指向主串的指针i，和指向子串的指针j，当s[i] != p[j]时，子串指针退回到某个已知位置<strong>next[j]</strong>，而i指针不需要回退。<strong>next[j]</strong>的形成是利用子串本身的特殊结构，即p[1…j]具有相同的前后缀。该算法的难以理解的地方在于<strong>next</strong>数组的递归求出。</p>
+<p><strong>next</strong>数组的递归求解：<br>（1）：求解next[j+1]时，设next[j]=k，若p[k]=p[j]，则next[j+1]=next[j]+1;<br>（2）：若p[k] != p[j]。此时，尝试p[next[k]] 是否等于p[j]。这样做的原因在于，在每次求解next[j+1]时，都将该问题看作是一个新的模式匹配，而主串和子串都是原题中的子串。故，在比较p[k]=p[j] 失败时，继续往后推导，使得在第二个问题中，当主串（即子串）的p[j]与子串的p[k]不匹配时，通过继续往低位子串寻找，找到一个位置<strong>k’</strong>，同时有<strong>p[k’]=p[j]</strong>，这样就意味着，主串（即子串）j+1前面有<strong>k’</strong>个和子串的<strong>k’</strong>前的<strong>所有</strong>相匹配，故next[j+1]=<strong>k’+1</strong>。<br>（3）： 若一直往后递归都没有找到某个位置的字符p[t]=p[j]，则<strong>next[j+1]=1</strong>。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stringmatching.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kmpMatching</span><span class="params">(<span class="keyword">char</span> mstr[],<span class="keyword">int</span> msize, <span class="keyword">char</span>* sstr,<span class="keyword">int</span> ssize)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>* next = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * msize);</span><br><span class="line">	constructNext(sstr, ssize, next);</span><br><span class="line">	<span class="keyword">int</span> mpointer = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> spointer = <span class="number">1</span>;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	char mstr[] = &#123; '0','a','b','a','a','b','c','a','b','a' &#125;;</span></span><br><span class="line"><span class="comment">	char sstr[] = &#123;'0','a','b','b'&#125;;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="keyword">for</span> (; mpointer &lt;= msize; mpointer++) &#123;</span><br><span class="line">		<span class="keyword">while</span> (spointer != <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">while</span> (mstr[mpointer++] == sstr[spointer++]&amp;&amp;spointer&lt;=ssize);</span><br><span class="line">			<span class="keyword">if</span> (spointer &gt; ssize&amp;&amp;mstr[mpointer<span class="number">-1</span>]==sstr[spointer<span class="number">-1</span>])</span><br><span class="line">				<span class="keyword">return</span> mpointer - ssize;</span><br><span class="line">			mpointer--;</span><br><span class="line">			spointer = next[--spointer];</span><br><span class="line">		&#125;</span><br><span class="line">		spointer = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">constructNext</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* sstr,<span class="keyword">int</span> ssize,<span class="keyword">int</span>*  next)</span> </span>&#123;</span><br><span class="line">	next[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	next[<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= ssize; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> k = next[i - <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">while</span> (sstr[i - <span class="number">1</span>] != sstr[k]) &#123;</span><br><span class="line">			k = next[k];</span><br><span class="line">			<span class="keyword">if</span> (k == <span class="number">0</span>)&#123;</span><br><span class="line">				next[i] = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (k!=<span class="number">0</span>&amp;&amp;sstr[i - <span class="number">1</span>] == sstr[k])</span><br><span class="line">			next[i] = k + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>traversal of binary tree</title>
+    <url>/2021/04/21/traversal%20of%20binary%20tree/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/traversal%20of%20binary%20tree/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h4 id="Chain-storage-definition"><a href="#Chain-storage-definition" class="headerlink" title="Chain storage definition"></a>Chain storage definition</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BitNode,*BiTree;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="PreOrder-recursive"><a href="#PreOrder-recursive" class="headerlink" title="PreOrder (recursive)"></a>PreOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        visit(T);</span><br><span class="line">        preOrder(T-&gt;lchild);</span><br><span class="line">        preOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="InOrder-recursive"><a href="#InOrder-recursive" class="headerlink" title="InOrder (recursive)"></a>InOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">    inOrder(T-&gt;lchild);</span><br><span class="line">    visit(T);</span><br><span class="line">    inOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="AfterOrder-recursive"><a href="#AfterOrder-recursive" class="headerlink" title="AfterOrder(recursive)"></a>AfterOrder(recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        afterOrder(T-&gt;lchild);</span><br><span class="line">        afterOrder(T-&gt;rchild);</span><br><span class="line">        visit(T);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="InOrder-non-recursive"><a href="#InOrder-non-recursive" class="headerlink" title="InOrder(non-recursive)"></a>InOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;   <span class="comment">// moving pointer</span></span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;    </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            visit(p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="PreOrder-non-recursive"><a href="#PreOrder-non-recursive" class="headerlink" title="PreOrder(non-recursive)"></a>PreOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;</span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            visit(p);</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="LevelOrder"><a href="#LevelOrder" class="headerlink" title="LevelOrder"></a>LevelOrder</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    InitQueue Q; <span class="comment">//initialize a queue;</span></span><br><span class="line">    BiTree p;</span><br><span class="line">    enQueue(Q,p);</span><br><span class="line">    <span class="keyword">while</span>(!isEmpty(Q))&#123;</span><br><span class="line">        deQueue(Q,p);</span><br><span class="line">        visit(p);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild!=null)</span><br><span class="line">            enQueue(Q,p-&gt;lchild);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild!=null)</span><br><span class="line">            enQueue(Q.p-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>algorithm</category>
       </categories>
   </entry>
   <entry>
@@ -773,33 +865,6 @@
 ]]></content>
       <categories>
         <category>grammar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>traversal of binary tree</title>
-    <url>/2021/04/21/traversal%20of%20binary%20tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/traversal%20of%20binary%20tree/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<h4 id="Chain-storage-definition"><a href="#Chain-storage-definition" class="headerlink" title="Chain storage definition"></a>Chain storage definition</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BitNode,*BiTree;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h4 id="PreOrder-recursive"><a href="#PreOrder-recursive" class="headerlink" title="PreOrder (recursive)"></a>PreOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        visit(T);</span><br><span class="line">        preOrder(T-&gt;lchild);</span><br><span class="line">        preOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="InOrder-recursive"><a href="#InOrder-recursive" class="headerlink" title="InOrder (recursive)"></a>InOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">    inOrder(T-&gt;lchild);</span><br><span class="line">    visit(T);</span><br><span class="line">    inOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="AfterOrder-recursive"><a href="#AfterOrder-recursive" class="headerlink" title="AfterOrder(recursive)"></a>AfterOrder(recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        afterOrder(T-&gt;lchild);</span><br><span class="line">        afterOrder(T-&gt;rchild);</span><br><span class="line">        visit(T);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h4 id="InOrder-non-recursive"><a href="#InOrder-non-recursive" class="headerlink" title="InOrder(non-recursive)"></a>InOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;   <span class="comment">// moving pointer</span></span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;    </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            visit(p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="PreOrder-non-recursive"><a href="#PreOrder-non-recursive" class="headerlink" title="PreOrder(non-recursive)"></a>PreOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;</span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            visit(p);</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="LevelOrder"><a href="#LevelOrder" class="headerlink" title="LevelOrder"></a>LevelOrder</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    InitQueue Q; <span class="comment">//initialize a queue;</span></span><br><span class="line">    BiTree p;</span><br><span class="line">    enQueue(Q,p);</span><br><span class="line">    <span class="keyword">while</span>(!isEmpty(Q))&#123;</span><br><span class="line">        deQueue(Q,p);</span><br><span class="line">        visit(p);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild!=null)</span><br><span class="line">            enQueue(Q,p-&gt;lchild);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild!=null)</span><br><span class="line">            enQueue(Q.p-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>algorithm</category>
       </categories>
   </entry>
   <entry>
@@ -1042,70 +1107,5 @@
         <tag>x86</tag>
         <tag>mbr</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>computer organization noun excerpts</title>
-    <url>/2021/04/21/computer%20organization%20noun%20excerpts/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/computer%20organization%20noun%20excerpts/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>服务器(server)：用于为多用户运行大型程序的计算机，通常由多个用户并行使用，并且一般通过网络访问。</p>
-<p>云计算(Cloud Computing)：在网络上提供服务的大服务器集群，它依赖于称为仓储规模计算机(Warehouse Scale Computer ,WSC)的巨型数据中心。一些运营商根据应用需求出租不同的服务器。</p>
-<p>软件即服务(Software as a Service,SaaS)：在网络上以服务的方式提供软件和数据。其运行方式通常不是在本地设备上运行所有的二进制代码，而是通过诸如运行在本地客户端的浏览器的小程序登录到远程服务器上执行。典型的例子是Web搜索和社交网络。</p>
-<p>程序性能影响因素：程序所用算法的有效性，用来建立程序并将其翻译成机器指令的软件系统，计算机执行机器指令的有效性。</p>
-<p><strong>计算机系统结构中的8个伟大思想</strong>：面向摩尔定律的设计（Moore’ Law）；使用抽象简化设计；加速大概率事件（common case fast）；通过并行提高性能；通过流水线提高性能（pipelining）；通过预测提高性能（prediction）；存储器层次（hierarchy of memory）；通过冗余提高可靠性。</p>
-<p>编译程序(Compiler)：将高级语言翻译为计算机所能识别的机器语言的程序。</p>
-<p>指令(Instruction)：计算机硬件所能理解并服从的命令。</p>
-<p><strong>重点1</strong>：组成计算机的5个经典部件是输入，输出，存储器，数据通路(datapath)（在计算机也称为运算器）和控制器，其中最后两个部件通常合称为处理器。你总能够把任何计算机（无论是现在的还是过去的）中的任何部件归于这五种之一。</p>
-<p>集成电路（Integrated Circuit）：也叫芯片（chip），一种将几十个至几百万格晶体管连接起来的设备。</p>
-<p>指令集体系结构（instruction set architecture）：也叫体系结构，是低层次软件和硬件之间的抽象接口，包含了需要编写正确运行的机器语言程序所需要的全部信息，包括指令，寄存器，存储访问和I/O等。</p>
-<p>应用二进制接口（Application Binary interface）：用户部分的指令加上应用程序员调用的操作系统接口，定义了二进制层次可移植的计算机的标准。</p>
-<p><strong>重点2</strong>：无论是硬件还是软件都可以使用抽象分成多个层次，每个较低的层次把细节对上层隐藏起来。抽象层次中的一个关键接口是指令集体系结构–硬件和底层软件之间的接口。这一抽象接口使得同一软件可以由成本不同，性能也不同的实现方法来完成。</p>
-<p>易失性存储器(volatile memory)：类似于DRAM的存储器，仅在加电时保存数据。</p>
-<p>非易失性存储器(nonvolatile memory)：在断电时仍可保持数据的存储器。如DVD。</p>
-<p>晶体管（transistor）：是一种收电流控制的开关。</p>
-<p>响应时间（response time）：也叫执行时间（execution time），是计算机完成某任务所需的总时间，包括硬盘访问，内存访问，I/O活动，操作系统开销和CPU执行时间等。</p>
-<p>吞吐率（throughput）：也叫带宽（bandwidth），性能的另一种度量参数，表示单位时间内完成的任务数量。</p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>infix expression into prefix expression</title>
-    <url>/2021/04/21/infix%20expression%20into%20prefix%20expression/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/infix%20expression%20into%20prefix%20expression/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
-<p>遇到一个操作符则与栈顶元素比较优先级，若大于栈顶操作符的优先级则将该操作符入栈，否则不断将操作符出栈直至该操作符优先级小于栈顶操作符（注意，同等优先级，左边的操作符优先级高）。举例如下：</p>
-<p>将如下中缀表达式转化成后缀表达式：2+9/3-5</p>
-<p>输出：2                                    栈：</p>
-<p>输出：2                                    栈：+</p>
-<p>输出：29                                  栈：+</p>
-<p>输出：29                                  栈：+/</p>
-<p>输出：293                                栈：+/</p>
-<p>输出：293/+                            栈：-</p>
-<p>输出：293/+5-</p>
-]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>access cycle and access time</title>
-    <url>/2021/04/21/access%20cycle%20and%20access%20time/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/access%20cycle%20and%20access%20time/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>存取时间：存取时间是指从启动一次存储器操作到完成该操作所经历的时间，分为读出时间和写入时间。</p>
-<p>存取周期：存取周期又称为读写周期或访问周期。它是指存储器进行一次完整的读写操作所需的全部时间，即<strong>连续两次独立访问存储器操作之间所需的最小时间间隔。</strong></p>
-<p>上面两个概念乍一看基本相同，其实不一样。关键在于存取周期=存取时间+恢复时间。</p>
-<p>那么What is recover time？</p>
-<p>对任何一种存储器，在读写操作之后，总要有一段恢复内部状态的复原时间。对于破坏性读出的存储器，存取周期往往比存取大得多（这意味着恢复时间较长）。故通常来说存取周期是大于存取时间的。（图在王道P94）</p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
   </entry>
 </search>
