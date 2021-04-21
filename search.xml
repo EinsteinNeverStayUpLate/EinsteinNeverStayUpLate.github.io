@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title># Function Pointer</title>
-    <url>/2020/10/15/#%20Function%20Pointer/</url>
-    <content><![CDATA[<h1 id="Function-Pointer"><a href="#Function-Pointer" class="headerlink" title="Function Pointer"></a>Function Pointer</h1><h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Basic concepts and properties of Tree</title>
     <url>/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/</url>
     <content><![CDATA[<h1 id="Basic-concepts-and-properties-of-Tree"><a href="#Basic-concepts-and-properties-of-Tree" class="headerlink" title="Basic concepts and properties of Tree"></a>Basic concepts and properties of Tree</h1><h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
@@ -1048,28 +1035,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>test3</title>
-    <url>/2021/04/20/test3/</url>
-    <content><![CDATA[<p><img src="/2021/04/20/test3/1.png" alt="1"></p>
-<p>These is excerpt.</p>
-<a id="more"></a>
-
-<p>This is Hueman, a free responsive, high resolution and pretty flexible theme for you to use to write about things you love. Make sure to check all the examples out! To download this theme or to check the full feature list, just go here. Feel free to leave a comment there if you digg it!</p>
-<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-<p>“Dolores eos qui ratione voluptatem sequi nesciunt. Lorem ipsum dolor.”Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-<p>It’s like a language. You learn the alphabet, which are the scales. You learn sentences, which are the chords. And then you talk extemporaneously with the horn. It’s a wonderful thing to speak extemporaneously, which is something I’ve never gotten the hang of. But musically I love to talk just off the top of my head. And that’s what jazz music is all about.</p>
-<p>Stan Getz</p>
-<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-]]></content>
-      <categories>
-        <category>Grammar</category>
-      </categories>
-      <tags>
-        <tag>nontarget</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C features</title>
     <url>/2021/04/20/C%20features/</url>
     <content><![CDATA[<p><img src="/2021/04/20/C%20features/2.png" alt="2"></p>
@@ -1399,5 +1364,18 @@
       <categories>
         <category>Grammar</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Function pointer</title>
+    <url>/2020/10/15/Function%20pointer/</url>
+    <content><![CDATA[<h1 id="Function-Pointer"><a href="#Function-Pointer" class="headerlink" title="Function Pointer"></a>Function Pointer</h1><h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
 </search>
