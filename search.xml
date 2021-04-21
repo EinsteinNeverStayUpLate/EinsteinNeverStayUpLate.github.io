@@ -126,8 +126,11 @@
   </entry>
   <entry>
     <title>ROM types</title>
-    <url>/2020/05/07/ROM%20types/</url>
-    <content><![CDATA[<h1 id="ROM-types"><a href="#ROM-types" class="headerlink" title="ROM types"></a>ROM types</h1><ul>
+    <url>/2021/04/21/ROM%20types/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/ROM%20types/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<ul>
 <li>掩模型只读存储器（Masked ROM，MROM）：重合法驱动，根据其交叉处是否有耦合元件MOS管识别0和1.不可写入。</li>
 <li>可编程只读存储器（Programmable ROM)：根据熔丝断和未断可区别其所存的信息是0还是1.只能实现一次编程，不得在修改。</li>
 <li>可擦除可编程只读存储器（Erasable Programmable ROM)：由<strong>浮动栅雪崩注入型MOS管</strong>构成，又称FAMOS型EPROM。用户需重新改变其状态，可用紫外线照射，驱散浮动栅，再按需要将不同的位置的MOS管D端重新置于正电压，又得出新状态的ROM。<strong><em>另外还可以使用电器方法将存储内容擦除。</em></strong></li>
@@ -135,6 +138,9 @@
 <li>闪速存储器（Flash Memory）擦除，重写速度快。在便携式计算机、工控系统及单片机系统中得到大量应用，近年来将它用于微型计算机中存放I/O驱动程序和参数。</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
   </entry>
   <entry>
     <title>MIPS addressing modes</title>
@@ -1221,7 +1227,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>Grammar</category>
+        <category>grammar</category>
       </categories>
   </entry>
   <entry>
@@ -1329,7 +1335,7 @@
   <entry>
     <title>MOS and TTL</title>
     <url>/2021/04/21/MOS%20and%20TTL/</url>
-    <content><![CDATA[<p>![0][0.jpg]</p>
+    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt="0"></p>
 <a id="more"></a>
 
 <p>MOS：金属氧化半导体场效应晶体管</p>
