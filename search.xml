@@ -403,9 +403,12 @@
 ]]></content>
   </entry>
   <entry>
-    <title>The Contents of C Head File</title>
-    <url>/2020/10/14/The%20Contents%20of%20C%20Head%20File/</url>
-    <content><![CDATA[<h1 id="The-Contents-of-C-Head-File"><a href="#The-Contents-of-C-Head-File" class="headerlink" title="The Contents of C Head File"></a>The Contents of C Head File</h1><ul>
+    <title>C head file contents</title>
+    <url>/2021/04/21/The%20Contents%20of%20C%20Head%20File/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/The%20Contents%20of%20C%20Head%20File/1.jpg" alt="1"></p>
+<a id="more"></a>
+
+<ul>
 <li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
 </li>
 <li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
@@ -418,6 +421,9 @@
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
   </entry>
   <entry>
     <title>The difference of Access cycle and Access time</title>
@@ -1383,5 +1389,22 @@
       <categories>
         <category>C</category>
       </categories>
+  </entry>
+  <entry>
+    <title>C head file contents</title>
+    <url>/2020/10/14/C%20head%20file%20contents/</url>
+    <content><![CDATA[<h1 id="The-Contents-of-C-Head-File"><a href="#The-Contents-of-C-Head-File" class="headerlink" title="The Contents of C Head File"></a>The Contents of C Head File</h1><ul>
+<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
+</li>
+<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
+</li>
+<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
+</li>
+<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
+</li>
+<li><p>类型定义——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
+</li>
+</ul>
+]]></content>
   </entry>
 </search>
