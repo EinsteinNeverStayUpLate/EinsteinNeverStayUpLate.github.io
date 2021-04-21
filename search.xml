@@ -1377,12 +1377,12 @@
       </categories>
   </entry>
   <entry>
-    <title>transform infix expression into prefix expression</title>
-    <url>/2021/04/21/transform%20infix%20expression%20into%20prefix%20expression%20/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/transform%20infix%20expression%20into%20prefix%20expression%20/0.jpg" alt="0"></p>
+    <title>infix expression into prefix expression</title>
+    <url>/2021/04/21/infix%20expression%20into%20prefix%20expression/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/infix%20expression%20into%20prefix%20expression/0.jpg" alt="0"></p>
 <a id="more"></a>
 
-<p>​    基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
+<p>基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
 <p>遇到一个操作符则与栈顶元素比较优先级，若大于栈顶操作符的优先级则将该操作符入栈，否则不断将操作符出栈直至该操作符优先级小于栈顶操作符（注意，同等优先级，左边的操作符优先级高）。举例如下：</p>
 <p>将如下中缀表达式转化成后缀表达式：2+9/3-5</p>
 <p>输出：2                                    栈：</p>
