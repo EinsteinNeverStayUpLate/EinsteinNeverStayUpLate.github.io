@@ -1,111 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AS</title>
-    <url>/2020/05/24/AS/</url>
-    <content><![CDATA[<h2 id="AS"><a href="#AS" class="headerlink" title="AS"></a>AS</h2><ol>
-<li>as…as</li>
-</ol>
-<p>Any sentences using the structure <strong>as…as</strong> can rewrite a sentence with <strong>than</strong>. And the meaning doesn’t change.</p>
-<ul>
-<li>The city center wasn’t as crowded this morning as it usually is. (subject + verb after the second as)</li>
-<li>I don’t know as many people as you do. (<strong>between the first and the second as ,it’s many+ noun, usually it should be a adj or adv, many/much+ noun can be an exception.</strong>)</li>
-</ul>
-<p><em>Note: It’s not necessary that after the second as , it must be subject +verb. Such as:</em></p>
-<ul>
-<li>Let’s walk. It’s just as quick as taking the bus.</li>
-</ul>
-<p>as soon as possible is common:</p>
-<ul>
-<li>Can you send me the money as soon as possible, please? (<strong>Usually, it’s put in the end of sentence).</strong></li>
-</ul>
-<hr>
-<ol start="2">
-<li>Another form: twice as…as , three times as…as etc:</li>
-</ol>
-<ul>
-<li>Petrol is twice as expensive as it was a few years age.</li>
-<li>Their house is about three times as big as ours. </li>
-</ul>
-<hr>
-<ol start="3">
-<li><strong>the same as</strong> is usual, but remember, between ‘same’ and ‘as’, it should be noun.</li>
-</ol>
-<ul>
-<li>Ann’s salary is the same as mine.          or           Ann gets the same salary as me.</li>
-<li>Tom is the same age as George.</li>
-<li>‘What would you like to drink?’      ‘I’ll have the same as you.’</li>
-</ul>
-<hr>
-<ol start="4">
-<li>As (reason and time), here ‘as ‘ is a conjunction</li>
-</ol>
-<ul>
-<li><p>As (reason): As sometimes means ‘because’:</p>
-<ul>
-<li>As it was a public holiday, all the shops were shut. (=because it was a public holiday)</li>
-<li>As the live near us, we see them quite often.</li>
-<li>We watched television all evening as we had nothing better to do.</li>
-</ul>
-</li>
-<li><p>As(time):  more complicated than above.</p>
-<ul>
-<li>you can say that something happened as you were doing something else (= in the middle of doing something else):<ul>
-<li>Jill slipped as she was getting off the bus.</li>
-<li>The thief was seen as he was climbing over the wall.</li>
-</ul>
-</li>
-<li>Most often we use as when two short actions happen at the same time:<ul>
-<li>George arrived as Sue left. (=he arrived and Sue left at the same time)</li>
-<li>We all waved goodbye to Liz as she drove away in her car.</li>
-</ul>
-</li>
-<li>But we also use as when two things happen together <strong>over at longer period of time</strong>:<ul>
-<li>As the day went on, the weather got worse.</li>
-<li>I began to enjoy the job more as I got used to it.</li>
-</ul>
-</li>
-<li>You can also use just as (=exactly at that moment): <ul>
-<li>Just as I sat down, the phone rang.</li>
-<li>Just as we were going out, it started to ran.</li>
-<li>I had to leave just as the conversation was getting interesting.</li>
-</ul>
-</li>
-</ul>
-<hr>
-</li>
-</ul>
-<ol start="5">
-<li>We use <strong>as(time)</strong> for actions and happenings. <strong>As</strong> + <strong><em>a situation</em></strong> (not an action) usually means ‘because’:</li>
-</ol>
-<ul>
-<li>As we were asleep, we didn’t hear the doorbell. (=because we were asleep)</li>
-<li>As I walked into the room, the phone started ringing. (at the same time)</li>
-<li>As they live near me, I see them quite often. (=because they live near me)</li>
-</ul>
-<hr>
-<ol start="6">
-<li>Another use: We use <strong>as</strong> before a subject + verb:</li>
-</ol>
-<ul>
-<li>I didn’t move anything. I left everything as I found it.</li>
-<li>They did as they promised.</li>
-</ul>
-<p>We also say <strong>as you know/as I said/ as she expected/ as I thought etc:</strong></p>
-<ul>
-<li>As you know, it’s Tom’s birthday next week. (‘As part’ is put in the head)</li>
-<li>Jane failed her driving test, as she expected.</li>
-</ul>
-<hr>
-<ol start="7">
-<li>Note that we say <strong>as usual / as always:</strong></li>
-</ol>
-<ul>
-<li>You’re late as usual.</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title># Function Pointer</title>
     <url>/2020/10/15/#%20Function%20Pointer/</url>
     <content><![CDATA[<h1 id="Function-Pointer"><a href="#Function-Pointer" class="headerlink" title="Function Pointer"></a>Function Pointer</h1><h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
@@ -116,19 +11,6 @@
 
 
 
-]]></content>
-  </entry>
-  <entry>
-    <title>AS LONG AS</title>
-    <url>/2020/06/03/AS%20LONG%20AS/</url>
-    <content><![CDATA[<h1 id="AS-LONG-AS"><a href="#AS-LONG-AS" class="headerlink" title="AS LONG AS"></a>AS LONG AS</h1><p><strong>as long as</strong>  , <strong>so long as</strong> , <strong>provided</strong> , <strong>providing</strong></p>
-<p>All these expressions mean <strong><em>‘if’</em></strong> or ‘on condition that’</p>
-<ul>
-<li>You can use my car <strong>as(so) long as</strong> you drive carefully.</li>
-<li>Travelling by car is convenient <strong>provided (providing)</strong> you have somewhere to park.</li>
-<li>*<em>Providing (Provided) *</em> she studies hard, she’ll pass her exams.</li>
-</ul>
-<p>When you are talking about the future, do not use <strong>will</strong> after unless / as long as / provided / providing.<br>Use a present tense.</p>
 ]]></content>
   </entry>
   <entry>
@@ -245,31 +127,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>COULD and WAS WERE ABLE TO</title>
-    <url>/2020/05/19/COULD%20and%20WAS%20WERE%20ABLE%20TO/</url>
-    <content><![CDATA[<h1 id="COULD-and-WAS-WERE-ABLE-TO"><a href="#COULD-and-WAS-WERE-ABLE-TO" class="headerlink" title="COULD and WAS/WERE ABLE TO"></a>COULD and WAS/WERE ABLE TO</h1><p>We use <strong>could</strong> to say that somebody had the general ability or permission to do something:</p>
-<ul>
-<li>My grandfather could speak five languages.</li>
-<li>We were completely free. We could do what we wanted.</li>
-</ul>
-<hr>
-<p>We use <strong>could</strong> for general ability. But if we are talking about what happened in a particular situation , we use was/were able to… or managed to…(not <strong>could</strong>):</p>
-<ul>
-<li>The fire spread through the building quickly but everybody was able to escape.<br>or…everybody managed to escape.</li>
-<li>They didn’t want to come with us at first but we managed to persuade them.<br>or…we were able to persuade them.(but not ‘could persuade’)</li>
-</ul>
-<hr>
-<p><strong>Compare:</strong></p>
-<ul>
-<li>Jack was an excellent tennis players. He <strong>could beat</strong> anybody. (=he had the general ability to beat anybody)</li>
-</ul>
-<p><strong>but</strong></p>
-<ul>
-<li>Jack and Alf had a game of tennis yesterday. Alf played very well but in the end Jack managed to beat him. or…was able to beat him. (=he managed to beat him in this particular game)</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>Bochs for debug</title>
     <url>/2021/01/05/Bochs%20for%20debug/</url>
     <content><![CDATA[<h2 id="Bochs-for-debug"><a href="#Bochs-for-debug" class="headerlink" title="Bochs for debug"></a>Bochs for debug</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug kernel codes. So, its  usage may not friendly. Before using it to virtualize physical machine, it need configuring a configure file, which contains many parameters you want to emulate.</p>
@@ -279,41 +136,6 @@
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># how much memory the emulated machine will have</span></span><br><span class="line">megs: <span class="number">32</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># filename of ROM images</span></span><br><span class="line">romimage: file=../BIOS-bochs-latest</span><br><span class="line">vgaromimage: file=../VGABIOS-lgpl-latest</span><br><span class="line"></span><br><span class="line"># what disk images will be used </span><br><span class="line">floppya: <span class="number">1</span>_44=floppya.img, status=inserted</span><br><span class="line">floppyb: <span class="number">1</span>_44=floppyb.img, status=inserted</span><br><span class="line"></span><br><span class="line"># hard disk</span><br><span class="line">ata0: enabled=<span class="number">1</span>, ioaddr1=<span class="number">0x1f0</span>, ioaddr2=<span class="number">0x3f0</span>, irq=<span class="number">14</span></span><br><span class="line">ata0-master: type=disk, path=<span class="string">"a.img"</span>, cylinders=<span class="number">306</span>, heads=<span class="number">4</span>, spt=<span class="number">17</span></span><br><span class="line"></span><br><span class="line"># choose the boot disk.</span><br><span class="line">boot: c</span><br><span class="line"></span><br><span class="line"># <span class="keyword">default</span> <span class="built_in">config</span> interface is textconfig.</span><br><span class="line">#config_interface: textconfig</span><br><span class="line">#config_interface: wx</span><br><span class="line"></span><br><span class="line">#display_library: x</span><br><span class="line"># other choices: win32 sdl wx carbon amigaos beos macintosh nogui rfb term svga</span><br><span class="line"></span><br><span class="line"># where <span class="keyword">do</span> we send <span class="built_in">log</span> messages?</span><br><span class="line"><span class="built_in">log</span>: bochsout.txt</span><br><span class="line"></span><br><span class="line"># disable the mouse, since DLX is <span class="built_in">text</span> only</span><br><span class="line">mouse: enabled=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># <span class="built_in">set</span> up IPS value <span class="keyword">and</span> clock sync</span><br><span class="line">cpu: ips=<span class="number">15000000</span></span><br><span class="line">clock: sync=both</span><br><span class="line">    </span><br><span class="line">keyboard: keymap=../keymaps/x11-pc-us.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-fr.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-de.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-es.<span class="built_in">map</span></span><br></pre></td></tr></table></figure>
 
 <p>​    For image file, it could be floppy, hard disk and CDROM, all of which should be written with binary file which can appear with NASM compiling .asm file to .bin file.<br>​    To utilize debug function, open <strong>bochsdbg.exe</strong>.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>COULD and COULD HAVE</title>
-    <url>/2020/05/19/COULD%20and%20COULD%20HAVE/</url>
-    <content><![CDATA[<h1 id="COULD-and-COULD-HAVE"><a href="#COULD-and-COULD-HAVE" class="headerlink" title="COULD and COULD HAVE"></a>COULD and COULD HAVE</h1><p><strong>could:</strong></p>
-<ul>
-<li>use <strong>could</strong> to talk about possible actions now or in the future (especially to make a suggestion):<br>A: What shall we do this evening? B: We could go to cinema.<br>It’s a nice day. We could go for a walk.</li>
-<li>You must use could(not ‘can’) when you don’t really mean what you say:<br>I’m so angry with him. I could kill him!(not ‘I can kill him’)</li>
-<li>We also use could to say that something is possible now or in the future:<br>The phone is ringing. It could be Tim.(<strong>now</strong>)<br>I don’t know when they ‘ll be here . They could arrive at any time.(<strong>future</strong>)</li>
-</ul>
-<hr>
-<p><strong>could have (done)</strong></p>
-<p>Most often, we use <strong>could have (done)</strong> for things which were possible but did not happen:</p>
-<ul>
-<li><p>Why did you stay at a hotel when you went  to New York? You could have stayed with Barbara. (=you had the opportunity to stay with her but you didn’t)</p>
-</li>
-<li><p>Jack fell off a ladder yesterday but he’s all right. He’s lucky - he could hurt himself badly. (but he didn’t hurt himself)</p>
-</li>
-<li><p>Jack wanted Ken to lend him 50 last week.<br>Ken couldn’t have lent him 50. (because he was short of money)</p>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Difference between WILL and GOING TO</title>
-    <url>/2020/05/18/Difference%20between%20WILL%20and%20GOING%20TO/</url>
-    <content><![CDATA[<h1 id="Difference-between-WILL-and-GOING-TO"><a href="#Difference-between-WILL-and-GOING-TO" class="headerlink" title="Difference between WILL and GOING TO"></a>Difference between WILL and GOING TO</h1><p><strong>wil</strong>l: We use  <strong>will</strong> when we decide to do something at the time of speaking. The speaker has not decided before. The party is a new idea.</p>
-<p>For example:</p>
-<p>SUE: Let’s have a party.</p>
-<p>HELEN: That’s a great idea. We<strong>‘ll</strong> invite lots of people.</p>
-<hr>
-<p><strong>going to</strong>: We use <strong>going to</strong> when we have already decided to do something. Helen had already decided to invite lots of people before she spoke to Dave.</p>
-<p>For example:</p>
-<p>HELEN: Sue and I have decide to have a party.   We<strong>‘re going to</strong> invite lots of people.</p>
 ]]></content>
   </entry>
   <entry>
@@ -344,59 +166,6 @@
 <p>P3=第四位⊕第五位⊕第六位⊕第七位=0⊕1⊕0⊕1=0</p>
 <p>（<strong>这里注意，对于连续的⊕，如果其中有偶数个1，则所得结果必是0</strong>）</p>
 <p>由上可知第一组，第二组出错了。则出错位那一位？<br>注意：我们上面已经说了，一般一位出错的概率最大。那么又因为第一，第二组出错，由此可知第一，第二组所共有的那一位（编号为3）出错。为什么不是编号为7的bit？因为假设编号为7出错，第三组也应该出错。所以将接收到的信息纠正为：0100101.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>MAY and MIGHT</title>
-    <url>/2020/05/20/MAY%20and%20MIGHT/</url>
-    <content><![CDATA[<h1 id="MAY-and-MIGHT"><a href="#MAY-and-MIGHT" class="headerlink" title="MAY and MIGHT"></a>MAY and MIGHT</h1><p>We use <strong>may</strong> or <strong>might</strong> to say that something is a possibility. Usually you can use <strong>may</strong> or <strong>might</strong><br>you can say:</p>
-<ul>
-<li>It <strong>may</strong> be true . or It <strong>might</strong> be true.</li>
-<li>She <strong>might</strong> know. or She <strong>might</strong> know.</li>
-</ul>
-<p>Sometimes <strong>could</strong> has a similar meaning to <strong>may</strong> and  <strong>might</strong><br>But <strong>couldn’t</strong> is different from <strong>may not ** and **might not</strong>.</p>
-<ul>
-<li><p>She was too far away, so she couldn’t have seen you .</p>
-</li>
-<li><p>A:I wonder why she didn’t say hello.</p>
-<p>She might not have seen you.</p>
-</li>
-</ul>
-<p>But we use only <strong>might</strong> (not may) when the situation is <strong>not real</strong>.</p>
-<ul>
-<li><p>If I knew them better, I might invite them to dinner.</p>
-<p>(The situation here is not real because I don’t know them very well,so I’m not going to invite them.’May’ is not possible in this example)</p>
-</li>
-</ul>
-<hr>
-<h3 id="Might-as-well-may-as-well"><a href="#Might-as-well-may-as-well" class="headerlink" title="Might as well / may as well"></a>Might as well / may as well</h3><ul>
-<li>What shall we do?Shall we walk?</li>
-<li>We might as well. It’s a nice day and I don’t want to wait here for an hour.</li>
-</ul>
-<p>‘(We) might as well do something’ =(We) should do something because  there is nothing better to do and there is no reason not to do it. You can also say ‘may as well (do)’.</p>
-<ul>
-<li>A: What time  are you going?</li>
-<li>Well , I’m ready, so I might as well go now.</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>In case (of)</title>
-    <url>/2020/06/03/In%20case%20(of)/</url>
-    <content><![CDATA[<h2 id="In-case-of"><a href="#In-case-of" class="headerlink" title="In case (of)"></a>In case (of)</h2><p>Some examples of in case:</p>
-<ul>
-<li>Ann might phone tonight. I don’t want to go out in case she phones.</li>
-<li>I’ll draw a map for you incase you can’t find our house.</li>
-</ul>
-<p>We use <strong>just in case</strong> for a smaller possibility:</p>
-<ul>
-<li>I don’t think it will rain but I’ll take an umbrella just in case.</li>
-</ul>
-<p>‘In case of…’ is not the same as ‘in case’. <strong>In case of</strong>=’if there is…’<strong><em>(especially in notices etc.):</em></strong></p>
-<ul>
-<li>In case of fire, please leave the building as quickly as possible.</li>
-<li>In case of emergency, telephone this number.</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
@@ -814,81 +583,6 @@
 
 <h3 id="BIOS-Interrupt"><a href="#BIOS-Interrupt" class="headerlink" title="BIOS Interrupt"></a>BIOS Interrupt</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">int 10h      ah=13h</span><br><span class="line">Function: display char</span><br><span class="line">al:output pattern</span><br><span class="line">bl:display property</span><br><span class="line">bh:page number</span><br><span class="line">cx:string length</span><br><span class="line">dh:row </span><br><span class="line">dl:col</span><br><span class="line">es:bp string address</span><br><span class="line"></span><br><span class="line">int 13h      ah=02h</span><br><span class="line">Function: read section</span><br><span class="line">al:how many sections to read</span><br><span class="line">es:bx buffer address</span><br><span class="line">ch: cylinder number</span><br><span class="line">cl: section number</span><br><span class="line">dh:	header number</span><br><span class="line">dl: driver</span><br><span class="line">output:</span><br><span class="line">CF=0 succeed.  ah=0  al=how many section to read</span><br></pre></td></tr></table></figure>
 
-]]></content>
-  </entry>
-  <entry>
-    <title>needn&#39;t  have done AND could have done</title>
-    <url>/2020/05/20/needn&#39;t%20%20have%20done%20AND%20could%20have%20done/</url>
-    <content><![CDATA[<h1 id="needn’t-have-done-and-could-have-done"><a href="#needn’t-have-done-and-could-have-done" class="headerlink" title="needn’t  have done and could have done"></a>needn’t  have done and could have done</h1><ul>
-<li>needn’t have done:  I needn’t have (done)  something  = I <strong>did</strong> something but now I know that it was not necessary.</li>
-<li>could have done:  Most often, we use *<em>could have (done) *</em> for things which were possible but did not happen.</li>
-</ul>
-<p><strong><em>Example</em></strong></p>
-<p>I got up very early because I had to get ready to go away. But in fact it didn’t take me long to get ready. So, I <strong>needn’t have got up</strong> so early. I *<em>could have stayed *</em> in bed longer.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>modals + have done</title>
-    <url>/2020/05/22/modals%20+%20have%20done/</url>
-    <content><![CDATA[<h1 id="modals-have-done"><a href="#modals-have-done" class="headerlink" title="modals + have done"></a>modals + have done</h1><h3 id="could-not-have-done"><a href="#could-not-have-done" class="headerlink" title="could (not) have done"></a>could (not) have done</h3><p>Most often, we use could have (done)  for things which were possible <strong>but did not happen</strong></p>
-<ul>
-<li>Why did you stay at a hotel when you went to New York?You <strong>could have stayed</strong> with Barbara.</li>
-</ul>
-<hr>
-<h3 id="may-have-done-and-might-have-done"><a href="#may-have-done-and-might-have-done" class="headerlink" title="may have done and might have done"></a>may have done and might have done</h3><p>Both of them  just express a possibility (whatever positive or negative)</p>
-<ul>
-<li>A: I wonder why Kay didn’t answer the phone.</li>
-<li>B: She may have been asleep.</li>
-</ul>
-<ul>
-<li>A: I was surprised that Sarah wasn’t at the meeting.</li>
-<li>B: She might not have known about it.</li>
-</ul>
-<p><strong><em>NOTE:</em></strong>  couldn’t (negative) is different from <strong>may not</strong> and <strong>might not</strong></p>
-<ul>
-<li>She was too far away, so she couldn’t have seen you.(=it is not possible that she saw you)</li>
-</ul>
-<ul>
-<li>A: I wonder why she didn’t say hello.</li>
-<li>B: She might not have seen you.</li>
-</ul>
-<hr>
-<h3 id="needn’t-have-done"><a href="#needn’t-have-done" class="headerlink" title="needn’t have done"></a>needn’t have done</h3><p>It means you really did something but now you know it was not necessary. So, you really did.<br>But ,comparing to <strong>could have done</strong> ,which means you didn’t do something that could happen probably  , this sentence is opposite to <strong>could have done</strong>. (in a sense).</p>
-<ul>
-<li>I got up very early because  I had to get ready to go away. But in fact it didn’t take me long to get ready. So, I *<em>needn’t have got up *</em> so early. I *<em>could have stayed *</em> in bed  longer.</li>
-</ul>
-<hr>
-<h3 id="should-not-have-done"><a href="#should-not-have-done" class="headerlink" title="should (not) have done"></a>should (not) have done</h3><p>You didn’t do it but it would have been the right thing to do. (for positive)</p>
-<ul>
-<li>(positive): It was a great party last night. You *<em>should have *</em> come. Why didn’t you?</li>
-<li>(negative): I’m feeling sick. I *<em>shouldn’t have eaten *</em> so much chocolate.</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>the .. the.. structure</title>
-    <url>/2020/05/24/the%20..%20the..%20structure/</url>
-    <content><![CDATA[<h2 id="The…the…-structure"><a href="#The…the…-structure" class="headerlink" title="The…the… structure"></a>The…the… structure</h2><p>It’s comparison structure. We use it to say that one thing depends on another thing:</p>
-<ul>
-<li>The warmer the weather, the better I feel.</li>
-<li>The sooner we leave, the sooner we will arrive.</li>
-<li>The younger you are, the easier it is to learn.</li>
-<li>The more expensive the hotel, the better the service.</li>
-</ul>
-<p><strong><em>Note:</em></strong>  本质来说，前后两个<strong>the</strong> 句子都是一个完整的正常语序的句子在进行倒装，同时由上述例子可以看出，will be /be  可以省略。</p>
-<hr>
-<h3 id="Older-and-elder"><a href="#Older-and-elder" class="headerlink" title="Older and elder"></a>Older and elder</h3><p>The comparative of old is older:</p>
-<ul>
-<li>Tom looks older than he really is.</li>
-</ul>
-<p>You can use elder(or older) when you talk about people in a family. You can say <strong>(my) elder brother/sister/son/daughter</strong>:</p>
-<ul>
-<li>My elder brother is a pilot.</li>
-</ul>
-<p>We say ‘my elder brother’ but we don’t say that ‘somebody is elder’:</p>
-<ul>
-<li>My brother is older than me(not ‘elder than me’)</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
@@ -1430,5 +1124,39 @@
       <tags>
         <tag>C</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>English grammar</title>
+    <url>/2021/04/21/English%20grammar/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/English%20grammar/1.jpg" alt="1"></p>
+<p>Common English grammar structures.</p>
+<a id="more"></a>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### needn't have done and could have done</span></span><br><span class="line"><span class="bullet">- </span>needn't have done:  I needn't have (done)  something  = I <span class="strong">**did**</span> something but now I know that it was not necessary.</span><br><span class="line"><span class="bullet">- </span>could have done:  Most often, we use <span class="strong">**could have (done) **</span> for things which were possible but did not happen.</span><br><span class="line"></span><br><span class="line"><span class="strong">***Example**</span>*</span><br><span class="line"></span><br><span class="line">I got up very early because I had to get ready to go away. But in fact it didn't take me long to get ready. So, I <span class="strong">**needn't have got up**</span> so early. I <span class="strong">**could have stayed **</span> in bed longer.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### modals + have done</span></span><br><span class="line"></span><br><span class="line"><span class="section">#### could (not) have done</span></span><br><span class="line"></span><br><span class="line">Most often, we use could have (done)  for things which were possible <span class="strong">**but did not happen**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Why did you stay at a hotel when you went to New York?You <span class="strong">**could have stayed**</span> with Barbara.</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">#### may have done and might have done</span></span><br><span class="line"></span><br><span class="line">Both of them  just express a possibility (whatever positive or negative)</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>A: I wonder why Kay didn't answer the phone.</span><br><span class="line"><span class="bullet">- </span>B: She may have been asleep.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>A: I was surprised that Sarah wasn't at the meeting.</span><br><span class="line"><span class="bullet">- </span>B: She might not have known about it.</span><br><span class="line"></span><br><span class="line"><span class="strong">***NOTE:**</span><span class="emphasis">*  couldn't (negative) is different from *</span><span class="emphasis">*may not*</span><span class="emphasis">* and *</span><span class="emphasis">*might not*</span>*</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>She was too far away, so she couldn't have seen you.(=it is not possible that she saw you)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>A: I wonder why she didn't say hello.</span><br><span class="line"><span class="bullet">- </span>B: She might not have seen you.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="section">#### needn't have done</span></span><br><span class="line"></span><br><span class="line">It means you really did something but now you know it was not necessary. So, you really did.</span><br><span class="line">But ,comparing to <span class="strong">**could have done**</span> ,which means you didn't do something that could happen probably  , this sentence is opposite to <span class="strong">**could have done**</span>. (in a sense).</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>I got up very early because  I had to get ready to go away. But in fact it didn't take me long to get ready. So, I <span class="strong">**needn't have got up **</span> so early. I <span class="strong">**could have stayed **</span> in bed  longer.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="section">#### should (not) have done </span></span><br><span class="line"></span><br><span class="line">You didn't do it but it would have been the right thing to do. (for positive)</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>(positive): It was a great party last night. You <span class="strong">**should have **</span> come. Why didn't you?</span><br><span class="line"><span class="bullet">- </span>(negative): I'm feeling sick. I <span class="strong">**shouldn't have eaten **</span> so much chocolate.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### may and might</span></span><br><span class="line">We use <span class="strong">**may**</span> or <span class="strong">**might**</span> to say that something is a possibility. Usually you can use <span class="strong">**may**</span> or <span class="strong">**might**</span></span><br><span class="line">you can say:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>It <span class="strong">**may**</span> be true . or It <span class="strong">**might**</span> be true.</span><br><span class="line"><span class="bullet">- </span>She <span class="strong">**might**</span> know. or She <span class="strong">**might**</span> know.</span><br><span class="line"></span><br><span class="line">Sometimes <span class="strong">**could**</span> has a similar meaning to <span class="strong">**may**</span> and  <span class="strong">**might**</span>    </span><br><span class="line">But <span class="strong">**couldn't**</span> is different from <span class="strong">**may not **</span> and <span class="strong">**might not**</span>.</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>She was too far away, so she couldn't have seen you .</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>A:I wonder why she didn't say hello.</span><br><span class="line"></span><br><span class="line">  She might not have seen you.</span><br><span class="line"></span><br><span class="line">But we use only <span class="strong">**might**</span> (not may) when the situation is <span class="strong">**not real**</span>.</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>If I knew them better, I might invite them to dinner.</span><br><span class="line"></span><br><span class="line">  (The situation here is not real because I don't know them very well,so I'm not going to invite them.'May' is not possible in this example)</span><br><span class="line">  </span><br><span class="line"> ### Might as well / may as well</span><br><span class="line"><span class="bullet">- </span>What shall we do?Shall we walk?</span><br><span class="line"><span class="bullet">- </span>We might as well. It's a nice day and I don't want to wait here for an hour.</span><br><span class="line"></span><br><span class="line">'(We) might as well do something' =(We) should do something because  there is nothing better to do and there is no reason not to do it. You can also say 'may as well (do)'.</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>A: What time  are you going?</span><br><span class="line"><span class="bullet">- </span>Well , I'm ready, so I might as well go now.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### difference between will and going to</span></span><br><span class="line"><span class="strong">**wil**</span>l: We use  <span class="strong">**will**</span> when we decide to do something at the time of speaking. The speaker has not decided before. The party is a new idea.</span><br><span class="line"></span><br><span class="line">For example:</span><br><span class="line"></span><br><span class="line">SUE: Let's have a party.</span><br><span class="line"></span><br><span class="line">HELEN: That's a great idea. We<span class="strong">**'ll**</span> invite lots of people.</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="strong">**going to**</span>: We use <span class="strong">**going to**</span> when we have already decided to do something. Helen had already decided to invite lots of people before she spoke to Dave.</span><br><span class="line"></span><br><span class="line">For example:</span><br><span class="line"></span><br><span class="line">HELEN: Sue and I have decide to have a party.   We<span class="strong">**'re going to**</span> invite lots of people.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### could and was/were able to</span></span><br><span class="line">We use <span class="strong">**could**</span> to say that somebody had the general ability or permission to do something:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>My grandfather could speak five languages.</span><br><span class="line"><span class="bullet">- </span>We were completely free. We could do what we wanted.</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">We use <span class="strong">**could**</span> for general ability. But if we are talking about what happened in a particular situation , we use was/were able to... or managed to...(not <span class="strong">**could**</span>):</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>The fire spread through the building quickly but everybody was able to escape.</span><br><span class="line">  or...everybody managed to escape.</span><br><span class="line"><span class="bullet">- </span>They didn't want to come with us at first but we managed to persuade them.</span><br><span class="line">  or...we were able to persuade them.(but not 'could persuade')</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="strong">**Compare:**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Jack was an excellent tennis players. He <span class="strong">**could beat**</span> anybody. (=he had the general ability to beat anybody)</span><br><span class="line"></span><br><span class="line"><span class="strong">**but**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Jack and Alf had a game of tennis yesterday. Alf played very well but in the end Jack managed to beat him. or...was able to beat him. (=he managed to beat him in this particular game)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### could and could have</span></span><br><span class="line">could:**</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>use <span class="strong">**could**</span> to talk about possible actions now or in the future (especially to make a suggestion):</span><br><span class="line">  A: What shall we do this evening? B: We could go to cinema.</span><br><span class="line">  It's a nice day. We could go for a walk.</span><br><span class="line"><span class="bullet">- </span>You must use could(not 'can') when you don't really mean what you say:</span><br><span class="line">  I'm so angry with him. I could kill him!(not 'I can kill him')</span><br><span class="line"><span class="bullet">- </span>We also use could to say that something is possible now or in the future:</span><br><span class="line">  The phone is ringing. It could be Tim.(<span class="strong">**now**</span>)</span><br><span class="line">  I don't know when they 'll be here . They could arrive at any time.(<span class="strong">**future**</span>)</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="strong">**could have (done)**</span></span><br><span class="line"></span><br><span class="line">Most often, we use <span class="strong">**could have (done)**</span> for things which were possible but did not happen:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Why did you stay at a hotel when you went  to New York? You could have stayed with Barbara. (=you had the opportunity to stay with her but you didn't)</span><br><span class="line"><span class="bullet">- </span>Jack fell off a ladder yesterday but he's all right. He's lucky - he could hurt himself badly. (but he didn't hurt himself)</span><br><span class="line"><span class="bullet">- </span>Jack wanted Ken to lend him 50 last week.</span><br><span class="line">  Ken couldn't have lent him 50. (because he was short of money)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### as</span></span><br><span class="line"><span class="bullet">1. </span>as...as</span><br><span class="line"></span><br><span class="line">Any sentences using the structure <span class="strong">**as...as**</span> can rewrite a sentence with <span class="strong">**than**</span>. And the meaning doesn't change.</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>The city center wasn't as crowded this morning as it usually is. (subject + verb after the second as)</span><br><span class="line"><span class="bullet">- </span>I don't know as many people as you do. (<span class="strong">**between the first and the second as ,it's many+ noun, usually it should be a adj or adv, many/much+ noun can be an exception.**</span>)</span><br><span class="line"></span><br><span class="line"><span class="emphasis">*Note: It's not necessary that after the second as , it must be subject +verb. Such as:*</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Let's walk. It's just as quick as taking the bus.</span><br><span class="line"></span><br><span class="line">as soon as possible is common:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Can you send me the money as soon as possible, please? (<span class="strong">**Usually, it's put in the end of sentence).**</span></span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="bullet">2. </span>Another form: twice as...as , three times as...as etc:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Petrol is twice as expensive as it was a few years age.</span><br><span class="line"><span class="bullet">- </span>Their house is about three times as big as ours. </span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="bullet">3. </span><span class="strong">**the same as**</span> is usual, but remember, between 'same' and 'as', it should be noun.</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Ann's salary is the same as mine.          or           Ann gets the same salary as me.</span><br><span class="line"><span class="bullet">- </span>Tom is the same age as George.</span><br><span class="line"><span class="bullet">- </span>'What would you like to drink?'      'I'll have the same as you.'</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="bullet">4. </span>As (reason and time), here 'as ' is a conjunction</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>As (reason): As sometimes means 'because':</span><br><span class="line"></span><br><span class="line"><span class="bullet">  - </span>As it was a public holiday, all the shops were shut. (=because it was a public holiday)</span><br><span class="line"><span class="bullet">  - </span>As the live near us, we see them quite often.</span><br><span class="line"><span class="bullet">  - </span>We watched television all evening as we had nothing better to do.</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>As(time):  more complicated than above.</span><br><span class="line"></span><br><span class="line"><span class="bullet">  - </span>you can say that something happened as you were doing something else (= in the middle of doing something else):</span><br><span class="line"><span class="bullet">    - </span>Jill slipped as she was getting off the bus.</span><br><span class="line"><span class="bullet">    - </span>The thief was seen as he was climbing over the wall.</span><br><span class="line"><span class="bullet">  - </span>Most often we use as when two short actions happen at the same time:</span><br><span class="line"><span class="bullet">    - </span>George arrived as Sue left. (=he arrived and Sue left at the same time)</span><br><span class="line"><span class="bullet">    - </span>We all waved goodbye to Liz as she drove away in her car.</span><br><span class="line"><span class="bullet">  - </span>But we also use as when two things happen together <span class="strong">**over at longer period of time**</span>:</span><br><span class="line"><span class="bullet">    - </span>As the day went on, the weather got worse.</span><br><span class="line"><span class="bullet">    - </span>I began to enjoy the job more as I got used to it.</span><br><span class="line"><span class="bullet">  - </span>You can also use just as (=exactly at that moment): </span><br><span class="line"><span class="bullet">    - </span>Just as I sat down, the phone rang.</span><br><span class="line"><span class="bullet">    - </span>Just as we were going out, it started to ran.</span><br><span class="line"><span class="bullet">    - </span>I had to leave just as the conversation was getting interesting.</span><br><span class="line"></span><br><span class="line">  ------</span><br><span class="line"></span><br><span class="line"><span class="bullet">5. </span>We use <span class="strong">**as(time)**</span> for actions and happenings. <span class="strong">**As**</span> + <span class="strong">***a situation**</span>* (not an action) usually means 'because':</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>As we were asleep, we didn't hear the doorbell. (=because we were asleep)</span><br><span class="line"><span class="bullet">- </span>As I walked into the room, the phone started ringing. (at the same time)</span><br><span class="line"><span class="bullet">- </span>As they live near me, I see them quite often. (=because they live near me)</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="bullet">6. </span>Another use: We use <span class="strong">**as**</span> before a subject + verb:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>I didn't move anything. I left everything as I found it.</span><br><span class="line"><span class="bullet">- </span>They did as they promised.</span><br><span class="line"></span><br><span class="line">We also say <span class="strong">**as you know/as I said/ as she expected/ as I thought etc:**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>As you know, it's Tom's birthday next week. ('As part' is put in the head)</span><br><span class="line"><span class="bullet">- </span>Jane failed her driving test, as she expected.</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line"><span class="bullet">7. </span>Note that we say <span class="strong">**as usual / as always:**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>You're late as usual.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### as long as</span></span><br><span class="line"><span class="strong">**as long as**</span>  , <span class="strong">**so long as**</span> , <span class="strong">**provided**</span> , <span class="strong">**providing**</span></span><br><span class="line"></span><br><span class="line">All these expressions mean <span class="strong">***'if'**</span>* or 'on condition that'</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>You can use my car <span class="strong">**as(so) long as**</span> you drive carefully.</span><br><span class="line"><span class="bullet">- </span>Travelling by car is convenient <span class="strong">**provided (providing)**</span> you have somewhere to park.</span><br><span class="line"><span class="bullet">- </span><span class="strong">**Providing (Provided) **</span> she studies hard, she'll pass her exams.</span><br><span class="line"></span><br><span class="line">When you are talking about the future, do not use <span class="strong">**will**</span> after unless / as long as / provided / providing.</span><br><span class="line">Use a present tense.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### in case (of)</span></span><br><span class="line">Some examples of in case:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Ann might phone tonight. I don't want to go out in case she phones.</span><br><span class="line"><span class="bullet">- </span>I'll draw a map for you incase you can't find our house.</span><br><span class="line"></span><br><span class="line">We use <span class="strong">**just in case**</span> for a smaller possibility:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>I don't think it will rain but I'll take an umbrella just in case.</span><br><span class="line"></span><br><span class="line">'In case of...' is not the same as 'in case'. <span class="strong">**In case of**</span>='if there is...'<span class="strong">***(especially in notices etc.):**</span>*</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>In case of fire, please leave the building as quickly as possible.</span><br><span class="line"><span class="bullet">- </span>In case of emergency, telephone this number.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### the... the ...</span></span><br><span class="line">It's comparison structure. We use it to say that one thing depends on another thing:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>The warmer the weather, the better I feel.</span><br><span class="line"><span class="bullet">- </span>The sooner we leave, the sooner we will arrive.</span><br><span class="line"><span class="bullet">- </span>The younger you are, the easier it is to learn.</span><br><span class="line"><span class="bullet">- </span>The more expensive the hotel, the better the service.</span><br><span class="line"></span><br><span class="line"><span class="strong">***Note:**</span><span class="emphasis">*  本质来说，前后两个*</span><span class="emphasis">*the*</span>* 句子都是一个完整的正常语序的句子在进行倒装，同时由上述例子可以看出，will be /be  可以省略。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### older and elder</span></span><br><span class="line">The comparative of old is older:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>Tom looks older than he really is.</span><br><span class="line"></span><br><span class="line">You can use elder(or older) when you talk about people in a family. You can say <span class="strong">**(my) elder brother/sister/son/daughter**</span>:</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>My elder brother is a pilot.</span><br><span class="line"></span><br><span class="line">We say 'my elder brother' but we don't say that 'somebody is elder':</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>My brother is older than me(not 'elder than me')</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Grammar</category>
+      </categories>
   </entry>
 </search>
