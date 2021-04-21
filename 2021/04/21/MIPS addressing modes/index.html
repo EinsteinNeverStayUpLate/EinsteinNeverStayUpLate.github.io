@@ -6,17 +6,23 @@
     
 
     
-    <title>Archive: 2020/5 | Virux</title>
+    <title>MIPS addressing modes | Virux</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Virux">
-<meta property="og:url" content="http://yoursite.com/archives/2020/05/page/2/index.html">
+    <meta name="keywords" content="" />
+    
+    <meta property="og:type" content="article">
+<meta property="og:title" content="MIPS addressing modes">
+<meta property="og:url" content="http://yoursite.com/2021/04/21/MIPS%20addressing%20modes/index.html">
 <meta property="og:site_name" content="Virux">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2021/04/21/MIPS%20addressing%20modes/0.png">
+<meta property="article:published_time" content="2021-04-21T07:46:32.000Z">
+<meta property="article:modified_time" content="2021-04-21T07:46:32.101Z">
 <meta property="article:author" content="Virux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2021/04/21/MIPS%20addressing%20modes/0.png">
     
 
     
@@ -143,81 +149,176 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2020/5
+    <a class="page-title-link" href="/categories/computer-hardware/">computer hardware</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-MIPS addressing modes" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2020" class="archive-year"><i class="icon fa fa-calendar-o"></i>2020</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2020/05/01/The%20difference%20of%20Access%20cycle%20and%20Access%20time/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2020/05/01/The%20difference%20of%20Access%20cycle%20and%20Access%20time/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2020-05-01T15:57:44.083Z" itemprop="datePublished">2020-05-01</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2020/05/01/The%20difference%20of%20Access%20cycle%20and%20Access%20time/">The difference of Access cycle and Access time</a>
+        MIPS addressing modes
         </h1>
     
 
-        <p class="article-excerpt">
-            The difference of Access cycle and Access time存取时间：存取时间是指从启动一次存储器操作到完成该操作所经历的时间，分为读出时间和写入时间。
-存取周期：存取周期又称为读写周期或访问周期。它是指存储器进行一次完整的读写操作所需的全部时间，即连续两次独立访问存储器操作之间所需的最小时间间隔。
-上面两个概念乍一看基本相同，其实不一样。关键在于存取周期=存取时间
-        </p>
-    </div>
-</article>
-    
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2021/04/21/MIPS%20addressing%20modes/" class="article-date">
+       <time datetime="2021-04-21T07:46:32.000Z" itemprop="datePublished">2021-04-21</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2021/04/21/MIPS%20addressing%20modes/" class="article-date">
+     <time datetime="2021-04-21T07:46:32.101Z" itemprop="dateModified">2021-04-21</time>
+  </a>
+</div>
+
+
+                
+
+                
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <p><img src="/2021/04/21/MIPS%20addressing%20modes/0.png" alt="0"></p>
+<a id="more"></a> 
+
+<h3 id="立即数寻址"><a href="#立即数寻址" class="headerlink" title="立即数寻址"></a>立即数寻址</h3><p>立即数寻址(immediate addressing)，操作数是位于指令自身的常数。</p>
+<p><img src="/2021/04/21/MIPS%20addressing%20modes/1.png" alt="immediate addressing"></p>
+<h3 id="寄存器寻址"><a href="#寄存器寻址" class="headerlink" title="寄存器寻址"></a>寄存器寻址</h3><p>寄存器寻址(register addressing)，操作数是寄存器。</p>
+<p><img src="/2021/04/21/MIPS%20addressing%20modes/2.png" alt="register addressing"></p>
+<h3 id="基址寻址"><a href="#基址寻址" class="headerlink" title="基址寻址"></a>基址寻址</h3><p>基址寻址(base addressing)或偏移寻址(displacement addressing)，操作数在内存中，其地址是指令中基址寄存器和常数的和。</p>
+<p><img src="/2021/04/21/MIPS%20addressing%20modes/3.png" alt="displacement addressing"></p>
+<h3 id="PC相对寻址"><a href="#PC相对寻址" class="headerlink" title="PC相对寻址"></a>PC相对寻址</h3><p>PC相对寻址(PC-relative addressing)，地址是PC和指令中常数的和。</p>
+<p><img src="/2021/04/21/MIPS%20addressing%20modes/4.png" alt="PC-relative addressing"></p>
+<h3 id="伪直接寻址"><a href="#伪直接寻址" class="headerlink" title="伪直接寻址"></a>伪直接寻址</h3><p>伪直接寻址(pseudodirect addressing)，跳转地址由指令中26位字段和PC高位相连而成。</p>
+<p><img src="/2021/04/21/MIPS%20addressing%20modes/5.png" alt="pseudodirect addressing"></p>
+
         </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2021/04/21/MIPS%20addressing%20modes/" data-id="cknpes0b0000euou79isgbvno" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Virux"
+        },
+        "headline": "MIPS addressing modes",
+        "image": "http://yoursite.com/2021/04/21/MIPS%20addressing%20modes/0.png",
+        "keywords": "",
+        "genre": "computer hardware",
+        "datePublished": "2021-04-21",
+        "dateCreated": "2021-04-21",
+        "dateModified": "2021-04-21",
+        "url": "http://yoursite.com/2021/04/21/MIPS addressing modes/",
+        "description": "",
+        "wordCount": 46
+    }
+</script>
+
+</article>
+
+    <section id="comments">
     
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
 
 
-    </div></section>
+    
+    </section>
 
-
-    <nav id="page-nav">
-        <span class="pages">Page 2 of 2</span>
-        <a class="extend prev" rel="prev" href="/archives/2020/05/">&laquo;</a><a class="page-number" href="/archives/2020/05/">1</a><span class="page-number current">2</span>
-    </nav>
 
 
                         </div>
@@ -278,6 +379,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2021/04/21/memory/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">memory</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -489,11 +603,13 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://yoursite.com/2021/04/21/MIPS%20addressing%20modes/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
