@@ -1,6 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>bus</title>
+    <url>/2021/04/21/Bus/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/Bus/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>what is bus：</p>
+<p>总线是连接各个部件的信息传输线，是各个部件共享的传输介质。</p>
+<p>总线上信息传送：</p>
+<p>​    串行，并行（需要多条数据线）</p>
+<p>传输距离较长时不使用并行传输，一般用在机箱内。</p>
+<p>总线结构的计算机举例：</p>
+<p>1：单总线结构框图：总线会成为瓶颈</p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E5%8D%95%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="单总线结构"></p>
+<p>2：面向CPU的双总线结构</p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="双总线结构"></p>
+<p>DEFEAT：当主存要与外部设备，一定要经过CPU，会打断CPU的执行。</p>
+<p>3：以存储器为中心</p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E9%9D%A2%E5%90%91%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="面向存储器的双总线结构"></p>
+<p>总线分类：（要有标准）</p>
+<p>根据总线的位置进行划分：</p>
+<p>1：片内总线： 芯片内部总线</p>
+<p>2：系统总线： 计算机各部件之间的信息传输线</p>
+<ul>
+<li>数据总线  双向 与机器字长、存储字长有关</li>
+<li>地址总线 单向   与存储地址、I/O地址有关,一般与MAR的长度相同</li>
+<li>控制总线    有出 有入</li>
+</ul>
+<p>3：通信总线：用于计算机系统之间或计算机系统与其他系统（如控制仪表、移动通信等）之间的通信</p>
+<p>传输方式：并行和串行</p>
+<p>总线的特性及性能指标：</p>
+<p>一：总线的物理实现</p>
+<p>二：总线特性</p>
+<ul>
+<li>机械特性</li>
+<li>电器特性  传输方向和有效的电平范围</li>
+<li>功能特性  每根传输线的功能</li>
+<li>时间特性  信号的时序关系</li>
+</ul>
+<p>总线的性能指标：</p>
+<ul>
+<li>总线的宽度 数据线的根数</li>
+<li>标准传输率 每秒传输的最大字节数（MBps）</li>
+<li>时钟同步/异步  同步、不同步</li>
+<li>总线复用  地址线和数据线复用 （8086地址线和数据线复用）复用的是为了减少芯片的管角、脚数</li>
+<li>信号线数  地址线 数据线和控制线的总和</li>
+<li>总线控制方式  突发、自动、仲裁、逻辑、计数</li>
+<li>其他指标   负载能力</li>
+</ul>
+<p>总线标准：</p>
+<p>单总线结构</p>
+<p>多总线结构</p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E5%A4%9A%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="多总线结构"></p>
+<p>通道：具有特殊功能的处理器，有自己的控制器，指令系统。通道的程序由操作系统来编写。</p>
+<p>三总线结构</p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="三总线结构"></p>
+<p>另一种三总线结构：</p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E5%8F%88%E4%B8%80%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="又一三总线结构"></p>
+<p>四总线结构</p>
+<p>将低速设备和高速设备进行分类组织</p>
+<p>总线结构举例：</p>
+<p><strong>总线控制（重难点）</strong></p>
+<p>一：总线判优控制</p>
+<p>1.基本概念</p>
+<ul>
+<li><p>主设备（模块） 对总线由控制权</p>
+</li>
+<li><p>从设备（模块） 响应从主设备发来的总线命令</p>
+</li>
+<li><p>总线判优控制：</p>
+<ul>
+<li>集中式 ：链式查询，计数器定时查询，独立请求方式</li>
+<li>分布式：</li>
+</ul>
+</li>
+<li><p>链式查询：一般用于微型计算机和嵌入式系统</p>
+<p>如果I/O接口有总线占用请求，通过BR向总线控制部件提出占用请求。</p>
+<p>BG设备查询接口是否总线占用请求。</p>
+<p>某个获得授权的接口通过BS总线设置总线忙，然后就获得总线的使用权。</p>
+<p>如果BG发送的信号经过某个故障接口时无法传下去，则后续的接口无法查询得到。</p>
+</li>
+<li><p>计数器定时查询</p>
+<p>设备地址上传输的是一个计数器给出的。通过的设备查找某个设备是否提出了总线占用请求。</p>
+<p>总线控制部件中有一个计数器。</p>
+<p>计数器在总线允许被占用的情况下启动。</p>
+<p>优点：优先级的确定十分灵活，可通过软件的方式控制计数器</p>
+</li>
+<li><p>独立请求方式</p>
+<p>每个接口都有BG 和BR两条线，总线控制部件内部有一个排队器。这样优先级的设定十分灵活</p>
+<p>接口BR发送总线占用请求信号到总线控制器。</p>
+<p>控制部件会对所有请求总线的接口中的某一个应答。获得应答的设备便占有总线的使用权。</p>
+</li>
+</ul>
+<p>二：总线的通信控制</p>
+<p>目的： 解决通信双方的 <strong>协调配合</strong> 问题</p>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Bochs usage</title>
+    <url>/2021/04/21/Bochs%20usage/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/Bochs%20usage/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug kernel codes. So, its  usage may not friendly. Before using it to virtualize physical machine, it need configuring a configure file, which contains many parameters you want to emulate.</p>
+<h3 id="Downloading-website"><a href="#Downloading-website" class="headerlink" title="Downloading website"></a>Downloading website</h3><p><a href="http://bochs.sourceforge.net/" target="_blank" rel="noopener">http://bochs.sourceforge.net/</a></p>
+<p><strong>NOTE: dlxlinux, demo of usage , of version 2.6.11 can’t be successfully run.</strong></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>​    Using Bochs to debug, two files are inevitable and should be generated manually, configure file and image file.<br>​    For config file, the following is an example. Each parameter’s meaning can be looked up from bochsrc-smaple.txt in Bochs directory.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># how much memory the emulated machine will have</span></span><br><span class="line">megs: <span class="number">32</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># filename of ROM images</span></span><br><span class="line">romimage: file=../BIOS-bochs-latest</span><br><span class="line">vgaromimage: file=../VGABIOS-lgpl-latest</span><br><span class="line"></span><br><span class="line"># what disk images will be used </span><br><span class="line">floppya: <span class="number">1</span>_44=floppya.img, status=inserted</span><br><span class="line">floppyb: <span class="number">1</span>_44=floppyb.img, status=inserted</span><br><span class="line"></span><br><span class="line"># hard disk</span><br><span class="line">ata0: enabled=<span class="number">1</span>, ioaddr1=<span class="number">0x1f0</span>, ioaddr2=<span class="number">0x3f0</span>, irq=<span class="number">14</span></span><br><span class="line">ata0-master: type=disk, path=<span class="string">"a.img"</span>, cylinders=<span class="number">306</span>, heads=<span class="number">4</span>, spt=<span class="number">17</span></span><br><span class="line"></span><br><span class="line"># choose the boot disk.</span><br><span class="line">boot: c</span><br><span class="line"></span><br><span class="line"># <span class="keyword">default</span> <span class="built_in">config</span> interface is textconfig.</span><br><span class="line">#config_interface: textconfig</span><br><span class="line">#config_interface: wx</span><br><span class="line"></span><br><span class="line">#display_library: x</span><br><span class="line"># other choices: win32 sdl wx carbon amigaos beos macintosh nogui rfb term svga</span><br><span class="line"></span><br><span class="line"># where <span class="keyword">do</span> we send <span class="built_in">log</span> messages?</span><br><span class="line"><span class="built_in">log</span>: bochsout.txt</span><br><span class="line"></span><br><span class="line"># disable the mouse, since DLX is <span class="built_in">text</span> only</span><br><span class="line">mouse: enabled=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># <span class="built_in">set</span> up IPS value <span class="keyword">and</span> clock sync</span><br><span class="line">cpu: ips=<span class="number">15000000</span></span><br><span class="line">clock: sync=both</span><br><span class="line">    </span><br><span class="line">keyboard: keymap=../keymaps/x11-pc-us.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-fr.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-de.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-es.<span class="built_in">map</span></span><br></pre></td></tr></table></figure>
+
+<p>​    For image file, it could be floppy, hard disk and CDROM, all of which should be written with binary file which can appear with NASM compiling .asm file to .bin file.<br>​    To utilize debug function, open <strong>bochsdbg.exe</strong>.</p>
+]]></content>
+      <categories>
+        <category>OSDev</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C head file contents</title>
+    <url>/2021/04/21/C%20head%20file%20contents/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/C%20head%20file%20contents/1.jpg" alt="1"></p>
+<a id="more"></a>
+
+<ul>
+<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
+</li>
+<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
+</li>
+<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
+</li>
+<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
+</li>
+<li><p><strong>类型定义</strong>——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C features</title>
     <url>/2021/04/20/C%20features/</url>
     <content><![CDATA[<p><img src="/2021/04/20/C%20features/1.png" alt="1"></p>
@@ -332,106 +473,6 @@
       </categories>
   </entry>
   <entry>
-    <title>bus</title>
-    <url>/2021/04/21/Bus/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/Bus/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>what is bus：</p>
-<p>总线是连接各个部件的信息传输线，是各个部件共享的传输介质。</p>
-<p>总线上信息传送：</p>
-<p>​    串行，并行（需要多条数据线）</p>
-<p>传输距离较长时不使用并行传输，一般用在机箱内。</p>
-<p>总线结构的计算机举例：</p>
-<p>1：单总线结构框图：总线会成为瓶颈</p>
-<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E5%8D%95%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="单总线结构"></p>
-<p>2：面向CPU的双总线结构</p>
-<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="双总线结构"></p>
-<p>DEFEAT：当主存要与外部设备，一定要经过CPU，会打断CPU的执行。</p>
-<p>3：以存储器为中心</p>
-<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E9%9D%A2%E5%90%91%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="面向存储器的双总线结构"></p>
-<p>总线分类：（要有标准）</p>
-<p>根据总线的位置进行划分：</p>
-<p>1：片内总线： 芯片内部总线</p>
-<p>2：系统总线： 计算机各部件之间的信息传输线</p>
-<ul>
-<li>数据总线  双向 与机器字长、存储字长有关</li>
-<li>地址总线 单向   与存储地址、I/O地址有关,一般与MAR的长度相同</li>
-<li>控制总线    有出 有入</li>
-</ul>
-<p>3：通信总线：用于计算机系统之间或计算机系统与其他系统（如控制仪表、移动通信等）之间的通信</p>
-<p>传输方式：并行和串行</p>
-<p>总线的特性及性能指标：</p>
-<p>一：总线的物理实现</p>
-<p>二：总线特性</p>
-<ul>
-<li>机械特性</li>
-<li>电器特性  传输方向和有效的电平范围</li>
-<li>功能特性  每根传输线的功能</li>
-<li>时间特性  信号的时序关系</li>
-</ul>
-<p>总线的性能指标：</p>
-<ul>
-<li>总线的宽度 数据线的根数</li>
-<li>标准传输率 每秒传输的最大字节数（MBps）</li>
-<li>时钟同步/异步  同步、不同步</li>
-<li>总线复用  地址线和数据线复用 （8086地址线和数据线复用）复用的是为了减少芯片的管角、脚数</li>
-<li>信号线数  地址线 数据线和控制线的总和</li>
-<li>总线控制方式  突发、自动、仲裁、逻辑、计数</li>
-<li>其他指标   负载能力</li>
-</ul>
-<p>总线标准：</p>
-<p>单总线结构</p>
-<p>多总线结构</p>
-<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E5%A4%9A%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="多总线结构"></p>
-<p>通道：具有特殊功能的处理器，有自己的控制器，指令系统。通道的程序由操作系统来编写。</p>
-<p>三总线结构</p>
-<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="三总线结构"></p>
-<p>另一种三总线结构：</p>
-<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E5%8F%88%E4%B8%80%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="又一三总线结构"></p>
-<p>四总线结构</p>
-<p>将低速设备和高速设备进行分类组织</p>
-<p>总线结构举例：</p>
-<p><strong>总线控制（重难点）</strong></p>
-<p>一：总线判优控制</p>
-<p>1.基本概念</p>
-<ul>
-<li><p>主设备（模块） 对总线由控制权</p>
-</li>
-<li><p>从设备（模块） 响应从主设备发来的总线命令</p>
-</li>
-<li><p>总线判优控制：</p>
-<ul>
-<li>集中式 ：链式查询，计数器定时查询，独立请求方式</li>
-<li>分布式：</li>
-</ul>
-</li>
-<li><p>链式查询：一般用于微型计算机和嵌入式系统</p>
-<p>如果I/O接口有总线占用请求，通过BR向总线控制部件提出占用请求。</p>
-<p>BG设备查询接口是否总线占用请求。</p>
-<p>某个获得授权的接口通过BS总线设置总线忙，然后就获得总线的使用权。</p>
-<p>如果BG发送的信号经过某个故障接口时无法传下去，则后续的接口无法查询得到。</p>
-</li>
-<li><p>计数器定时查询</p>
-<p>设备地址上传输的是一个计数器给出的。通过的设备查找某个设备是否提出了总线占用请求。</p>
-<p>总线控制部件中有一个计数器。</p>
-<p>计数器在总线允许被占用的情况下启动。</p>
-<p>优点：优先级的确定十分灵活，可通过软件的方式控制计数器</p>
-</li>
-<li><p>独立请求方式</p>
-<p>每个接口都有BG 和BR两条线，总线控制部件内部有一个排队器。这样优先级的设定十分灵活</p>
-<p>接口BR发送总线占用请求信号到总线控制器。</p>
-<p>控制部件会对所有请求总线的接口中的某一个应答。获得应答的设备便占有总线的使用权。</p>
-</li>
-</ul>
-<p>二：总线的通信控制</p>
-<p>目的： 解决通信双方的 <strong>协调配合</strong> 问题</p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hanming code</title>
     <url>/2021/04/21/Hanming%20Code/</url>
     <content><![CDATA[<p><img src="/2021/04/21/Hanming%20Code/0.jpg" alt="0"></p>
@@ -468,26 +509,25 @@
       </categories>
   </entry>
   <entry>
-    <title>C head file contents</title>
-    <url>/2021/04/21/C%20head%20file%20contents/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/C%20head%20file%20contents/1.jpg" alt="1"></p>
+    <title>I/O interrupt processing procedure</title>
+    <url>/2021/04/21/IO%20interrupt%20processing%20procedure/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg" alt="0"></p>
 <a id="more"></a>
 
+<p>完整的操作过程如下：</p>
+<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/1.png" alt="1"></p>
+<p>​    在执行主程序的过程中，会执行到一条输入指令。接着CPU将设备地址通过地址线送到接口电路中的设备选择电路，然后设备选择电路对该地址进行比较，看是否是该接口所连接的I/O设备，若是则该接口和相对应的设备就被选中，<strong>SEL</strong> 有效。只有SEL有效，接口电路才会开始工作。<br>​    CPU将命令送到接口中进行译码。由图可以看出<em>启动命令</em>和<em>SEL</em>同时有效才会是触发器D和触发器B被设置。触发器B被设置为1，而触发器D被设置为0。 表示设备开始工作，但同时数据并没有准备好。<strong>NOTE</strong>：触发器B的另一个作用是，启动I/O设备开始工作。<br>​    然后I/O设备开始工作，将data送入DBR中，并将触发器B和触发器D进行修改，B改为0而D改为1。接着，如果MASK触发器的非端为1（表示该中断并未被屏蔽），此时INTR就会经过两个1被置为1。<br>​    接着CPU在一条指令的执行阶段结束后，发出中断查询信号。 然后将INTR送入排队器排队，经过排队器排队后，排队器的输出信号只有一个是1，其他都是0。 排队器的输出信号输出到设备编码器，然后CPU发出中断响应信号（INTA）。之后，设备编码器就会形成向量地址，该地址经过数据线传给CPU，传给PC。PC利用改地址去取出中断服务程序的路口地址（无条件跳转）。然后就进入中断服务程序。</p>
+<hr>
+<p>中断服务程序的流程：</p>
 <ul>
-<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
-</li>
-<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
-</li>
-<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
-</li>
-<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
-</li>
-<li><p><strong>类型定义</strong>——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
-</li>
+<li>保护现场：保护程序的断点（中断隐指令完成）；保存通用寄存器和状态寄存器。</li>
+<li>中断服务：与I/O设备直接相关，不同功能设备的中断服务程序不同。</li>
+<li>恢复现场：从主存或堆栈中恢复CPU寄存器中的内容。</li>
+<li>中断返回：中断返回指令。</li>
 </ul>
 ]]></content>
       <categories>
-        <category>C</category>
+        <category>computer hardware</category>
       </categories>
   </entry>
   <entry>
@@ -506,6 +546,19 @@
 <p><img src="/2021/04/21/MIPS%20addressing%20modes/4.png" alt="PC-relative addressing"></p>
 <h3 id="伪直接寻址"><a href="#伪直接寻址" class="headerlink" title="伪直接寻址"></a>伪直接寻址</h3><p>伪直接寻址(pseudodirect addressing)，跳转地址由指令中26位字段和PC高位相连而成。</p>
 <p><img src="/2021/04/21/MIPS%20addressing%20modes/5.png" alt="pseudodirect addressing"></p>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>MOS and TTL</title>
+    <url>/2021/04/21/MOS%20and%20TTL/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>MOS：金属氧化半导体场效应晶体管</p>
+<p>TTL：Transistor-Transistor logic 晶体管-晶体管逻辑电路</p>
 ]]></content>
       <categories>
         <category>computer hardware</category>
@@ -546,19 +599,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>MOS and TTL</title>
-    <url>/2021/04/21/MOS%20and%20TTL/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>MOS：金属氧化半导体场效应晶体管</p>
-<p>TTL：Transistor-Transistor logic 晶体管-晶体管逻辑电路</p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
     <title>The included information of C head files in UNIX</title>
     <url>/2020/05/07/The%20included%20information%20of%20C%20head%20files%20in%20UNIX/</url>
     <content><![CDATA[<h1 id="The-included-information-of-C-head-files-in-UNIX"><a href="#The-included-information-of-C-head-files-in-UNIX" class="headerlink" title="The included information of C head files in UNIX"></a>The included information of C head files in UNIX</h1><ul>
@@ -573,21 +613,103 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Bochs usage</title>
-    <url>/2021/04/21/Bochs%20usage/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/Bochs%20usage/0.jpg" alt="0"></p>
+    <title>develpment aspects of microprocessors</title>
+    <url>/2021/04/21/develpment%20aspects%20of%20microprocessors/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/develpment%20aspects%20of%20microprocessors/0.jpg" alt="0"></p>
 <a id="more"></a>
 
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug kernel codes. So, its  usage may not friendly. Before using it to virtualize physical machine, it need configuring a configure file, which contains many parameters you want to emulate.</p>
-<h3 id="Downloading-website"><a href="#Downloading-website" class="headerlink" title="Downloading website"></a>Downloading website</h3><p><a href="http://bochs.sourceforge.net/" target="_blank" rel="noopener">http://bochs.sourceforge.net/</a></p>
-<p><strong>NOTE: dlxlinux, demo of usage , of version 2.6.11 can’t be successfully run.</strong></p>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>​    Using Bochs to debug, two files are inevitable and should be generated manually, configure file and image file.<br>​    For config file, the following is an example. Each parameter’s meaning can be looked up from bochsrc-smaple.txt in Bochs directory.</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># how much memory the emulated machine will have</span></span><br><span class="line">megs: <span class="number">32</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># filename of ROM images</span></span><br><span class="line">romimage: file=../BIOS-bochs-latest</span><br><span class="line">vgaromimage: file=../VGABIOS-lgpl-latest</span><br><span class="line"></span><br><span class="line"># what disk images will be used </span><br><span class="line">floppya: <span class="number">1</span>_44=floppya.img, status=inserted</span><br><span class="line">floppyb: <span class="number">1</span>_44=floppyb.img, status=inserted</span><br><span class="line"></span><br><span class="line"># hard disk</span><br><span class="line">ata0: enabled=<span class="number">1</span>, ioaddr1=<span class="number">0x1f0</span>, ioaddr2=<span class="number">0x3f0</span>, irq=<span class="number">14</span></span><br><span class="line">ata0-master: type=disk, path=<span class="string">"a.img"</span>, cylinders=<span class="number">306</span>, heads=<span class="number">4</span>, spt=<span class="number">17</span></span><br><span class="line"></span><br><span class="line"># choose the boot disk.</span><br><span class="line">boot: c</span><br><span class="line"></span><br><span class="line"># <span class="keyword">default</span> <span class="built_in">config</span> interface is textconfig.</span><br><span class="line">#config_interface: textconfig</span><br><span class="line">#config_interface: wx</span><br><span class="line"></span><br><span class="line">#display_library: x</span><br><span class="line"># other choices: win32 sdl wx carbon amigaos beos macintosh nogui rfb term svga</span><br><span class="line"></span><br><span class="line"># where <span class="keyword">do</span> we send <span class="built_in">log</span> messages?</span><br><span class="line"><span class="built_in">log</span>: bochsout.txt</span><br><span class="line"></span><br><span class="line"># disable the mouse, since DLX is <span class="built_in">text</span> only</span><br><span class="line">mouse: enabled=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"># <span class="built_in">set</span> up IPS value <span class="keyword">and</span> clock sync</span><br><span class="line">cpu: ips=<span class="number">15000000</span></span><br><span class="line">clock: sync=both</span><br><span class="line">    </span><br><span class="line">keyboard: keymap=../keymaps/x11-pc-us.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-fr.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-de.<span class="built_in">map</span></span><br><span class="line">#keyboard: keymap=../keymaps/x11-pc-es.<span class="built_in">map</span></span><br></pre></td></tr></table></figure>
-
-<p>​    For image file, it could be floppy, hard disk and CDROM, all of which should be written with binary file which can appear with NASM compiling .asm file to .bin file.<br>​    To utilize debug function, open <strong>bochsdbg.exe</strong>.</p>
+<p>从21世纪初来看，当前通用微处理器的发展重点将在以下几个方面：</p>
+<ul>
+<li>进一步提高复杂度来提高处理器性能</li>
+<li>通过Thread-level/Process-level 并行性的开发提高处理器的性能，即通过开发线程级并行性（Thread-Level Parallelism，TLP）或进程级并行性（Process-Level Parallelism，PLP）来提高性能，简化硬件设计。</li>
+<li>将存储器集成到处理器芯片来提高处理器性能</li>
+<li>发展嵌入式处理器</li>
+</ul>
 ]]></content>
       <categories>
-        <category>OSDev</category>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>concepts and properties of tree</title>
+    <url>/2021/04/21/concepts%20and%20properties%20of%20tree/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/concepts%20and%20properties%20of%20tree/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
+<h5 id="树的层次（Level），深度（Depth）和高度"><a href="#树的层次（Level），深度（Depth）和高度" class="headerlink" title="树的层次（Level），深度（Depth）和高度"></a>树的层次（Level），深度（Depth）和高度</h5><p>严蔚敏的书规定，根节点所在的层次是第一层。故，深度=高度。</p>
+<h5 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h5><p>若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树，否则为无序树。</p>
+<h5 id="路径和路径长度"><a href="#路径和路径长度" class="headerlink" title="路径和路径长度"></a>路径和路径长度</h5><p>树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数。<br>树的路径长度是从树根到每个结点的路径长度。</p>
+<h3 id="2-Basic-properties"><a href="#2-Basic-properties" class="headerlink" title="2. Basic properties"></a>2. Basic properties</h3><h5 id="任意树的结点数与其最小高度的关系"><a href="#任意树的结点数与其最小高度的关系" class="headerlink" title="任意树的结点数与其最小高度的关系"></a>任意树的结点数与其最小高度的关系</h5><p>具有n个结点的m叉树的最小高度为：<br>$$<br>\lceil\log_m (n(m-1)+1)\rceil<br>$$</p>
+<h5 id="二叉树与度为2的有序树的区别"><a href="#二叉树与度为2的有序树的区别" class="headerlink" title="二叉树与度为2的有序树的区别"></a>二叉树与度为2的有序树的区别</h5><ul>
+<li>度为2的树至少有3个结点，而二叉树可以为空</li>
+<li>度为2的有序树的孩子的左右次序是相对于另一孩子而言的，若某个结点只有一个孩子，则这个孩子就无须区分其左右次序，而二叉树无论孩子数是否为2，均需确定其左右次序，即二叉树的结点次序不是相对另一结点而言，而是确定的。</li>
+</ul>
+<h5 id="二叉树结点关系-常用"><a href="#二叉树结点关系-常用" class="headerlink" title="二叉树结点关系(常用)"></a>二叉树结点关系(常用)</h5><p>非空二叉树上的叶子结点数等于度为2的结点数加1，即<br>$$<br>n_0=n_2+1<br>$$</p>
+<h5 id="某一层的结点数上限"><a href="#某一层的结点数上限" class="headerlink" title="某一层的结点数上限"></a>某一层的结点数上限</h5><p>非空二叉树第k层上至多有<br>$$<br>2^{k-1}个结点<br>$$</p>
+<h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
+<h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
+<h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>difference between computer architecture and computer organization</title>
+    <url>/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>计算机体系结构(Computer Architecture)是指机器语言或汇编语言程序所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，<strong>大多属于抽象的属性</strong></p>
+<p>计算机组成（Computer Organization）是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构的问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为他们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，即可以认为它们的组成方式是不同的。<strong>例如，一台机器是否具备乘法指令是一个结构的问题，但实现乘法指令采用什么方式则是一个组成的问题。</strong></p>
+<h2 id="王道解释："><a href="#王道解释：" class="headerlink" title="王道解释："></a>王道解释：</h2><p>计算机体系结构（Computer architecture)，是指机器语言或汇编语言程序员所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，大都属于抽象属性。<br>    计算机组成（Computer Organization），是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为它们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，既可以认为它们的组成方式是不同的。例如，一个机器是否具备乘法指令是一个结构问题，但实现乘法指令采用什么方式（例如直接采用乘法器，亦或者采用加法器实现）则是一个组成的问题。<br>    许多计算机厂商提供一系列结构相同的解散及，而它们的组成却又相当大的差别，即使是同一系列的不同型号机器，其性能和价格差异也很大。例如，IBM System/370结构就包含了多种价位和性能的机位。</p>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>SRAM and DRAM basic unit circuity  working principle</title>
+    <url>/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/1.png" alt="1"></p>
+<p>工作原理如下：</p>
+<p>读出时：行地址选择和列地址选择有效，T5，T6，T7，T8打开。假设A端为高电平，通过T6送进位线A，经过T8，送进读出放大器，输出。读入时，经过两个写放大器的相反信号分别经过T7，T8送进A’和A端，A‘和A端两端是相反的信号。</p>
+<hr>
+<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/2.png" alt="2"></p>
+<p>工作原理：</p>
+<p>读出时，T4置一预充电信号，接着读选择项打开T2。若Gg有足够多的电荷（即Cg存储的是1），则T1导通且接地，此时读数据线降为低电平，读出“0”。反之，Cg没有足够多的电荷（存储的是0），T1截止，读数据线为高电平，读出“1”。</p>
+<p>写入时，数据先到写数据线，再由写选择线打开T3，此时写数据线相当于电容Cg联通，写数据线上是“1”就写入“1”，是“0”就写入“0”。</p>
+<hr>
+<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/3.png" alt="3"></p>
+<p>工作原理：</p>
+<p>读出时，字线上的高电平使T导通，如果Cg中有电荷（表示“1”），经T管在数据线上产生电流，读出为“1”。<br>否则，数据线上不产生电流，视为读出“0”。这里注意，读操作结束时，Cg的电荷已释放完毕，故是破坏性读出，必须再生。</p>
+<p>写入时，原理类似。</p>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Function pointer</title>
+    <url>/2021/04/21/function%20pointer/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/function%20pointer/1.jpg" alt="1"></p>
+<a id="more"></a>
+
+<h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>C</category>
       </categories>
   </entry>
   <entry>
@@ -636,43 +758,115 @@
       </categories>
   </entry>
   <entry>
-    <title>develpment aspects of microprocessors</title>
-    <url>/2021/04/21/develpment%20aspects%20of%20microprocessors/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/develpment%20aspects%20of%20microprocessors/0.jpg" alt="0"></p>
+    <title>memory</title>
+    <url>/2021/04/21/memory/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/memory/0.jpg" alt="0"></p>
 <a id="more"></a>
 
-<p>从21世纪初来看，当前通用微处理器的发展重点将在以下几个方面：</p>
+<p>一. 存储器分类</p>
+<p>（1） 半导体存储器   TTL 、MOS   易失</p>
+<p>（2）磁表面存储器   磁头，磁载体   非易失</p>
+<p>（3） 磁芯存储器     硬磁材料 ，环状元件  非易失</p>
+<p>（4） 光盘存储器     激光 、激光材料   非易失</p>
+<p><strong>寄存器在I/O端口中也有</strong></p>
+<p>Cache 一部分在CPU中，一部分在CPU外</p>
+<p>利用软硬件相结合的方式将不同介质的存储器连接成一个整体。 </p>
+<p>主存-辅存  解决主存容量不够 。利用软硬件相结合的方法连接成一个整体。</p>
+<p>缓存-主存   为了解决主存的速度不够。用硬件的方法连接成一个整体。因为主要是为了解决主存和CPU的速度问题，故需要非常快。</p>
+<p>主存-辅存  这个整体称为虚拟存储器。地址称为：虚地址，逻辑地址</p>
+<p>缓存-主存   这个层次结构用主存储器的地址。实际上缓存是按内容来查找的。</p>
+<p>主存用到的地址称为实地址，也即物理地址。</p>
+<hr>
+<p>Q1：主存的基本组成</p>
+<p>Q2：主存与CPU之间的联系</p>
+<p>Q3：主存中存储单元地址的分配</p>
+<p>Q4：主存的技术指标</p>
+<p>主存的基本构成：存储体，MAR，MDR，译码器等。</p>
+<p>MAR经过译码器进行译码才能选定指定的存储单元。</p>
+<p>主存遍址单位是字节，每一个字节都一个地址。</p>
+<p>12345678H  在主存的存储单元中如何存储。</p>
 <ul>
-<li>进一步提高复杂度来提高处理器性能</li>
-<li>通过Thread-level/Process-level 并行性的开发提高处理器的性能，即通过开发线程级并行性（Thread-Level Parallelism，TLP）或进程级并行性（Process-Level Parallelism，PLP）来提高性能，简化硬件设计。</li>
-<li>将存储器集成到处理器芯片来提高处理器性能</li>
-<li>发展嵌入式处理器</li>
+<li>高位字节地址为字地址（高位字节在低地址，低位字节在高地址）-大端方式</li>
+<li>低位字节地址为字地址-小端方式</li>
 </ul>
+<p>x86系列的机器采用的是小尾方式。</p>
+<p>两种类型的机器进行通讯会产生问题。</p>
+<p><img src="/2021/04/21/memory/1.png" alt="1"></p>
+<p>读出时间：从给出地址信号到数据线有稳定的数据输出。</p>
+<p>存取周期&gt;存取时间</p>
+<hr>
+<p><img src="/2021/04/21/memory/2.png" alt="2"></p>
+<p>半导体芯片的片选线一般有两种方式：</p>
+<p><img src="/2021/04/21/memory/3.png" alt="3"></p>
+<p>对 八个芯片相同的地址同时进行操作，每个芯片给出一位。<br>每一组八个芯片要同时进行工作才能够在每个芯片当中读出或写入一位二进制信号。<br>每八片的片选线连接在一起。<br>CPU地址中0<del>16K-1  分配到第一组芯片中。<br>16K</del>32K-1 分配到第二组芯片中。后面同理</p>
+<p>如果要读的地址是65535，则选择第四组芯片（低电平有效），其余芯片组高电平。然后在八个芯片的同一地址处各读出一位，构成一个B，送到CPU中。</p>
+<hr>
+<h4 id="半导体存储芯片的译码驱动方式"><a href="#半导体存储芯片的译码驱动方式" class="headerlink" title="半导体存储芯片的译码驱动方式"></a>半导体存储芯片的译码驱动方式</h4><ul>
+<li>线选法：不适合地址容量大的内存，布局的时候，是布局成线性的数组。</li>
+<li>重合法：把所有的存储单元布局成二位的存储阵列，可以提高芯片集成度。</li>
+</ul>
+<hr>
+<h4 id="RAM：内存就是由RAM构成的。"><a href="#RAM：内存就是由RAM构成的。" class="headerlink" title="RAM：内存就是由RAM构成的。"></a>RAM：内存就是由RAM构成的。</h4><ul>
+<li>静态RAM（SRAM）</li>
+<li>动态RAM（DRAM）</li>
+</ul>
+<hr>
+<h4 id="静态RAM-利用触发器存储0-1"><a href="#静态RAM-利用触发器存储0-1" class="headerlink" title="静态RAM:利用触发器存储0,1"></a>静态RAM:利用触发器存储0,1</h4><p>(1)：静态RAM基本电路的读操作的解释</p>
 ]]></content>
       <categories>
         <category>computer hardware</category>
       </categories>
   </entry>
   <entry>
-    <title>concepts and properties of tree</title>
-    <url>/2021/04/21/concepts%20and%20properties%20of%20tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/concepts%20and%20properties%20of%20tree/0.jpg" alt="0"></p>
+    <title>popular BUS standards</title>
+    <url>/2021/04/21/popular%20BUS%20standards/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/popular%20BUS%20standards/0.jpg" alt="0"></p>
 <a id="more"></a>
 
-<h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
-<h5 id="树的层次（Level），深度（Depth）和高度"><a href="#树的层次（Level），深度（Depth）和高度" class="headerlink" title="树的层次（Level），深度（Depth）和高度"></a>树的层次（Level），深度（Depth）和高度</h5><p>严蔚敏的书规定，根节点所在的层次是第一层。故，深度=高度。</p>
-<h5 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h5><p>若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树，否则为无序树。</p>
-<h5 id="路径和路径长度"><a href="#路径和路径长度" class="headerlink" title="路径和路径长度"></a>路径和路径长度</h5><p>树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数。<br>树的路径长度是从树根到每个结点的路径长度。</p>
-<h3 id="2-Basic-properties"><a href="#2-Basic-properties" class="headerlink" title="2. Basic properties"></a>2. Basic properties</h3><h5 id="任意树的结点数与其最小高度的关系"><a href="#任意树的结点数与其最小高度的关系" class="headerlink" title="任意树的结点数与其最小高度的关系"></a>任意树的结点数与其最小高度的关系</h5><p>具有n个结点的m叉树的最小高度为：<br>$$<br>\lceil\log_m (n(m-1)+1)\rceil<br>$$</p>
-<h5 id="二叉树与度为2的有序树的区别"><a href="#二叉树与度为2的有序树的区别" class="headerlink" title="二叉树与度为2的有序树的区别"></a>二叉树与度为2的有序树的区别</h5><ul>
-<li>度为2的树至少有3个结点，而二叉树可以为空</li>
-<li>度为2的有序树的孩子的左右次序是相对于另一孩子而言的，若某个结点只有一个孩子，则这个孩子就无须区分其左右次序，而二叉树无论孩子数是否为2，均需确定其左右次序，即二叉树的结点次序不是相对另一结点而言，而是确定的。</li>
-</ul>
-<h5 id="二叉树结点关系-常用"><a href="#二叉树结点关系-常用" class="headerlink" title="二叉树结点关系(常用)"></a>二叉树结点关系(常用)</h5><p>非空二叉树上的叶子结点数等于度为2的结点数加1，即<br>$$<br>n_0=n_2+1<br>$$</p>
-<h5 id="某一层的结点数上限"><a href="#某一层的结点数上限" class="headerlink" title="某一层的结点数上限"></a>某一层的结点数上限</h5><p>非空二叉树第k层上至多有<br>$$<br>2^{k-1}个结点<br>$$</p>
-<h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
-<h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
-<h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
+<h3 id="ISA总线"><a href="#ISA总线" class="headerlink" title="ISA总线"></a>ISA总线</h3><p>​    ISA（Industiral Standard Architecture)总线是IBM为了采用全16位的CPU而推出的，又称为AT总线，它使用独立于CPU的总线时钟，一年春CPU可以采用比总线频率更高的时钟，有利于CPU性能的提高。由于ISA总线没有支持总线仲裁的硬件逻辑，因此它不能支持多台主设备系统，而且ISA上的所有数据的传送必须通过CPU或DMA接口来管理，因此使CPU花费大量时间来控制与外部设备交换数据。ISA总线时钟频率为8MHz，最大传输率为16MBps，数据线为16位，地址线为24位。</p>
+<hr>
+<h3 id="EISA总线"><a href="#EISA总线" class="headerlink" title="EISA总线"></a>EISA总线</h3><p>​    EISA（Extended Industrial Standard Architecture)是一种在ISA基础上扩充开放的总线标准，与ISA完全兼容，从CPU中分离出了总线控制权，是一种具有智能化的总线，能支持多个总线主控器和突发方式（成块传输）的传输。EISA总线的时钟频率为8MHz，最大传输率可达33MBps，数据总线为32位，地址总线为32位，扩充DMA访问范围达2^32</p>
+<hr>
+<h3 id="VESA总线"><a href="#VESA总线" class="headerlink" title="VESA总线"></a>VESA总线</h3><p>​    VESA是由VESA（Video Electronic Standard Association，视频电子标准协会）提出的局部总线标准，又称为VL-BUS（Local BUS）总线。<strong>所谓的局部总线，是指在系统外为两个以上的模块提供高速传输信息通道。</strong>VL-BUS是由CPU总线演化而来的，采用CPU的时钟频率达33MHz，数据线为32位，可通过扩展槽扩展到64位，配有局部总线控制器，最大传输率达133MBps。通过局部总线控制器，将高速I/O设备直接挂在CPU上，实现CPU与高速I/O设备之间的高速数据交换。</p>
+<hr>
+<h3 id="PCI总线"><a href="#PCI总线" class="headerlink" title="PCI总线"></a>PCI总线</h3><p>​    随着图形用户接口（Graphical User Interface ，GUI）和多媒体技术在PC系统的广泛应用，ISA总线和EISA总线由于受带宽的限制，已不能适应系统工作的要求，成为整个系统的主要瓶颈。因此对总线提出了更高的性能要求，促使总线技术进一步发展。<br>​        1991年下半年，Intel公司首先提出PCI（Peripheral Component Interconnect ，外部部件互连）总线的概念，并联合IBM、COMPAQ、APPLE、DEC、AST、HP等计算机业界大户，成立了PCI集团PCIIG（PIC Special Interest Group)，于1992年6月22日推出了PCI1.0版，1995和1999又先后推出了2.1和2.2版，PCI总线已成为现代计算机中最常用的总线之一，其主要特点如下：</p>
+<pre><code>1. ​    高性能。PCI总线是一种不依附某个具体处理器的局部总线。它为系统提供了一个高速的数据传输通道，与CPU时钟频率无关，自身采用33MHz和66MHz的总线时钟，数据线为32位，可扩展到64位，传输速率从132MBps可升级到528MBps。它支持突发工作方式，这种方式是指若被传送的数据在主存中连续存放，则在访问此组数据时，只需给出第一个数据的地址，占用一个时钟周期，其后每个数据的传送各占一个时钟周期，不必每次给出各个数据的地址，因此可提高传输速率。
+2.    良好的兼容性。PCI总线部件和插件接口相对于处理器是独立的，它支持所有的目前和将来不同结构的处理器，因此具有相对长的生命周期。PCI总线与ISA、EISA总线均可兼容，可以转换为标准的ISA和EISA。
+3.    支持即插即用（Plug and play)，即任何扩展卡只要插入系统便可工作。PCI设备中配有存放设备具体信息的寄存器，这些信息可供BIOS和操作系统层的软件自动配置PCI总线部件和插件，使系统使用方便，无需进行复杂的手动配置。
+4. ​    具有与处理和存储器子系统完全并行操作的能力。PCI总线可视为CPU与外设之间的一个中间层，它通过PCI桥路与CPU相连。PCI桥路有多级缓冲，可把一批数据快速写入缓冲器中，在这些数据不断写入PCI设备过程中，，可真正实现与处理器/存储器子系统的安全并发工作。
+5.    支持多主设备能力。主设备即对总线有控制权的设备，PCI支持多主设备，即允许任何主设备和从设备之间实现点对点对等存取，体现了接纳设备的高度灵活性。
+6.    提供数据和地址奇偶校验功能，保证了数据的完整和准确。
+7.    支持两种电压标准：5V和3.3V。3.3~5V的组件技术可以是电压平滑过渡。3.3V电压的PCI总线可以用于便携式微型计算机中。
+8.    可扩充性好。当PCI总线驱动能力不足时，可以采用层次结构。
+9.    软件兼容性好。PCI部件可以完全兼容现有的驱动程序和应用程序。设备驱动程序可被移植到各类平台上。
+10.    采用多路复用技术，减少了总线引脚个数。</code></pre><p>随着网络的告诉法杖以及其他周边设备的技术革新，诸如千兆网卡之类的设备对PCI总线提出了更高的要求。Intel公司近年来又推出了PCI-Express总线，它采用了类似网络传输TCP/IP协议的分层结构和数据帧逐层传递的模式。</p>
+<hr>
+<h3 id="AGP总线"><a href="#AGP总线" class="headerlink" title="AGP总线"></a>AGP总线</h3><p>​    随着多媒体计算机的普及，对三维技术的应用也越来越广。处理三维数据不仅要求有惊人的数据量，而且要求有更宽广的数据传输带宽。Intel于1996年7月又推出了AGP（Accelerated Graphics Port），这是显示卡专用的局部总线，基于PCI2.1版规范并进行扩充修改而成，它采用点对点通道方式，以66.7MHz的频率直接与主存联系，以主存作为帧缓冲器，实现了高速存取。最大数据传输率为266MBps，是传统PCI总线带宽的2倍。AGP还定义了一种“双激励”（Double Pumping）的传输技术，能在一个时钟的上，下沿双向传递数据，这样，AGP实现的传输频率为133MHz，最大数据传输率可增为533MBps。后来又依次推出了AGP2X, AGP4X, AGP8X多个版本，数据传输速率可达2.1GBps。</p>
+<hr>
+<h3 id="RS-232C总线"><a href="#RS-232C总线" class="headerlink" title="RS-232C总线"></a>RS-232C总线</h3><p>​    RS-232（RS即Recommended Standard ，232位标识号，C表示修改次数）是由美国电子工业协会EIA（Electronic Industries Association）推荐的一种串行通信总线标准，它是应用串行二进制交换的数据终端设备和数据通信设备之间的标准接口。<br>​    众所周知，计算机之间传送的是数字信号，它要求传送的频带很宽，而计算机远程通信通常是通过载波电话传送的，不可能有这样的宽的频带。如果数字信号直接进行通信，经过传输后，必然发生畸变。因此在发送端必须通过调制器将数字信号转换成模拟信号，即对载波电话线上载波进行调制；而在接收端又必须用解调器检出从发送端来的模拟信号，并恢复为原来的数字信号。</p>
+<hr>
+<h3 id="USB总线"><a href="#USB总线" class="headerlink" title="USB总线"></a>USB总线</h3><p>​    USB（Universial Serial Bus）通用串行总线是Compaq，DEC，IBM，Intel，Microsoft，NEC（Japan）和Northe Telecom（Canada）等七大公司于1994年11月联合开发的计算机串行接口总线标准，1996年1月颁布了USB1.0版本。它基于通用连接技术，实现外设的简单快速连接，达到方便用户、降低成本、扩展PC连接外设范围的目的。用户可以将几乎所有的外设装置，包括显示器、键盘、鼠标、打印机、扫描仪、数码相机、U盘、调制解调器等直接插入标准USB插口。还可以将一些USB外设进行串接，使一大堆设备共用PC上的端口。其特点如下：</p>
+<pre><code>1. 具有真正的即插即用特征。用户可以在不关机的情况下很方便地对外设实行安装和拆卸，主机可按外设的增删情况自动配置系统资源，外设装置驱动程序的安装，删除均自动实现。
+2.  具有很强的连接能力。使用USB HUB（USB集线器）实现系统扩展，最多可链式连接127个外设到同一系统。
+3.  数据传输率有两种，即采用普通无屏蔽双绞线，速度可达1.5Mbps，若用带屏蔽的双绞线，速度可达12Mbps。USB2.0的数据传输率最高可达480Mbps。
+4.  标准统一。USB的引入减轻了对目前PC中所有标准接口的需求，如串口的鼠标、键盘、并口的打印机、扫描仪、IDE接口的硬盘，都可以改成以统一的USB标准接入系统，从而减少了对PC插槽的需求，节省空间。
+5. 连接电缆轻巧，电源体积缩小。USB使用的4芯电缆2条用于信号连接，2条用于电源/地，可为外设提供+5V的直流电源，方便用户。
+6. 生命力强。USB是一种开放型的不具有专利版权的工业标准，它是由一个标准化组织“USB实施者论坛”制定出来的，因此不存在专利版权问题，USB规范具有强大的生命力。</code></pre>]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>proving process of number relationship between child and parent in tree</title>
+    <url>/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
+<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
+<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
+<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
+<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
 ]]></content>
       <categories>
         <category>algorithm</category>
@@ -693,6 +887,31 @@
 ]]></content>
       <categories>
         <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>signal types in control bus</title>
+    <url>/2021/04/21/signal%20types%20in%20control%20bus/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/signal%20types%20in%20control%20bus/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>控制总线上常见的控制信号有：</p>
+<ul>
+<li>总线请求</li>
+<li>总线允许</li>
+<li>中断请求</li>
+<li>中断响应</li>
+<li>存储器写</li>
+<li>存储器读</li>
+<li>I/O读</li>
+<li>I/O写</li>
+<li>时钟：用来同步各种操作</li>
+<li>复位：初始化所有部件</li>
+<li>传输响应：表示数据已被接受，或已将数据送至数据总线上。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
       </categories>
   </entry>
   <entry>
@@ -862,86 +1081,51 @@
       </categories>
   </entry>
   <entry>
-    <title>proving process of number relationship between child and parent in tree</title>
-    <url>/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/0.jpg" alt="0"></p>
+    <title>transform infix expression into prefix expression(with Stack)</title>
+    <url>/2021/04/21/transform%20infix%20expression%20into%20prefix%20expression(with%20Stack)%20/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/transform%20infix%20expression%20into%20prefix%20expression(with%20Stack)%20/0.jpg" alt="0"></p>
 <a id="more"></a>
 
-<h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
-<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
-<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
-<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
-<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
+<p>​    基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
+<p>遇到一个操作符则与栈顶元素比较优先级，若大于栈顶操作符的优先级则将该操作符入栈，否则不断将操作符出栈直至该操作符优先级小于栈顶操作符（注意，同等优先级，左边的操作符优先级高）。举例如下：</p>
+<p>将如下中缀表达式转化成后缀表达式：2+9/3-5</p>
+<p>输出：2                                    栈：</p>
+<p>输出：2                                    栈：+</p>
+<p>输出：29                                  栈：+</p>
+<p>输出：29                                  栈：+/</p>
+<p>输出：293                                栈：+/</p>
+<p>输出：293/+                            栈：-</p>
+<p>输出：293/+5-</p>
 ]]></content>
       <categories>
         <category>algorithm</category>
       </categories>
   </entry>
   <entry>
-    <title>popular BUS standards</title>
-    <url>/2021/04/21/popular%20BUS%20standards/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/popular%20BUS%20standards/0.jpg" alt="0"></p>
+    <title>traversal of binary tree</title>
+    <url>/2021/04/21/traversal%20of%20binary%20tree/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/traversal%20of%20binary%20tree/0.jpg" alt="0"></p>
 <a id="more"></a>
 
-<h3 id="ISA总线"><a href="#ISA总线" class="headerlink" title="ISA总线"></a>ISA总线</h3><p>​    ISA（Industiral Standard Architecture)总线是IBM为了采用全16位的CPU而推出的，又称为AT总线，它使用独立于CPU的总线时钟，一年春CPU可以采用比总线频率更高的时钟，有利于CPU性能的提高。由于ISA总线没有支持总线仲裁的硬件逻辑，因此它不能支持多台主设备系统，而且ISA上的所有数据的传送必须通过CPU或DMA接口来管理，因此使CPU花费大量时间来控制与外部设备交换数据。ISA总线时钟频率为8MHz，最大传输率为16MBps，数据线为16位，地址线为24位。</p>
-<hr>
-<h3 id="EISA总线"><a href="#EISA总线" class="headerlink" title="EISA总线"></a>EISA总线</h3><p>​    EISA（Extended Industrial Standard Architecture)是一种在ISA基础上扩充开放的总线标准，与ISA完全兼容，从CPU中分离出了总线控制权，是一种具有智能化的总线，能支持多个总线主控器和突发方式（成块传输）的传输。EISA总线的时钟频率为8MHz，最大传输率可达33MBps，数据总线为32位，地址总线为32位，扩充DMA访问范围达2^32</p>
-<hr>
-<h3 id="VESA总线"><a href="#VESA总线" class="headerlink" title="VESA总线"></a>VESA总线</h3><p>​    VESA是由VESA（Video Electronic Standard Association，视频电子标准协会）提出的局部总线标准，又称为VL-BUS（Local BUS）总线。<strong>所谓的局部总线，是指在系统外为两个以上的模块提供高速传输信息通道。</strong>VL-BUS是由CPU总线演化而来的，采用CPU的时钟频率达33MHz，数据线为32位，可通过扩展槽扩展到64位，配有局部总线控制器，最大传输率达133MBps。通过局部总线控制器，将高速I/O设备直接挂在CPU上，实现CPU与高速I/O设备之间的高速数据交换。</p>
-<hr>
-<h3 id="PCI总线"><a href="#PCI总线" class="headerlink" title="PCI总线"></a>PCI总线</h3><p>​    随着图形用户接口（Graphical User Interface ，GUI）和多媒体技术在PC系统的广泛应用，ISA总线和EISA总线由于受带宽的限制，已不能适应系统工作的要求，成为整个系统的主要瓶颈。因此对总线提出了更高的性能要求，促使总线技术进一步发展。<br>​        1991年下半年，Intel公司首先提出PCI（Peripheral Component Interconnect ，外部部件互连）总线的概念，并联合IBM、COMPAQ、APPLE、DEC、AST、HP等计算机业界大户，成立了PCI集团PCIIG（PIC Special Interest Group)，于1992年6月22日推出了PCI1.0版，1995和1999又先后推出了2.1和2.2版，PCI总线已成为现代计算机中最常用的总线之一，其主要特点如下：</p>
-<pre><code>1. ​    高性能。PCI总线是一种不依附某个具体处理器的局部总线。它为系统提供了一个高速的数据传输通道，与CPU时钟频率无关，自身采用33MHz和66MHz的总线时钟，数据线为32位，可扩展到64位，传输速率从132MBps可升级到528MBps。它支持突发工作方式，这种方式是指若被传送的数据在主存中连续存放，则在访问此组数据时，只需给出第一个数据的地址，占用一个时钟周期，其后每个数据的传送各占一个时钟周期，不必每次给出各个数据的地址，因此可提高传输速率。
-2.    良好的兼容性。PCI总线部件和插件接口相对于处理器是独立的，它支持所有的目前和将来不同结构的处理器，因此具有相对长的生命周期。PCI总线与ISA、EISA总线均可兼容，可以转换为标准的ISA和EISA。
-3.    支持即插即用（Plug and play)，即任何扩展卡只要插入系统便可工作。PCI设备中配有存放设备具体信息的寄存器，这些信息可供BIOS和操作系统层的软件自动配置PCI总线部件和插件，使系统使用方便，无需进行复杂的手动配置。
-4. ​    具有与处理和存储器子系统完全并行操作的能力。PCI总线可视为CPU与外设之间的一个中间层，它通过PCI桥路与CPU相连。PCI桥路有多级缓冲，可把一批数据快速写入缓冲器中，在这些数据不断写入PCI设备过程中，，可真正实现与处理器/存储器子系统的安全并发工作。
-5.    支持多主设备能力。主设备即对总线有控制权的设备，PCI支持多主设备，即允许任何主设备和从设备之间实现点对点对等存取，体现了接纳设备的高度灵活性。
-6.    提供数据和地址奇偶校验功能，保证了数据的完整和准确。
-7.    支持两种电压标准：5V和3.3V。3.3~5V的组件技术可以是电压平滑过渡。3.3V电压的PCI总线可以用于便携式微型计算机中。
-8.    可扩充性好。当PCI总线驱动能力不足时，可以采用层次结构。
-9.    软件兼容性好。PCI部件可以完全兼容现有的驱动程序和应用程序。设备驱动程序可被移植到各类平台上。
-10.    采用多路复用技术，减少了总线引脚个数。</code></pre><p>随着网络的告诉法杖以及其他周边设备的技术革新，诸如千兆网卡之类的设备对PCI总线提出了更高的要求。Intel公司近年来又推出了PCI-Express总线，它采用了类似网络传输TCP/IP协议的分层结构和数据帧逐层传递的模式。</p>
-<hr>
-<h3 id="AGP总线"><a href="#AGP总线" class="headerlink" title="AGP总线"></a>AGP总线</h3><p>​    随着多媒体计算机的普及，对三维技术的应用也越来越广。处理三维数据不仅要求有惊人的数据量，而且要求有更宽广的数据传输带宽。Intel于1996年7月又推出了AGP（Accelerated Graphics Port），这是显示卡专用的局部总线，基于PCI2.1版规范并进行扩充修改而成，它采用点对点通道方式，以66.7MHz的频率直接与主存联系，以主存作为帧缓冲器，实现了高速存取。最大数据传输率为266MBps，是传统PCI总线带宽的2倍。AGP还定义了一种“双激励”（Double Pumping）的传输技术，能在一个时钟的上，下沿双向传递数据，这样，AGP实现的传输频率为133MHz，最大数据传输率可增为533MBps。后来又依次推出了AGP2X, AGP4X, AGP8X多个版本，数据传输速率可达2.1GBps。</p>
-<hr>
-<h3 id="RS-232C总线"><a href="#RS-232C总线" class="headerlink" title="RS-232C总线"></a>RS-232C总线</h3><p>​    RS-232（RS即Recommended Standard ，232位标识号，C表示修改次数）是由美国电子工业协会EIA（Electronic Industries Association）推荐的一种串行通信总线标准，它是应用串行二进制交换的数据终端设备和数据通信设备之间的标准接口。<br>​    众所周知，计算机之间传送的是数字信号，它要求传送的频带很宽，而计算机远程通信通常是通过载波电话传送的，不可能有这样的宽的频带。如果数字信号直接进行通信，经过传输后，必然发生畸变。因此在发送端必须通过调制器将数字信号转换成模拟信号，即对载波电话线上载波进行调制；而在接收端又必须用解调器检出从发送端来的模拟信号，并恢复为原来的数字信号。</p>
-<hr>
-<h3 id="USB总线"><a href="#USB总线" class="headerlink" title="USB总线"></a>USB总线</h3><p>​    USB（Universial Serial Bus）通用串行总线是Compaq，DEC，IBM，Intel，Microsoft，NEC（Japan）和Northe Telecom（Canada）等七大公司于1994年11月联合开发的计算机串行接口总线标准，1996年1月颁布了USB1.0版本。它基于通用连接技术，实现外设的简单快速连接，达到方便用户、降低成本、扩展PC连接外设范围的目的。用户可以将几乎所有的外设装置，包括显示器、键盘、鼠标、打印机、扫描仪、数码相机、U盘、调制解调器等直接插入标准USB插口。还可以将一些USB外设进行串接，使一大堆设备共用PC上的端口。其特点如下：</p>
-<pre><code>1. 具有真正的即插即用特征。用户可以在不关机的情况下很方便地对外设实行安装和拆卸，主机可按外设的增删情况自动配置系统资源，外设装置驱动程序的安装，删除均自动实现。
-2.  具有很强的连接能力。使用USB HUB（USB集线器）实现系统扩展，最多可链式连接127个外设到同一系统。
-3.  数据传输率有两种，即采用普通无屏蔽双绞线，速度可达1.5Mbps，若用带屏蔽的双绞线，速度可达12Mbps。USB2.0的数据传输率最高可达480Mbps。
-4.  标准统一。USB的引入减轻了对目前PC中所有标准接口的需求，如串口的鼠标、键盘、并口的打印机、扫描仪、IDE接口的硬盘，都可以改成以统一的USB标准接入系统，从而减少了对PC插槽的需求，节省空间。
-5. 连接电缆轻巧，电源体积缩小。USB使用的4芯电缆2条用于信号连接，2条用于电源/地，可为外设提供+5V的直流电源，方便用户。
-6. 生命力强。USB是一种开放型的不具有专利版权的工业标准，它是由一个标准化组织“USB实施者论坛”制定出来的，因此不存在专利版权问题，USB规范具有强大的生命力。</code></pre>]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>计组：软硬件接口 名词及重点摘录</title>
-    <url>/2021/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/0.jpg" alt="0"></p>
-<a id="more"></a>
+<h4 id="Chain-storage-definition"><a href="#Chain-storage-definition" class="headerlink" title="Chain storage definition"></a>Chain storage definition</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BitNode,*BiTree;</span><br></pre></td></tr></table></figure>
 
-<p>服务器(server)：用于为多用户运行大型程序的计算机，通常由多个用户并行使用，并且一般通过网络访问。</p>
-<p>云计算(Cloud Computing)：在网络上提供服务的大服务器集群，它依赖于称为仓储规模计算机(Warehouse Scale Computer ,WSC)的巨型数据中心。一些运营商根据应用需求出租不同的服务器。</p>
-<p>软件即服务(Software as a Service,SaaS)：在网络上以服务的方式提供软件和数据。其运行方式通常不是在本地设备上运行所有的二进制代码，而是通过诸如运行在本地客户端的浏览器的小程序登录到远程服务器上执行。典型的例子是Web搜索和社交网络。</p>
-<p>程序性能影响因素：程序所用算法的有效性，用来建立程序并将其翻译成机器指令的软件系统，计算机执行机器指令的有效性。</p>
-<p><strong>计算机系统结构中的8个伟大思想</strong>：面向摩尔定律的设计（Moore’ Law）；使用抽象简化设计；加速大概率事件（common case fast）；通过并行提高性能；通过流水线提高性能（pipelining）；通过预测提高性能（prediction）；存储器层次（hierarchy of memory）；通过冗余提高可靠性。</p>
-<p>编译程序(Compiler)：将高级语言翻译为计算机所能识别的机器语言的程序。</p>
-<p>指令(Instruction)：计算机硬件所能理解并服从的命令。</p>
-<p><strong>重点1</strong>：组成计算机的5个经典部件是输入，输出，存储器，数据通路(datapath)（在计算机也称为运算器）和控制器，其中最后两个部件通常合称为处理器。你总能够把任何计算机（无论是现在的还是过去的）中的任何部件归于这五种之一。</p>
-<p>集成电路（Integrated Circuit）：也叫芯片（chip），一种将几十个至几百万格晶体管连接起来的设备。</p>
-<p>指令集体系结构（instruction set architecture）：也叫体系结构，是低层次软件和硬件之间的抽象接口，包含了需要编写正确运行的机器语言程序所需要的全部信息，包括指令，寄存器，存储访问和I/O等。</p>
-<p>应用二进制接口（Application Binary interface）：用户部分的指令加上应用程序员调用的操作系统接口，定义了二进制层次可移植的计算机的标准。</p>
-<p><strong>重点2</strong>：无论是硬件还是软件都可以使用抽象分成多个层次，每个较低的层次把细节对上层隐藏起来。抽象层次中的一个关键接口是指令集体系结构–硬件和底层软件之间的接口。这一抽象接口使得同一软件可以由成本不同，性能也不同的实现方法来完成。</p>
-<p>易失性存储器(volatile memory)：类似于DRAM的存储器，仅在加电时保存数据。</p>
-<p>非易失性存储器(nonvolatile memory)：在断电时仍可保持数据的存储器。如DVD。</p>
-<p>晶体管（transistor）：是一种收电流控制的开关。</p>
-<p>响应时间（response time）：也叫执行时间（execution time），是计算机完成某任务所需的总时间，包括硬盘访问，内存访问，I/O活动，操作系统开销和CPU执行时间等。</p>
-<p>吞吐率（throughput）：也叫带宽（bandwidth），性能的另一种度量参数，表示单位时间内完成的任务数量。</p>
+<hr>
+<h4 id="PreOrder-recursive"><a href="#PreOrder-recursive" class="headerlink" title="PreOrder (recursive)"></a>PreOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        visit(T);</span><br><span class="line">        preOrder(T-&gt;lchild);</span><br><span class="line">        preOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="InOrder-recursive"><a href="#InOrder-recursive" class="headerlink" title="InOrder (recursive)"></a>InOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">    inOrder(T-&gt;lchild);</span><br><span class="line">    visit(T);</span><br><span class="line">    inOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="AfterOrder-recursive"><a href="#AfterOrder-recursive" class="headerlink" title="AfterOrder(recursive)"></a>AfterOrder(recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        afterOrder(T-&gt;lchild);</span><br><span class="line">        afterOrder(T-&gt;rchild);</span><br><span class="line">        visit(T);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="InOrder-non-recursive"><a href="#InOrder-non-recursive" class="headerlink" title="InOrder(non-recursive)"></a>InOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;   <span class="comment">// moving pointer</span></span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;    </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            visit(p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="PreOrder-non-recursive"><a href="#PreOrder-non-recursive" class="headerlink" title="PreOrder(non-recursive)"></a>PreOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;</span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            visit(p);</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="LevelOrder"><a href="#LevelOrder" class="headerlink" title="LevelOrder"></a>LevelOrder</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    InitQueue Q; <span class="comment">//initialize a queue;</span></span><br><span class="line">    BiTree p;</span><br><span class="line">    enQueue(Q,p);</span><br><span class="line">    <span class="keyword">while</span>(!isEmpty(Q))&#123;</span><br><span class="line">        deQueue(Q,p);</span><br><span class="line">        visit(p);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild!=null)</span><br><span class="line">            enQueue(Q,p-&gt;lchild);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild!=null)</span><br><span class="line">            enQueue(Q.p-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>computer hardware</category>
+        <category>algorithm</category>
       </categories>
   </entry>
   <entry>
@@ -1186,215 +1370,31 @@
       </tags>
   </entry>
   <entry>
-    <title>memory</title>
-    <url>/2021/04/21/memory/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/memory/0.jpg" alt="0"></p>
+    <title>计组：软硬件接口 名词及重点摘录</title>
+    <url>/2021/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/0.jpg" alt="0"></p>
 <a id="more"></a>
 
-<p>一. 存储器分类</p>
-<p>（1） 半导体存储器   TTL 、MOS   易失</p>
-<p>（2）磁表面存储器   磁头，磁载体   非易失</p>
-<p>（3） 磁芯存储器     硬磁材料 ，环状元件  非易失</p>
-<p>（4） 光盘存储器     激光 、激光材料   非易失</p>
-<p><strong>寄存器在I/O端口中也有</strong></p>
-<p>Cache 一部分在CPU中，一部分在CPU外</p>
-<p>利用软硬件相结合的方式将不同介质的存储器连接成一个整体。 </p>
-<p>主存-辅存  解决主存容量不够 。利用软硬件相结合的方法连接成一个整体。</p>
-<p>缓存-主存   为了解决主存的速度不够。用硬件的方法连接成一个整体。因为主要是为了解决主存和CPU的速度问题，故需要非常快。</p>
-<p>主存-辅存  这个整体称为虚拟存储器。地址称为：虚地址，逻辑地址</p>
-<p>缓存-主存   这个层次结构用主存储器的地址。实际上缓存是按内容来查找的。</p>
-<p>主存用到的地址称为实地址，也即物理地址。</p>
-<hr>
-<p>Q1：主存的基本组成</p>
-<p>Q2：主存与CPU之间的联系</p>
-<p>Q3：主存中存储单元地址的分配</p>
-<p>Q4：主存的技术指标</p>
-<p>主存的基本构成：存储体，MAR，MDR，译码器等。</p>
-<p>MAR经过译码器进行译码才能选定指定的存储单元。</p>
-<p>主存遍址单位是字节，每一个字节都一个地址。</p>
-<p>12345678H  在主存的存储单元中如何存储。</p>
-<ul>
-<li>高位字节地址为字地址（高位字节在低地址，低位字节在高地址）-大端方式</li>
-<li>低位字节地址为字地址-小端方式</li>
-</ul>
-<p>x86系列的机器采用的是小尾方式。</p>
-<p>两种类型的机器进行通讯会产生问题。</p>
-<p><img src="/2021/04/21/memory/1.png" alt="1"></p>
-<p>读出时间：从给出地址信号到数据线有稳定的数据输出。</p>
-<p>存取周期&gt;存取时间</p>
-<hr>
-<p><img src="/2021/04/21/memory/2.png" alt="2"></p>
-<p>半导体芯片的片选线一般有两种方式：</p>
-<p><img src="/2021/04/21/memory/3.png" alt="3"></p>
-<p>对 八个芯片相同的地址同时进行操作，每个芯片给出一位。<br>每一组八个芯片要同时进行工作才能够在每个芯片当中读出或写入一位二进制信号。<br>每八片的片选线连接在一起。<br>CPU地址中0<del>16K-1  分配到第一组芯片中。<br>16K</del>32K-1 分配到第二组芯片中。后面同理</p>
-<p>如果要读的地址是65535，则选择第四组芯片（低电平有效），其余芯片组高电平。然后在八个芯片的同一地址处各读出一位，构成一个B，送到CPU中。</p>
-<hr>
-<h4 id="半导体存储芯片的译码驱动方式"><a href="#半导体存储芯片的译码驱动方式" class="headerlink" title="半导体存储芯片的译码驱动方式"></a>半导体存储芯片的译码驱动方式</h4><ul>
-<li>线选法：不适合地址容量大的内存，布局的时候，是布局成线性的数组。</li>
-<li>重合法：把所有的存储单元布局成二位的存储阵列，可以提高芯片集成度。</li>
-</ul>
-<hr>
-<h4 id="RAM：内存就是由RAM构成的。"><a href="#RAM：内存就是由RAM构成的。" class="headerlink" title="RAM：内存就是由RAM构成的。"></a>RAM：内存就是由RAM构成的。</h4><ul>
-<li>静态RAM（SRAM）</li>
-<li>动态RAM（DRAM）</li>
-</ul>
-<hr>
-<h4 id="静态RAM-利用触发器存储0-1"><a href="#静态RAM-利用触发器存储0-1" class="headerlink" title="静态RAM:利用触发器存储0,1"></a>静态RAM:利用触发器存储0,1</h4><p>(1)：静态RAM基本电路的读操作的解释</p>
+<p>服务器(server)：用于为多用户运行大型程序的计算机，通常由多个用户并行使用，并且一般通过网络访问。</p>
+<p>云计算(Cloud Computing)：在网络上提供服务的大服务器集群，它依赖于称为仓储规模计算机(Warehouse Scale Computer ,WSC)的巨型数据中心。一些运营商根据应用需求出租不同的服务器。</p>
+<p>软件即服务(Software as a Service,SaaS)：在网络上以服务的方式提供软件和数据。其运行方式通常不是在本地设备上运行所有的二进制代码，而是通过诸如运行在本地客户端的浏览器的小程序登录到远程服务器上执行。典型的例子是Web搜索和社交网络。</p>
+<p>程序性能影响因素：程序所用算法的有效性，用来建立程序并将其翻译成机器指令的软件系统，计算机执行机器指令的有效性。</p>
+<p><strong>计算机系统结构中的8个伟大思想</strong>：面向摩尔定律的设计（Moore’ Law）；使用抽象简化设计；加速大概率事件（common case fast）；通过并行提高性能；通过流水线提高性能（pipelining）；通过预测提高性能（prediction）；存储器层次（hierarchy of memory）；通过冗余提高可靠性。</p>
+<p>编译程序(Compiler)：将高级语言翻译为计算机所能识别的机器语言的程序。</p>
+<p>指令(Instruction)：计算机硬件所能理解并服从的命令。</p>
+<p><strong>重点1</strong>：组成计算机的5个经典部件是输入，输出，存储器，数据通路(datapath)（在计算机也称为运算器）和控制器，其中最后两个部件通常合称为处理器。你总能够把任何计算机（无论是现在的还是过去的）中的任何部件归于这五种之一。</p>
+<p>集成电路（Integrated Circuit）：也叫芯片（chip），一种将几十个至几百万格晶体管连接起来的设备。</p>
+<p>指令集体系结构（instruction set architecture）：也叫体系结构，是低层次软件和硬件之间的抽象接口，包含了需要编写正确运行的机器语言程序所需要的全部信息，包括指令，寄存器，存储访问和I/O等。</p>
+<p>应用二进制接口（Application Binary interface）：用户部分的指令加上应用程序员调用的操作系统接口，定义了二进制层次可移植的计算机的标准。</p>
+<p><strong>重点2</strong>：无论是硬件还是软件都可以使用抽象分成多个层次，每个较低的层次把细节对上层隐藏起来。抽象层次中的一个关键接口是指令集体系结构–硬件和底层软件之间的接口。这一抽象接口使得同一软件可以由成本不同，性能也不同的实现方法来完成。</p>
+<p>易失性存储器(volatile memory)：类似于DRAM的存储器，仅在加电时保存数据。</p>
+<p>非易失性存储器(nonvolatile memory)：在断电时仍可保持数据的存储器。如DVD。</p>
+<p>晶体管（transistor）：是一种收电流控制的开关。</p>
+<p>响应时间（response time）：也叫执行时间（execution time），是计算机完成某任务所需的总时间，包括硬盘访问，内存访问，I/O活动，操作系统开销和CPU执行时间等。</p>
+<p>吞吐率（throughput）：也叫带宽（bandwidth），性能的另一种度量参数，表示单位时间内完成的任务数量。</p>
 ]]></content>
       <categories>
         <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>traversal of binary tree</title>
-    <url>/2021/04/21/traversal%20of%20binary%20tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/traversal%20of%20binary%20tree/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<h4 id="Chain-storage-definition"><a href="#Chain-storage-definition" class="headerlink" title="Chain storage definition"></a>Chain storage definition</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BitNode,*BiTree;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h4 id="PreOrder-recursive"><a href="#PreOrder-recursive" class="headerlink" title="PreOrder (recursive)"></a>PreOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        visit(T);</span><br><span class="line">        preOrder(T-&gt;lchild);</span><br><span class="line">        preOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="InOrder-recursive"><a href="#InOrder-recursive" class="headerlink" title="InOrder (recursive)"></a>InOrder (recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">    inOrder(T-&gt;lchild);</span><br><span class="line">    visit(T);</span><br><span class="line">    inOrder(T-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="AfterOrder-recursive"><a href="#AfterOrder-recursive" class="headerlink" title="AfterOrder(recursive)"></a>AfterOrder(recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=null)&#123;</span><br><span class="line">        afterOrder(T-&gt;lchild);</span><br><span class="line">        afterOrder(T-&gt;rchild);</span><br><span class="line">        visit(T);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h4 id="InOrder-non-recursive"><a href="#InOrder-non-recursive" class="headerlink" title="InOrder(non-recursive)"></a>InOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;   <span class="comment">// moving pointer</span></span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;    </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            visit(p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="PreOrder-non-recursive"><a href="#PreOrder-non-recursive" class="headerlink" title="PreOrder(non-recursive)"></a>PreOrder(non-recursive)</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">afterOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    initStack(S); <span class="comment">//initialize a stack</span></span><br><span class="line">    BiTree p=T;</span><br><span class="line">    <span class="keyword">while</span>(p||!isEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">if</span>(p)&#123;</span><br><span class="line">            visit(p);</span><br><span class="line">            push(S,p);</span><br><span class="line">            p=p-&gt;lchild;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            pop(S,p);</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="LevelOrder"><a href="#LevelOrder" class="headerlink" title="LevelOrder"></a>LevelOrder</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">levelOrder</span><span class="params">(BiTree T)</span></span>&#123;</span><br><span class="line">    InitQueue Q; <span class="comment">//initialize a queue;</span></span><br><span class="line">    BiTree p;</span><br><span class="line">    enQueue(Q,p);</span><br><span class="line">    <span class="keyword">while</span>(!isEmpty(Q))&#123;</span><br><span class="line">        deQueue(Q,p);</span><br><span class="line">        visit(p);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild!=null)</span><br><span class="line">            enQueue(Q,p-&gt;lchild);</span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild!=null)</span><br><span class="line">            enQueue(Q.p-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>signal types in control bus</title>
-    <url>/2021/04/21/signal%20types%20in%20control%20bus/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/signal%20types%20in%20control%20bus/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>控制总线上常见的控制信号有：</p>
-<ul>
-<li>总线请求</li>
-<li>总线允许</li>
-<li>中断请求</li>
-<li>中断响应</li>
-<li>存储器写</li>
-<li>存储器读</li>
-<li>I/O读</li>
-<li>I/O写</li>
-<li>时钟：用来同步各种操作</li>
-<li>复位：初始化所有部件</li>
-<li>传输响应：表示数据已被接受，或已将数据送至数据总线上。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>difference between computer architecture and computer organization</title>
-    <url>/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>计算机体系结构(Computer Architecture)是指机器语言或汇编语言程序所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，<strong>大多属于抽象的属性</strong></p>
-<p>计算机组成（Computer Organization）是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构的问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为他们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，即可以认为它们的组成方式是不同的。<strong>例如，一台机器是否具备乘法指令是一个结构的问题，但实现乘法指令采用什么方式则是一个组成的问题。</strong></p>
-<h2 id="王道解释："><a href="#王道解释：" class="headerlink" title="王道解释："></a>王道解释：</h2><p>计算机体系结构（Computer architecture)，是指机器语言或汇编语言程序员所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，大都属于抽象属性。<br>    计算机组成（Computer Organization），是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为它们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，既可以认为它们的组成方式是不同的。例如，一个机器是否具备乘法指令是一个结构问题，但实现乘法指令采用什么方式（例如直接采用乘法器，亦或者采用加法器实现）则是一个组成的问题。<br>    许多计算机厂商提供一系列结构相同的解散及，而它们的组成却又相当大的差别，即使是同一系列的不同型号机器，其性能和价格差异也很大。例如，IBM System/370结构就包含了多种价位和性能的机位。</p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>I/O interrupt processing procedure</title>
-    <url>/2021/04/21/IO%20interrupt%20processing%20procedure/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>完整的操作过程如下：</p>
-<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/1.png" alt="1"></p>
-<p>​    在执行主程序的过程中，会执行到一条输入指令。接着CPU将设备地址通过地址线送到接口电路中的设备选择电路，然后设备选择电路对该地址进行比较，看是否是该接口所连接的I/O设备，若是则该接口和相对应的设备就被选中，<strong>SEL</strong> 有效。只有SEL有效，接口电路才会开始工作。<br>​    CPU将命令送到接口中进行译码。由图可以看出<em>启动命令</em>和<em>SEL</em>同时有效才会是触发器D和触发器B被设置。触发器B被设置为1，而触发器D被设置为0。 表示设备开始工作，但同时数据并没有准备好。<strong>NOTE</strong>：触发器B的另一个作用是，启动I/O设备开始工作。<br>​    然后I/O设备开始工作，将data送入DBR中，并将触发器B和触发器D进行修改，B改为0而D改为1。接着，如果MASK触发器的非端为1（表示该中断并未被屏蔽），此时INTR就会经过两个1被置为1。<br>​    接着CPU在一条指令的执行阶段结束后，发出中断查询信号。 然后将INTR送入排队器排队，经过排队器排队后，排队器的输出信号只有一个是1，其他都是0。 排队器的输出信号输出到设备编码器，然后CPU发出中断响应信号（INTA）。之后，设备编码器就会形成向量地址，该地址经过数据线传给CPU，传给PC。PC利用改地址去取出中断服务程序的路口地址（无条件跳转）。然后就进入中断服务程序。</p>
-<hr>
-<p>中断服务程序的流程：</p>
-<ul>
-<li>保护现场：保护程序的断点（中断隐指令完成）；保存通用寄存器和状态寄存器。</li>
-<li>中断服务：与I/O设备直接相关，不同功能设备的中断服务程序不同。</li>
-<li>恢复现场：从主存或堆栈中恢复CPU寄存器中的内容。</li>
-<li>中断返回：中断返回指令。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>SRAM and DRAM basic unit circuity  working principle</title>
-    <url>/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/1.png" alt="1"></p>
-<p>工作原理如下：</p>
-<p>读出时：行地址选择和列地址选择有效，T5，T6，T7，T8打开。假设A端为高电平，通过T6送进位线A，经过T8，送进读出放大器，输出。读入时，经过两个写放大器的相反信号分别经过T7，T8送进A’和A端，A‘和A端两端是相反的信号。</p>
-<hr>
-<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/2.png" alt="2"></p>
-<p>工作原理：</p>
-<p>读出时，T4置一预充电信号，接着读选择项打开T2。若Gg有足够多的电荷（即Cg存储的是1），则T1导通且接地，此时读数据线降为低电平，读出“0”。反之，Cg没有足够多的电荷（存储的是0），T1截止，读数据线为高电平，读出“1”。</p>
-<p>写入时，数据先到写数据线，再由写选择线打开T3，此时写数据线相当于电容Cg联通，写数据线上是“1”就写入“1”，是“0”就写入“0”。</p>
-<hr>
-<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/3.png" alt="3"></p>
-<p>工作原理：</p>
-<p>读出时，字线上的高电平使T导通，如果Cg中有电荷（表示“1”），经T管在数据线上产生电流，读出为“1”。<br>否则，数据线上不产生电流，视为读出“0”。这里注意，读操作结束时，Cg的电荷已释放完毕，故是破坏性读出，必须再生。</p>
-<p>写入时，原理类似。</p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Function pointer</title>
-    <url>/2021/04/21/function%20pointer/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/function%20pointer/1.jpg" alt="1"></p>
-<a id="more"></a>
-
-<h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>transform infix expression into prefix expression(with Stack)</title>
-    <url>/2021/04/21/transform%20infix%20expression%20into%20prefix%20expression(with%20Stack)%20/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/transform%20infix%20expression%20into%20prefix%20expression(with%20Stack)%20/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>​    基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
-<p>遇到一个操作符则与栈顶元素比较优先级，若大于栈顶操作符的优先级则将该操作符入栈，否则不断将操作符出栈直至该操作符优先级小于栈顶操作符（注意，同等优先级，左边的操作符优先级高）。举例如下：</p>
-<p>将如下中缀表达式转化成后缀表达式：2+9/3-5</p>
-<p>输出：2                                    栈：</p>
-<p>输出：2                                    栈：+</p>
-<p>输出：29                                  栈：+</p>
-<p>输出：29                                  栈：+/</p>
-<p>输出：293                                栈：+/</p>
-<p>输出：293/+                            栈：-</p>
-<p>输出：293/+5-</p>
-]]></content>
-      <categories>
-        <category>algorithm</category>
       </categories>
   </entry>
 </search>
