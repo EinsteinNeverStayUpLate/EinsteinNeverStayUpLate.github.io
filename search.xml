@@ -596,14 +596,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>The difference between computer architecture and computer organization</title>
-    <url>/2020/04/26/The%20difference%20between%20computer%20architecture%20and%20computer%20organization/</url>
-    <content><![CDATA[<h1 id="The-difference-between-computer-architecture-and-computer-organization"><a href="#The-difference-between-computer-architecture-and-computer-organization" class="headerlink" title="The difference between computer architecture and computer organization"></a>The difference between computer architecture and computer organization</h1><p>计算机体系结构(Computer Architecture)是指机器语言或汇编语言程序所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，<strong>大多属于抽象的属性</strong></p>
-<p>计算机组成（Computer Organization）是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构的问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为他们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，即可以认为它们的组成方式是不同的。<strong>例如，一台机器是否具备乘法指令是一个结构的问题，但实现乘法指令采用什么方式则是一个组成的问题。</strong></p>
-<h2 id="王道解释："><a href="#王道解释：" class="headerlink" title="王道解释："></a>王道解释：</h2><p>计算机体系结构（Computer architecture)，是指机器语言或汇编语言程序员所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，大都属于抽象属性。<br>    计算机组成（Computer Organization），是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为它们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，既可以认为它们的组成方式是不同的。例如，一个机器是否具备乘法指令是一个结构问题，但实现乘法指令采用什么方式（例如直接采用乘法器，亦或者采用加法器实现）则是一个组成的问题。<br>    许多计算机厂商提供一系列结构相同的解散及，而它们的组成却又相当大的差别，即使是同一系列的不同型号机器，其性能和价格差异也很大。例如，IBM System/370结构就包含了多种价位和性能的机位。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Bochs usage</title>
     <url>/2021/04/21/Bochs%20usage/</url>
     <content><![CDATA[<p><img src="/2021/04/21/Bochs%20usage/0.jpg" alt="0"></p>
@@ -1476,6 +1468,20 @@
 <li>复位：初始化所有部件</li>
 <li>传输响应：表示数据已被接受，或已将数据送至数据总线上。</li>
 </ul>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>difference between computer architecture and computer organization</title>
+    <url>/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>计算机体系结构(Computer Architecture)是指机器语言或汇编语言程序所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，<strong>大多属于抽象的属性</strong></p>
+<p>计算机组成（Computer Organization）是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构的问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为他们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，即可以认为它们的组成方式是不同的。<strong>例如，一台机器是否具备乘法指令是一个结构的问题，但实现乘法指令采用什么方式则是一个组成的问题。</strong></p>
+<h2 id="王道解释："><a href="#王道解释：" class="headerlink" title="王道解释："></a>王道解释：</h2><p>计算机体系结构（Computer architecture)，是指机器语言或汇编语言程序员所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，大都属于抽象属性。<br>    计算机组成（Computer Organization），是指如何实现计算机体系结构所体现的属性，它包含对许多程序员来说透明的硬件细节。例如，指令系统属于结构问题，但指令的实现即如何取指令，分析指令，取操作数，如何运算等都属于组成的问题。因此，当两台机器指令系统相同时，只能认为它们具有相同的结构，至于这两台机器如何实现其指令，完全可以不同，既可以认为它们的组成方式是不同的。例如，一个机器是否具备乘法指令是一个结构问题，但实现乘法指令采用什么方式（例如直接采用乘法器，亦或者采用加法器实现）则是一个组成的问题。<br>    许多计算机厂商提供一系列结构相同的解散及，而它们的组成却又相当大的差别，即使是同一系列的不同型号机器，其性能和价格差异也很大。例如，IBM System/370结构就包含了多种价位和性能的机位。</p>
 ]]></content>
       <categories>
         <category>computer hardware</category>
