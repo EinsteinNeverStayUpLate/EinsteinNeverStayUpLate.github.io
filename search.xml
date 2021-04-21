@@ -3,7 +3,7 @@
   <entry>
     <title>Bochs usage</title>
     <url>/2021/04/21/Bochs%20usage/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/Bochs%20usage/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/Bochs%20usage/0.jpg" alt></p>
 <a id="more"></a>
 
 <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>​    Bochs is a virtual machine, which is kind of different from other virtual machine software, like VirtualBox and VMware. The most distinctive point is that it can debug kernel codes. So, its  usage may not friendly. Before using it to virtualize physical machine, it need configuring a configure file, which contains many parameters you want to emulate.</p>
@@ -21,7 +21,7 @@
   <entry>
     <title>bus</title>
     <url>/2021/04/21/Bus/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/Bus/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/Bus/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>what is bus：</p>
@@ -119,9 +119,32 @@
       </categories>
   </entry>
   <entry>
+    <title>C head file contents</title>
+    <url>/2021/04/21/C%20head%20file%20contents/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/C%20head%20file%20contents/1.jpg" alt></p>
+<a id="more"></a>
+
+<ul>
+<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
+</li>
+<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
+</li>
+<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
+</li>
+<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
+</li>
+<li><p><strong>类型定义</strong>——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C features</title>
     <url>/2021/04/20/C%20features/</url>
-    <content><![CDATA[<p><img src="/2021/04/20/C%20features/1.png" alt="1"></p>
+    <content><![CDATA[<p><img src="/2021/04/20/C%20features/1.png" alt></p>
 <a id="more"></a>
 
 <h4 id="1-const关键字在声明指针时不同位置形成的不同指针"><a href="#1-const关键字在声明指针时不同位置形成的不同指针" class="headerlink" title="1.const关键字在声明指针时不同位置形成的不同指针"></a>1.const关键字在声明指针时不同位置形成的不同指针</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> *pc;  <span class="comment">//意味着不能通过该指针来修改其所指向的变量</span></span><br><span class="line"><span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//意味着在初始化后，pc不能指向其他变量，但能通过该指针改变其指向的值</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> * <span class="keyword">const</span> pc; <span class="comment">//同上</span></span><br></pre></td></tr></table></figure>
@@ -175,32 +198,9 @@
       </tags>
   </entry>
   <entry>
-    <title>C head file contents</title>
-    <url>/2021/04/21/C%20head%20file%20contents/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/C%20head%20file%20contents/1.jpg" alt="1"></p>
-<a id="more"></a>
-
-<ul>
-<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
-</li>
-<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
-</li>
-<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
-</li>
-<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
-</li>
-<li><p><strong>类型定义</strong>——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-  </entry>
-  <entry>
     <title>English grammar</title>
     <url>/2021/04/21/English%20grammar/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/English%20grammar/1.jpg" alt="1"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/English%20grammar/1.jpg" alt></p>
 <p>Common English grammar structures.</p>
 <a id="more"></a>
 
@@ -475,7 +475,7 @@
   <entry>
     <title>Hanming code</title>
     <url>/2021/04/21/Hanming%20Code/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/Hanming%20Code/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/Hanming%20Code/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>简介：Richard Hanming与1950提出，它具有一位纠错能力。</p>
@@ -511,11 +511,11 @@
   <entry>
     <title>I/O interrupt processing procedure</title>
     <url>/2021/04/21/IO%20interrupt%20processing%20procedure/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>完整的操作过程如下：</p>
-<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/1.png" alt="1"></p>
+<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/1.png" alt></p>
 <p>​    在执行主程序的过程中，会执行到一条输入指令。接着CPU将设备地址通过地址线送到接口电路中的设备选择电路，然后设备选择电路对该地址进行比较，看是否是该接口所连接的I/O设备，若是则该接口和相对应的设备就被选中，<strong>SEL</strong> 有效。只有SEL有效，接口电路才会开始工作。<br>​    CPU将命令送到接口中进行译码。由图可以看出<em>启动命令</em>和<em>SEL</em>同时有效才会是触发器D和触发器B被设置。触发器B被设置为1，而触发器D被设置为0。 表示设备开始工作，但同时数据并没有准备好。<strong>NOTE</strong>：触发器B的另一个作用是，启动I/O设备开始工作。<br>​    然后I/O设备开始工作，将data送入DBR中，并将触发器B和触发器D进行修改，B改为0而D改为1。接着，如果MASK触发器的非端为1（表示该中断并未被屏蔽），此时INTR就会经过两个1被置为1。<br>​    接着CPU在一条指令的执行阶段结束后，发出中断查询信号。 然后将INTR送入排队器排队，经过排队器排队后，排队器的输出信号只有一个是1，其他都是0。 排队器的输出信号输出到设备编码器，然后CPU发出中断响应信号（INTA）。之后，设备编码器就会形成向量地址，该地址经过数据线传给CPU，传给PC。PC利用改地址去取出中断服务程序的路口地址（无条件跳转）。然后就进入中断服务程序。</p>
 <hr>
 <p>中断服务程序的流程：</p>
@@ -533,7 +533,7 @@
   <entry>
     <title>MIPS addressing modes</title>
     <url>/2021/04/21/MIPS%20addressing%20modes/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/MIPS%20addressing%20modes/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/MIPS%20addressing%20modes/0.jpg" alt></p>
 <a id="more"></a> 
 
 <h3 id="立即数寻址"><a href="#立即数寻址" class="headerlink" title="立即数寻址"></a>立即数寻址</h3><p>立即数寻址(immediate addressing)，操作数是位于指令自身的常数。</p>
@@ -554,7 +554,7 @@
   <entry>
     <title>MOS and TTL</title>
     <url>/2021/04/21/MOS%20and%20TTL/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>MOS：金属氧化半导体场效应晶体管</p>
@@ -567,7 +567,7 @@
   <entry>
     <title>ROM types</title>
     <url>/2021/04/21/ROM%20types/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/ROM%20types/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/ROM%20types/0.jpg" alt></p>
 <a id="more"></a>
 
 <ul>
@@ -585,7 +585,7 @@
   <entry>
     <title>access cycle and access time</title>
     <url>/2021/04/21/access%20cycle%20and%20access%20time/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/access%20cycle%20and%20access%20time/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/access%20cycle%20and%20access%20time/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>存取时间：存取时间是指从启动一次存储器操作到完成该操作所经历的时间，分为读出时间和写入时间。</p>
@@ -601,7 +601,7 @@
   <entry>
     <title>computer organization noun excerpts</title>
     <url>/2021/04/21/computer%20organization%20noun%20excerpts/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/computer%20organization%20noun%20excerpts/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/computer%20organization%20noun%20excerpts/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>服务器(server)：用于为多用户运行大型程序的计算机，通常由多个用户并行使用，并且一般通过网络访问。</p>
@@ -629,7 +629,7 @@
   <entry>
     <title>concepts and properties of tree</title>
     <url>/2021/04/21/concepts%20and%20properties%20of%20tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/concepts%20and%20properties%20of%20tree/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/concepts%20and%20properties%20of%20tree/0.jpg" alt></p>
 <a id="more"></a>
 
 <h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
@@ -654,7 +654,7 @@
   <entry>
     <title>develpment aspects of microprocessors</title>
     <url>/2021/04/21/develpment%20aspects%20of%20microprocessors/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/develpment%20aspects%20of%20microprocessors/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/develpment%20aspects%20of%20microprocessors/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>从21世纪初来看，当前通用微处理器的发展重点将在以下几个方面：</p>
@@ -672,7 +672,7 @@
   <entry>
     <title>difference between computer architecture and computer organization</title>
     <url>/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>计算机体系结构(Computer Architecture)是指机器语言或汇编语言程序所看到的传统机器的属性，包括指令集，数据类型，存储器寻址技术等，<strong>大多属于抽象的属性</strong></p>
@@ -686,19 +686,19 @@
   <entry>
     <title>SRAM and DRAM basic unit circuity  working principle</title>
     <url>/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/0.jpg" alt></p>
 <a id="more"></a>
 
-<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/1.png" alt="1"></p>
+<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/1.png" alt></p>
 <p>工作原理如下：</p>
 <p>读出时：行地址选择和列地址选择有效，T5，T6，T7，T8打开。假设A端为高电平，通过T6送进位线A，经过T8，送进读出放大器，输出。读入时，经过两个写放大器的相反信号分别经过T7，T8送进A’和A端，A‘和A端两端是相反的信号。</p>
 <hr>
-<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/2.png" alt="2"></p>
+<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/2.png" alt></p>
 <p>工作原理：</p>
 <p>读出时，T4置一预充电信号，接着读选择项打开T2。若Gg有足够多的电荷（即Cg存储的是1），则T1导通且接地，此时读数据线降为低电平，读出“0”。反之，Cg没有足够多的电荷（存储的是0），T1截止，读数据线为高电平，读出“1”。</p>
 <p>写入时，数据先到写数据线，再由写选择线打开T3，此时写数据线相当于电容Cg联通，写数据线上是“1”就写入“1”，是“0”就写入“0”。</p>
 <hr>
-<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/3.png" alt="3"></p>
+<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/3.png" alt></p>
 <p>工作原理：</p>
 <p>读出时，字线上的高电平使T导通，如果Cg中有电荷（表示“1”），经T管在数据线上产生电流，读出为“1”。<br>否则，数据线上不产生电流，视为读出“0”。这里注意，读操作结束时，Cg的电荷已释放完毕，故是破坏性读出，必须再生。</p>
 <p>写入时，原理类似。</p>
@@ -708,9 +708,49 @@
       </categories>
   </entry>
   <entry>
+    <title>function pointer</title>
+    <url>/2021/04/21/function_pointer/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/function_pointer/0.jpg" alt></p>
+<a id="more"></a>
+
+<h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>infix expression into prefix expression</title>
+    <url>/2021/04/21/infix%20expression%20into%20prefix%20expression/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/infix%20expression%20into%20prefix%20expression/0.jpg" alt></p>
+<a id="more"></a>
+
+<p>基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
+<p>遇到一个操作符则与栈顶元素比较优先级，若大于栈顶操作符的优先级则将该操作符入栈，否则不断将操作符出栈直至该操作符优先级小于栈顶操作符（注意，同等优先级，左边的操作符优先级高）。举例如下：</p>
+<p>将如下中缀表达式转化成后缀表达式：2+9/3-5</p>
+<p>输出：2                                    栈：</p>
+<p>输出：2                                    栈：+</p>
+<p>输出：29                                  栈：+</p>
+<p>输出：29                                  栈：+/</p>
+<p>输出：293                                栈：+/</p>
+<p>输出：293/+                            栈：-</p>
+<p>输出：293/+5-</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
     <title>kernel</title>
     <url>/2021/04/21/kernel/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/kernel/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/kernel/0.jpg" alt></p>
 <a id="more"></a>
 
 <h3 id="Into-Protection-Mode"><a href="#Into-Protection-Mode" class="headerlink" title="Into Protection Mode"></a>Into Protection Mode</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">From real mode into protection mode, there are five necessary steps:</span><br><span class="line"></span><br><span class="line">1: load global descriptor register</span><br><span class="line"><span class="code">	xor eax,eax</span></span><br><span class="line"><span class="code">	mov ax,cs	</span></span><br><span class="line"><span class="code">	shl eax,4</span></span><br><span class="line"><span class="code">	add eax,LABEL_GDT</span></span><br><span class="line"><span class="code">	mov dword [GdtPtr+0x02],eax</span></span><br><span class="line"><span class="code">	lgdt	[GdtPtr]</span></span><br><span class="line"></span><br><span class="line">2:	switch off interrupt</span><br><span class="line"><span class="code">	cli</span></span><br><span class="line"><span class="code">	</span></span><br><span class="line">3:	open A20</span><br><span class="line"><span class="code">	in al,92h</span></span><br><span class="line"><span class="code">	or al,0000_0010h</span></span><br><span class="line"><span class="code">	out 92h,al</span></span><br><span class="line"></span><br><span class="line">4:	set PE in cr0 to 1</span><br><span class="line"><span class="code">	mov eax,cr0</span></span><br><span class="line"><span class="code">	or eax,1</span></span><br><span class="line"><span class="code">	mov cr0,eax</span></span><br><span class="line"><span class="code">	</span></span><br><span class="line">5:	jump into protected mode</span><br><span class="line"><span class="code">	jmp dword SelectorCode32:0</span></span><br></pre></td></tr></table></figure>
@@ -755,7 +795,7 @@
   <entry>
     <title>memory</title>
     <url>/2021/04/21/memory/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/memory/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/memory/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>一. 存储器分类</p>
@@ -786,13 +826,13 @@
 </ul>
 <p>x86系列的机器采用的是小尾方式。</p>
 <p>两种类型的机器进行通讯会产生问题。</p>
-<p><img src="/2021/04/21/memory/1.png" alt="1"></p>
+<p><img src="/2021/04/21/memory/1.png" alt></p>
 <p>读出时间：从给出地址信号到数据线有稳定的数据输出。</p>
 <p>存取周期&gt;存取时间</p>
 <hr>
-<p><img src="/2021/04/21/memory/2.png" alt="2"></p>
+<p><img src="/2021/04/21/memory/2.png" alt></p>
 <p>半导体芯片的片选线一般有两种方式：</p>
-<p><img src="/2021/04/21/memory/3.png" alt="3"></p>
+<p><img src="/2021/04/21/memory/3.png" alt></p>
 <p>对 八个芯片相同的地址同时进行操作，每个芯片给出一位。<br>每一组八个芯片要同时进行工作才能够在每个芯片当中读出或写入一位二进制信号。<br>每八片的片选线连接在一起。<br>CPU地址中0<del>16K-1  分配到第一组芯片中。<br>16K</del>32K-1 分配到第二组芯片中。后面同理</p>
 <p>如果要读的地址是65535，则选择第四组芯片（低电平有效），其余芯片组高电平。然后在八个芯片的同一地址处各读出一位，构成一个B，送到CPU中。</p>
 <hr>
@@ -815,7 +855,7 @@
   <entry>
     <title>popular BUS standards</title>
     <url>/2021/04/21/popular%20BUS%20standards/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/popular%20BUS%20standards/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/popular%20BUS%20standards/0.jpg" alt></p>
 <a id="more"></a>
 
 <h3 id="ISA总线"><a href="#ISA总线" class="headerlink" title="ISA总线"></a>ISA总线</h3><p>​    ISA（Industiral Standard Architecture)总线是IBM为了采用全16位的CPU而推出的，又称为AT总线，它使用独立于CPU的总线时钟，一年春CPU可以采用比总线频率更高的时钟，有利于CPU性能的提高。由于ISA总线没有支持总线仲裁的硬件逻辑，因此它不能支持多台主设备系统，而且ISA上的所有数据的传送必须通过CPU或DMA接口来管理，因此使CPU花费大量时间来控制与外部设备交换数据。ISA总线时钟频率为8MHz，最大传输率为16MBps，数据线为16位，地址线为24位。</p>
@@ -852,25 +892,9 @@
       </categories>
   </entry>
   <entry>
-    <title>proving process of number relationship between child and parent in tree</title>
-    <url>/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
-<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
-<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
-<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
-<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
-]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-  </entry>
-  <entry>
     <title>signal types in control bus</title>
     <url>/2021/04/21/signal%20types%20in%20control%20bus/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/signal%20types%20in%20control%20bus/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/signal%20types%20in%20control%20bus/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>控制总线上常见的控制信号有：</p>
@@ -893,9 +917,25 @@
       </categories>
   </entry>
   <entry>
+    <title>proving process of number relationship between child and parent in tree</title>
+    <url>/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/0.jpg" alt></p>
+<a id="more"></a>
+
+<h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
+<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
+<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
+<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
+<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
     <title>string matching KMP algorithm</title>
     <url>/2021/04/21/string%20matching%20KMP%20algorithm/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/string%20matching%20KMP%20algorithm/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/string%20matching%20KMP%20algorithm/0.jpg" alt></p>
 <a id="more"></a>
 
 <p>KMP算法利用子串的结构特点（前后缀有相同的部分）来减少子串与主串的比较次数。</p>
@@ -912,7 +952,7 @@
   <entry>
     <title>structures for composition</title>
     <url>/2021/04/21/structures%20for%20composition/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/structures%20for%20composition/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/structures%20for%20composition/0.jpg" alt></p>
 <a id="more"></a>
 
 
@@ -1078,7 +1118,7 @@
   <entry>
     <title>traversal of binary tree</title>
     <url>/2021/04/21/traversal%20of%20binary%20tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/traversal%20of%20binary%20tree/0.jpg" alt="0"></p>
+    <content><![CDATA[<p><img src="/2021/04/21/traversal%20of%20binary%20tree/0.jpg" alt></p>
 <a id="more"></a>
 
 <h4 id="Chain-storage-definition"><a href="#Chain-storage-definition" class="headerlink" title="Chain storage definition"></a>Chain storage definition</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BitNode,*BiTree;</span><br></pre></td></tr></table></figure>
@@ -1105,7 +1145,7 @@
   <entry>
     <title>x86 instruction</title>
     <url>/2021/04/20/x86%20Instructions/</url>
-    <content><![CDATA[<p><img src="/2021/04/20/x86%20Instructions/3.jpg" alt="3"></p>
+    <content><![CDATA[<p><img src="/2021/04/20/x86%20Instructions/0.jpg" alt></p>
 <a id="more"></a>
 
 <h3 id="Master-boot-sector"><a href="#Master-boot-sector" class="headerlink" title="Master boot sector"></a>Master boot sector</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Nomally, 0 head 0 cylinder 1 sector is the Master boot sector</span></span><br><span class="line"><span class="comment">//to prevent reading fault data, master boot sector's last two binary</span></span><br><span class="line"><span class="comment">//must be 0x55aa</span></span><br><span class="line"><span class="comment">//use db or dw can complete it</span></span><br><span class="line">db <span class="number">0x55</span>,<span class="number">0xaa</span></span><br><span class="line">dw <span class="number">0xaa55</span>      <span class="comment">//cause,write a word into memory with low byte alignment</span></span><br></pre></td></tr></table></figure>
@@ -1342,45 +1382,5 @@
         <tag>x86</tag>
         <tag>mbr</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>infix expression into prefix expression</title>
-    <url>/2021/04/21/infix%20expression%20into%20prefix%20expression/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/infix%20expression%20into%20prefix%20expression/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
-<p>遇到一个操作符则与栈顶元素比较优先级，若大于栈顶操作符的优先级则将该操作符入栈，否则不断将操作符出栈直至该操作符优先级小于栈顶操作符（注意，同等优先级，左边的操作符优先级高）。举例如下：</p>
-<p>将如下中缀表达式转化成后缀表达式：2+9/3-5</p>
-<p>输出：2                                    栈：</p>
-<p>输出：2                                    栈：+</p>
-<p>输出：29                                  栈：+</p>
-<p>输出：29                                  栈：+/</p>
-<p>输出：293                                栈：+/</p>
-<p>输出：293/+                            栈：-</p>
-<p>输出：293/+5-</p>
-]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>function pointer</title>
-    <url>/2021/04/21/function_pointer/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/function_pointer/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
   </entry>
 </search>

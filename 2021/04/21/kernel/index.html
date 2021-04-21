@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2021/04/21/kernel/0.jpg">
 <meta property="article:published_time" content="2021-04-21T08:17:15.000Z">
-<meta property="article:modified_time" content="2021-04-21T08:19:18.000Z">
+<meta property="article:modified_time" content="2021-04-21T15:05:00.108Z">
 <meta property="article:author" content="Virux">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2021/04/21/kernel/0.jpg">
@@ -181,7 +181,7 @@
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
   <a href="/2021/04/21/kernel/" class="article-date">
-     <time datetime="2021-04-21T08:19:18.000Z" itemprop="dateModified">2021-04-21</time>
+     <time datetime="2021-04-21T15:05:00.108Z" itemprop="dateModified">2021-04-21</time>
   </a>
 </div>
 
@@ -203,7 +203,7 @@
 
             
 
-            <p><img src="/2021/04/21/kernel/0.jpg" alt="0"></p>
+            <p><img src="/2021/04/21/kernel/0.jpg" alt></p>
 <a id="more"></a>
 
 <h3 id="Into-Protection-Mode"><a href="#Into-Protection-Mode" class="headerlink" title="Into Protection Mode"></a>Into Protection Mode</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">From real mode into protection mode, there are five necessary steps:</span><br><span class="line"></span><br><span class="line">1: load global descriptor register</span><br><span class="line"><span class="code">	xor eax,eax</span></span><br><span class="line"><span class="code">	mov ax,cs	</span></span><br><span class="line"><span class="code">	shl eax,4</span></span><br><span class="line"><span class="code">	add eax,LABEL_GDT</span></span><br><span class="line"><span class="code">	mov dword [GdtPtr+0x02],eax</span></span><br><span class="line"><span class="code">	lgdt	[GdtPtr]</span></span><br><span class="line"></span><br><span class="line">2:	switch off interrupt</span><br><span class="line"><span class="code">	cli</span></span><br><span class="line"><span class="code">	</span></span><br><span class="line">3:	open A20</span><br><span class="line"><span class="code">	in al,92h</span></span><br><span class="line"><span class="code">	or al,0000_0010h</span></span><br><span class="line"><span class="code">	out 92h,al</span></span><br><span class="line"></span><br><span class="line">4:	set PE in cr0 to 1</span><br><span class="line"><span class="code">	mov eax,cr0</span></span><br><span class="line"><span class="code">	or eax,1</span></span><br><span class="line"><span class="code">	mov cr0,eax</span></span><br><span class="line"><span class="code">	</span></span><br><span class="line">5:	jump into protected mode</span><br><span class="line"><span class="code">	jmp dword SelectorCode32:0</span></span><br></pre></td></tr></table></figure>
@@ -247,7 +247,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2021/04/21/kernel/" data-id="cknrkuugm001008u7erlx0l4k" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2021/04/21/kernel/" data-id="cknrld0io0012ewu7ggwh6ryv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
