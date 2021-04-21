@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Bus</title>
-    <url>/2020/05/14/Bus/</url>
-    <content><![CDATA[<h1 id="BUS"><a href="#BUS" class="headerlink" title="BUS"></a>BUS</h1><p>what is bus：</p>
+    <title>bus</title>
+    <url>/2021/04/21/Bus/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/Bus/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>what is bus：</p>
 <p>总线是连接各个部件的信息传输线，是各个部件共享的传输介质。</p>
 <p>总线上信息传送：</p>
 <p>​    串行，并行（需要多条数据线）</p>
 <p>传输距离较长时不使用并行传输，一般用在机箱内。</p>
 <p>总线结构的计算机举例：</p>
 <p>1：单总线结构框图：总线会成为瓶颈</p>
-<p><img src="/2020/05/14/Bus/C:%5CUsers%5C123%5CDesktop%5C%E5%8D%95%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="单总线结构"></p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E5%8D%95%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="单总线结构"></p>
 <p>2：面向CPU的双总线结构</p>
-<p><img src="/2020/05/14/Bus/C:%5CUsers%5C123%5CDesktop%5C%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="双总线结构"></p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="双总线结构"></p>
 <p>DEFEAT：当主存要与外部设备，一定要经过CPU，会打断CPU的执行。</p>
 <p>3：以存储器为中心</p>
-<p><img src="/2020/05/14/Bus/C:%5CUsers%5C123%5CDesktop%5C%E9%9D%A2%E5%90%91%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="面向存储器的双总线结构"></p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5C%E9%9D%A2%E5%90%91%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="面向存储器的双总线结构"></p>
 <p>总线分类：（要有标准）</p>
 <p>根据总线的位置进行划分：</p>
 <p>1：片内总线： 芯片内部总线</p>
@@ -49,12 +52,12 @@
 <p>总线标准：</p>
 <p>单总线结构</p>
 <p>多总线结构</p>
-<p><img src="/2020/05/14/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E5%A4%9A%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="多总线结构"></p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E5%A4%9A%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="多总线结构"></p>
 <p>通道：具有特殊功能的处理器，有自己的控制器，指令系统。通道的程序由操作系统来编写。</p>
 <p>三总线结构</p>
-<p><img src="/2020/05/14/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="三总线结构"></p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="三总线结构"></p>
 <p>另一种三总线结构：</p>
-<p><img src="/2020/05/14/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E5%8F%88%E4%B8%80%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="又一三总线结构"></p>
+<p><img src="/2021/04/21/Bus/C:%5CUsers%5C123%5CDesktop%5CPictures%5C%E5%8F%88%E4%B8%80%E4%B8%89%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84.PNG" alt="又一三总线结构"></p>
 <p>四总线结构</p>
 <p>将低速设备和高速设备进行分类组织</p>
 <p>总线结构举例：</p>
@@ -93,6 +96,9 @@
 <p>二：总线的通信控制</p>
 <p>目的： 解决通信双方的 <strong>协调配合</strong> 问题</p>
 ]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
   </entry>
   <entry>
     <title>Hanming Code</title>
