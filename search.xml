@@ -432,16 +432,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>The proof process of number relationship between child and parent in Tree</title>
-    <url>/2020/10/06/The%20proof%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/</url>
-    <content><![CDATA[<h1 id="The-proof-process-of-number-relationship-between-child-and-parent-in-Tree"><a href="#The-proof-process-of-number-relationship-between-child-and-parent-in-Tree" class="headerlink" title="The proof process of number relationship between child and parent in Tree"></a>The proof process of number relationship between child and parent in Tree</h1><h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
-<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
-<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
-<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
-<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Transform infix expression into prefix expression(with Stack) </title>
     <url>/2020/09/26/Transform%20infix%20expression%20into%20prefix%20expression(with%20Stack)%20/</url>
     <content><![CDATA[<h1 id="Transform-infix-expression-into-prefix-expression-with-Stack"><a href="#Transform-infix-expression-into-prefix-expression-with-Stack" class="headerlink" title="Transform infix expression into prefix expression(with Stack)"></a>Transform infix expression into prefix expression(with Stack)</h1><p>​    基本思想：从左到右扫描，遇到数字直接输出，遇到+，-，*，/则进栈。入栈规则如下：</p>
@@ -1402,6 +1392,21 @@
 <h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
 <h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
 <h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>proving process of number relationship between child and parent in tree</title>
+    <url>/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
+<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
+<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
+<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
+<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
 ]]></content>
       <categories>
         <category>algorithm</category>
