@@ -708,25 +708,6 @@
       </categories>
   </entry>
   <entry>
-    <title>function pointer</title>
-    <url>/2021/04/21/function%20pointer/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/function%20pointer/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-  </entry>
-  <entry>
     <title>kernel</title>
     <url>/2021/04/21/kernel/</url>
     <content><![CDATA[<p><img src="/2021/04/21/kernel/0.jpg" alt="0"></p>
@@ -1381,6 +1362,25 @@
 ]]></content>
       <categories>
         <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>function pointer</title>
+    <url>/2021/04/21/function_pointer/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/function_pointer/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>C</category>
       </categories>
   </entry>
 </search>
