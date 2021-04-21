@@ -6,23 +6,23 @@
     
 
     
-    <title>The function of each FILE in IO instruction | Virux</title>
+    <title>I/O interrupt processing procedure | Virux</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="The function of each FILE in I&#x2F;O instruction 操作码：该字段可作为I&#x2F;O指令与其他指令（如访存指令，算术逻辑指令，控制指令等）的判别代码 命令码：体现I&#x2F;O设备的具体操作 设备码：多台I&#x2F;O设备的选择码">
-<meta property="og:type" content="article">
-<meta property="og:title" content="The function of each FILE in IO instruction">
-<meta property="og:url" content="http://yoursite.com/2020/05/12/The%20function%20of%20each%20FILE%20in%20IO%20instruction/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="I&#x2F;O interrupt processing procedure">
+<meta property="og:url" content="http://yoursite.com/2021/04/21/IO%20interrupt%20processing%20procedure/index.html">
 <meta property="og:site_name" content="Virux">
-<meta property="og:description" content="The function of each FILE in I&#x2F;O instruction 操作码：该字段可作为I&#x2F;O指令与其他指令（如访存指令，算术逻辑指令，控制指令等）的判别代码 命令码：体现I&#x2F;O设备的具体操作 设备码：多台I&#x2F;O设备的选择码">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-12T13:49:44.132Z">
-<meta property="article:modified_time" content="2020-09-28T05:20:45.109Z">
+<meta property="og:image" content="http://yoursite.com/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg">
+<meta property="article:published_time" content="2021-04-21T11:33:21.000Z">
+<meta property="article:modified_time" content="2021-04-21T11:35:40.888Z">
 <meta property="article:author" content="Virux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg">
     
 
     
@@ -149,19 +149,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <a class="page-title-link" href="/categories/computer-hardware/">computer hardware</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-The function of each FILE in IO instruction" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-IO interrupt processing procedure" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        The function of each FILE in IO instruction
+        I/O interrupt processing procedure
         </h1>
     
 
@@ -172,16 +172,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/2020/05/12/The%20function%20of%20each%20FILE%20in%20IO%20instruction/" class="article-date">
-       <time datetime="2020-05-12T13:49:44.132Z" itemprop="datePublished">2020-05-12</time>
+    <a href="/2021/04/21/IO%20interrupt%20processing%20procedure/" class="article-date">
+       <time datetime="2021-04-21T11:33:21.000Z" itemprop="datePublished">2021-04-21</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/2020/05/12/The%20function%20of%20each%20FILE%20in%20IO%20instruction/" class="article-date">
-     <time datetime="2020-09-28T05:20:45.109Z" itemprop="dateModified">2020-09-28</time>
+  <a href="/2021/04/21/IO%20interrupt%20processing%20procedure/" class="article-date">
+     <time datetime="2021-04-21T11:35:40.888Z" itemprop="dateModified">2021-04-21</time>
   </a>
 </div>
 
@@ -203,10 +203,18 @@
 
             
 
-            <h1 id="The-function-of-each-FILE-in-I-O-instruction"><a href="#The-function-of-each-FILE-in-I-O-instruction" class="headerlink" title="The function of each FILE in I/O instruction"></a>The function of each FILE in I/O instruction</h1><ul>
-<li>操作码：该字段可作为I/O指令与其他指令（如访存指令，算术逻辑指令，控制指令等）的判别代码</li>
-<li>命令码：体现I/O设备的具体操作</li>
-<li>设备码：多台I/O设备的选择码</li>
+            <p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>完整的操作过程如下：</p>
+<p>​    在执行主程序的过程中，会执行到一条输入指令。接着CPU将设备地址通过地址线送到接口电路中的设备选择电路，然后设备选择电路对该地址进行比较，看是否是该接口所连接的I/O设备，若是则该接口和相对应的设备就被选中，<strong>SEL</strong> 有效。只有SEL有效，接口电路才会开始工作。<br>​    CPU将命令送到接口中进行译码。由图可以看出<em>启动命令</em>和<em>SEL</em>同时有效才会是触发器D和触发器B被设置。触发器B被设置为1，而触发器D被设置为0。 表示设备开始工作，但同时数据并没有准备好。<strong>NOTE</strong>：触发器B的另一个作用是，启动I/O设备开始工作。<br>​    然后I/O设备开始工作，将data送入DBR中，并将触发器B和触发器D进行修改，B改为0而D改为1。接着，如果MASK触发器的非端为1（表示该中断并未被屏蔽），此时INTR就会经过两个1被置为1。<br>​    接着CPU在一条指令的执行阶段结束后，发出中断查询信号。 然后将INTR送入排队器排队，经过排队器排队后，排队器的输出信号只有一个是1，其他都是0。 排队器的输出信号输出到设备编码器，然后CPU发出中断响应信号（INTA）。之后，设备编码器就会形成向量地址，该地址经过数据线传给CPU，传给PC。PC利用改地址去取出中断服务程序的路口地址（无条件跳转）。然后就进入中断服务程序。</p>
+<hr>
+<p>中断服务程序的流程：</p>
+<ul>
+<li>保护现场：保护程序的断点（中断隐指令完成）；保存通用寄存器和状态寄存器。</li>
+<li>中断服务：与I/O设备直接相关，不同功能设备的中断服务程序不同。</li>
+<li>恢复现场：从主存或堆栈中恢复CPU寄存器中的内容。</li>
+<li>中断返回：中断返回指令。</li>
 </ul>
 
         </div>
@@ -215,7 +223,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2020/05/12/The%20function%20of%20each%20FILE%20in%20IO%20instruction/" data-id="cknrd5jsx000mycu76vc68h2w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2021/04/21/IO%20interrupt%20processing%20procedure/" data-id="cknrdrswo0000x4u7dlaacyu1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -285,21 +293,16 @@
             "@type": "Person",
             "name": "Virux"
         },
-        "headline": "The function of each FILE in IO instruction",
-        "image": "http://yoursite.com",
+        "headline": "I/O interrupt processing procedure",
+        "image": "http://yoursite.com/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg",
         "keywords": "",
-        "genre": "",
-        "datePublished": "2020-05-12",
-        "dateCreated": "2020-05-12",
-        "dateModified": "2020-09-28",
-        "url": "http://yoursite.com/2020/05/12/The function of each FILE in IO instruction/",
-        "description": "The function of each FILE in I/O instruction
-操作码：该字段可作为I/O指令与其他指令（如访存指令，算术逻辑指令，控制指令等）的判别代码
-命令码：体现I/O设备的具体操作
-设备码：多台I/O设备的选择码
-
-",
-        "wordCount": 19
+        "genre": "computer hardware",
+        "datePublished": "2021-04-21",
+        "dateCreated": "2021-04-21",
+        "dateModified": "2021-04-21",
+        "url": "http://yoursite.com/2021/04/21/IO interrupt processing procedure/",
+        "description": "",
+        "wordCount": 24
     }
 </script>
 
@@ -380,20 +383,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2020/05/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            计算机组成原理——系统总线学习笔记：
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2020/05/09/Hanming%20Code/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2021/04/21/difference%20between%20computer%20architecture%20and%20computer%20organization/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Hanming Code</p>
+        <p class="article-nav-title">difference between computer architecture and computer organization</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -411,6 +404,26 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/04/21/IO%20interrupt%20processing%20procedure/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg)" alt="I/O interrupt processing procedure" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/computer-hardware/">computer hardware</a></p>
+                            <p class="item-title"><a href="/2021/04/21/IO%20interrupt%20processing%20procedure/" class="title">I/O interrupt processing procedure</a></p>
+                            <p class="item-date"><time datetime="2021-04-21T11:33:21.000Z" itemprop="datePublished">2021-04-21</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -492,26 +505,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2021/04/21/popular%20BUS%20standards/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2021/04/21/popular%20BUS%20standards/0.jpg)" alt="popular BUS standards" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/computer-hardware/">computer hardware</a></p>
-                            <p class="item-title"><a href="/2021/04/21/popular%20BUS%20standards/" class="title">popular BUS standards</a></p>
-                            <p class="item-date"><time datetime="2021-04-21T09:11:26.000Z" itemprop="datePublished">2021-04-21</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -521,7 +514,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Assembly-language/">Assembly language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OSDev/">OSDev</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer-hardware/">computer hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/grammar/">grammar</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Assembly-language/">Assembly language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OSDev/">OSDev</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer-hardware/">computer hardware</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/grammar/">grammar</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -531,7 +524,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -610,7 +603,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2020/05/12/The%20function%20of%20each%20FILE%20in%20IO%20instruction/';
+    var disqus_url = 'http://yoursite.com/2021/04/21/IO%20interrupt%20processing%20procedure/';
     
     (function() {
     var dsq = document.createElement('script');
