@@ -589,16 +589,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>The difference of Access cycle and Access time</title>
-    <url>/2020/05/01/The%20difference%20of%20Access%20cycle%20and%20Access%20time/</url>
-    <content><![CDATA[<h1 id="The-difference-of-Access-cycle-and-Access-time"><a href="#The-difference-of-Access-cycle-and-Access-time" class="headerlink" title="The difference of Access cycle and Access time"></a>The difference of Access cycle and Access time</h1><p>存取时间：存取时间是指从启动一次存储器操作到完成该操作所经历的时间，分为读出时间和写入时间。</p>
-<p>存取周期：存取周期又称为读写周期或访问周期。它是指存储器进行一次完整的读写操作所需的全部时间，即<strong>连续两次独立访问存储器操作之间所需的最小时间间隔。</strong></p>
-<p>上面两个概念乍一看基本相同，其实不一样。关键在于存取周期=存取时间+恢复时间。</p>
-<p>那么What is recover time？</p>
-<p>对任何一种存储器，在读写操作之后，总要有一段恢复内部状态的复原时间。对于破坏性读出的存储器，存取周期往往比存取大得多（这意味着恢复时间较长）。故通常来说存取周期是大于存取时间的。（图在王道P94）</p>
-]]></content>
-  </entry>
-  <entry>
     <title>The included information of C head files in UNIX</title>
     <url>/2020/05/07/The%20included%20information%20of%20C%20head%20files%20in%20UNIX/</url>
     <content><![CDATA[<h1 id="The-included-information-of-C-head-files-in-UNIX"><a href="#The-included-information-of-C-head-files-in-UNIX" class="headerlink" title="The included information of C head files in UNIX"></a>The included information of C head files in UNIX</h1><ul>
@@ -1395,6 +1385,22 @@
 ]]></content>
       <categories>
         <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>access cycle and access time</title>
+    <url>/2021/04/21/access%20cycle%20and%20access%20time/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/access%20cycle%20and%20access%20time/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>存取时间：存取时间是指从启动一次存储器操作到完成该操作所经历的时间，分为读出时间和写入时间。</p>
+<p>存取周期：存取周期又称为读写周期或访问周期。它是指存储器进行一次完整的读写操作所需的全部时间，即<strong>连续两次独立访问存储器操作之间所需的最小时间间隔。</strong></p>
+<p>上面两个概念乍一看基本相同，其实不一样。关键在于存取周期=存取时间+恢复时间。</p>
+<p>那么What is recover time？</p>
+<p>对任何一种存储器，在读写操作之后，总要有一段恢复内部状态的复原时间。对于破坏性读出的存储器，存取周期往往比存取大得多（这意味着恢复时间较长）。故通常来说存取周期是大于存取时间的。（图在王道P94）</p>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
       </categories>
   </entry>
 </search>
