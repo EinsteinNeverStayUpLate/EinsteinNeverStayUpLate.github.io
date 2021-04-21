@@ -175,65 +175,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C head file contents</title>
-    <url>/2021/04/21/C%20head%20file%20contents/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/C%20head%20file%20contents/1.jpg" alt="1"></p>
-<a id="more"></a>
-
-<ul>
-<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
-</li>
-<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
-</li>
-<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
-</li>
-<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
-</li>
-<li><p><strong>类型定义</strong>——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hanming code</title>
-    <url>/2021/04/21/Hanming%20Code/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/Hanming%20Code/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>简介：Richard Hanming与1950提出，它具有一位纠错能力。</p>
-<p>编码纠错理论内容：</p>
-<p>任何一种编码是否具有检测能力和纠错能力，都与编码的最小距离有关。所谓编码的最小距离，是指在一种编码系统中，任意两组合法代码之间的最少二进制位数的差异。<br>由纠错理论的</p>
-<p>​                                                               L-1=D+C     且D&gt;=C</p>
-<p>L表示最小距离，D（detection）检测错误的位数，C（correct）纠正错误的位数。<br>故通过加入检测位，可以有效提高检错能力和纠错能力。</p>
-<hr>
-<p>Hanming Code插入检测位过程：</p>
-<p>假设欲传送的信息n位，则根据 2^k&gt;=n+k+1，可以得出所要加入检测位的位数k。k确定后，就要知道这k位的位置和信息（0或1）。k位检测为插入二进制串后，形成n+k为的一个二进制串，此时还没确定位置和信息，只知道有一个n+k位的二进制串。这里规定，这个二进制串从左到右进行位置编号，从1到n+k。<br>注意，Hanming Code一种非划分的分组检测方式，这意味着k位检测位需要承担各自小组的检测任务，这里的意思就是将n+k位的二进制串分成k组，但是组与组之间有重叠的。<br>接下来讨论k位检测码的插入位置。对于一个n+k位的二进制串，检测码在位置编号为2^(i-1)处，即1,2,4,8,16…都是检测位。（<strong>IT’s rule ，don’t ask why</strong>）<br>那么每一位检测码引领的组是哪些编号上的bit呢？<br>第2^(i-1)(i=1,2,3,4,…)位上的的检测位所引领的bit的位置编号具有以下特点：这个位置编号转化为二进制后，从右到左数，第 i 位是1。（<strong>位置和小组确定</strong>）<br>接下来讨论，检测位上是0还是1。<br>通常来说，我们假设对于每一个检测位和其所引领的小组会形成一个奇偶纠错系统。这意味着对于每一个小组，我们通过奇原则（1的个数为奇数）或偶原则（1的个数为偶数）去检测，能够发现这一个小组（包括检测位在内）是否在传送过程中发生了错误。（<strong>注意，一般而言我们认为一串二进制出错只出错一位，而不会出错两个位，这是一种概率超过百分之九十的事件</strong>）。<br>回到开头，我们如何确定检测位是0还是1？这里我们假设利用偶原则进行检验，则检测位Ci（i=1,2,4,8,16…)为</p>
-<p>​                                 Ci=其所引领的小组内的所有bit（不包括Ci）进行连续异或所得到的的结果</p>
-<hr>
-<p>下面用一个例题概述上面过程，并给出接受方进行纠错的过程。</p>
-<p>假设发送方欲发送信息0101，则经过Hanming 编码后，发送出去的信息是什么？</p>
-<p>首先： C1 C2 0 C4 1 0 1 确认了位置。</p>
-<p>C1=0⊕1⊕1=0  （第3,5,7位的bit）</p>
-<p>C2=0⊕0⊕1=1 （第3,6,7位的bit）</p>
-<p>C4=1⊕0⊕1=0（第5,6,7位的bit）</p>
-<p>故最终传送出去的信息位：0100101</p>
-<hr>
-<p>假设接受方接到传送过来信息位：0110101，且双方已按偶原则编码，试问欲传送的信息是什么？</p>
-<p>首先，这串信息不能直接拿来就用，要像纠错。纠错过程实际上是对传送后的Hanming code形成新的检测位Pi（i=1,2,4,8,16，…），本质是将每一小组拿出来单独进行奇偶校验。</p>
-<p>P1=第一位⊕第三位⊕第五位⊕第七位=0⊕1⊕1⊕1=1</p>
-<p>P2=第二位⊕第三位⊕第六位⊕第七位=1⊕1⊕0⊕1=1</p>
-<p>P3=第四位⊕第五位⊕第六位⊕第七位=0⊕1⊕0⊕1=0</p>
-<p>（<strong>这里注意，对于连续的⊕，如果其中有偶数个1，则所得结果必是0</strong>）</p>
-<p>由上可知第一组，第二组出错了。则出错位那一位？<br>注意：我们上面已经说了，一般一位出错的概率最大。那么又因为第一，第二组出错，由此可知第一，第二组所共有的那一位（编号为3）出错。为什么不是编号为7的bit？因为假设编号为7出错，第三组也应该出错。所以将接收到的信息纠正为：0100101.</p>
-]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-  </entry>
-  <entry>
     <title>English grammar</title>
     <url>/2021/04/21/English%20grammar/</url>
     <content><![CDATA[<p><img src="/2021/04/21/English%20grammar/1.jpg" alt="1"></p>
@@ -509,6 +450,65 @@
       </categories>
   </entry>
   <entry>
+    <title>Hanming code</title>
+    <url>/2021/04/21/Hanming%20Code/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/Hanming%20Code/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>简介：Richard Hanming与1950提出，它具有一位纠错能力。</p>
+<p>编码纠错理论内容：</p>
+<p>任何一种编码是否具有检测能力和纠错能力，都与编码的最小距离有关。所谓编码的最小距离，是指在一种编码系统中，任意两组合法代码之间的最少二进制位数的差异。<br>由纠错理论的</p>
+<p>​                                                               L-1=D+C     且D&gt;=C</p>
+<p>L表示最小距离，D（detection）检测错误的位数，C（correct）纠正错误的位数。<br>故通过加入检测位，可以有效提高检错能力和纠错能力。</p>
+<hr>
+<p>Hanming Code插入检测位过程：</p>
+<p>假设欲传送的信息n位，则根据 2^k&gt;=n+k+1，可以得出所要加入检测位的位数k。k确定后，就要知道这k位的位置和信息（0或1）。k位检测为插入二进制串后，形成n+k为的一个二进制串，此时还没确定位置和信息，只知道有一个n+k位的二进制串。这里规定，这个二进制串从左到右进行位置编号，从1到n+k。<br>注意，Hanming Code一种非划分的分组检测方式，这意味着k位检测位需要承担各自小组的检测任务，这里的意思就是将n+k位的二进制串分成k组，但是组与组之间有重叠的。<br>接下来讨论k位检测码的插入位置。对于一个n+k位的二进制串，检测码在位置编号为2^(i-1)处，即1,2,4,8,16…都是检测位。（<strong>IT’s rule ，don’t ask why</strong>）<br>那么每一位检测码引领的组是哪些编号上的bit呢？<br>第2^(i-1)(i=1,2,3,4,…)位上的的检测位所引领的bit的位置编号具有以下特点：这个位置编号转化为二进制后，从右到左数，第 i 位是1。（<strong>位置和小组确定</strong>）<br>接下来讨论，检测位上是0还是1。<br>通常来说，我们假设对于每一个检测位和其所引领的小组会形成一个奇偶纠错系统。这意味着对于每一个小组，我们通过奇原则（1的个数为奇数）或偶原则（1的个数为偶数）去检测，能够发现这一个小组（包括检测位在内）是否在传送过程中发生了错误。（<strong>注意，一般而言我们认为一串二进制出错只出错一位，而不会出错两个位，这是一种概率超过百分之九十的事件</strong>）。<br>回到开头，我们如何确定检测位是0还是1？这里我们假设利用偶原则进行检验，则检测位Ci（i=1,2,4,8,16…)为</p>
+<p>​                                 Ci=其所引领的小组内的所有bit（不包括Ci）进行连续异或所得到的的结果</p>
+<hr>
+<p>下面用一个例题概述上面过程，并给出接受方进行纠错的过程。</p>
+<p>假设发送方欲发送信息0101，则经过Hanming 编码后，发送出去的信息是什么？</p>
+<p>首先： C1 C2 0 C4 1 0 1 确认了位置。</p>
+<p>C1=0⊕1⊕1=0  （第3,5,7位的bit）</p>
+<p>C2=0⊕0⊕1=1 （第3,6,7位的bit）</p>
+<p>C4=1⊕0⊕1=0（第5,6,7位的bit）</p>
+<p>故最终传送出去的信息位：0100101</p>
+<hr>
+<p>假设接受方接到传送过来信息位：0110101，且双方已按偶原则编码，试问欲传送的信息是什么？</p>
+<p>首先，这串信息不能直接拿来就用，要像纠错。纠错过程实际上是对传送后的Hanming code形成新的检测位Pi（i=1,2,4,8,16，…），本质是将每一小组拿出来单独进行奇偶校验。</p>
+<p>P1=第一位⊕第三位⊕第五位⊕第七位=0⊕1⊕1⊕1=1</p>
+<p>P2=第二位⊕第三位⊕第六位⊕第七位=1⊕1⊕0⊕1=1</p>
+<p>P3=第四位⊕第五位⊕第六位⊕第七位=0⊕1⊕0⊕1=0</p>
+<p>（<strong>这里注意，对于连续的⊕，如果其中有偶数个1，则所得结果必是0</strong>）</p>
+<p>由上可知第一组，第二组出错了。则出错位那一位？<br>注意：我们上面已经说了，一般一位出错的概率最大。那么又因为第一，第二组出错，由此可知第一，第二组所共有的那一位（编号为3）出错。为什么不是编号为7的bit？因为假设编号为7出错，第三组也应该出错。所以将接收到的信息纠正为：0100101.</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C head file contents</title>
+    <url>/2021/04/21/C%20head%20file%20contents/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/C%20head%20file%20contents/1.jpg" alt="1"></p>
+<a id="more"></a>
+
+<ul>
+<li><p><strong>明示常量</strong>——例如，stdio.h中定义的EOF，NULL和BUFSIZE（标准I/O缓冲区大小）</p>
+</li>
+<li><p><strong>宏函数</strong>——例如，getc(stdin) 通常用getchar()定义，而getc()经常用于定义较复杂的宏，头文件ctype.h通常包含ctype系列函数的宏定义</p>
+</li>
+<li><p><strong>函数声明</strong>——例如，在string.h头文件包含字符串函数系列的函数声明。在ANSI C和后面的标准中，函数声明都是函数原型形式。</p>
+</li>
+<li><p><strong>结构模板定义</strong>——标准I/O函数使用FILE结构，该结构中包含了文件和与文件缓冲区相关的信息。FILE结构在头文件stdio.h中。</p>
+</li>
+<li><p><strong>类型定义</strong>——标准I/O函数使用指向FILE的指针作为参数。通常，stdio.h用#define或typedef把FIEL定义为指向结构的指针。类似地，size_t和time_t类型也定义在头文件中。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+  </entry>
+  <entry>
     <title>I/O interrupt processing procedure</title>
     <url>/2021/04/21/IO%20interrupt%20processing%20procedure/</url>
     <content><![CDATA[<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg" alt="0"></p>
@@ -552,19 +552,6 @@
       </categories>
   </entry>
   <entry>
-    <title>MOS and TTL</title>
-    <url>/2021/04/21/MOS%20and%20TTL/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<p>MOS：金属氧化半导体场效应晶体管</p>
-<p>TTL：Transistor-Transistor logic 晶体管-晶体管逻辑电路</p>
-]]></content>
-      <categories>
-        <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
     <title>ROM types</title>
     <url>/2021/04/21/ROM%20types/</url>
     <content><![CDATA[<p><img src="/2021/04/21/ROM%20types/0.jpg" alt="0"></p>
@@ -577,6 +564,19 @@
 <li>用电可擦除可编程只读存储器（Electrically Erasable Programmable ROM）：可在联机条件下，用字擦除方式或页擦除方式，即可局部擦写，又可全部擦写，这种EPROM就是EEPROM。</li>
 <li>闪速存储器（Flash Memory）擦除，重写速度快。在便携式计算机、工控系统及单片机系统中得到大量应用，近年来将它用于微型计算机中存放I/O驱动程序和参数。</li>
 </ul>
+]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>MOS and TTL</title>
+    <url>/2021/04/21/MOS%20and%20TTL/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/MOS%20and%20TTL/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>MOS：金属氧化半导体场效应晶体管</p>
+<p>TTL：Transistor-Transistor logic 晶体管-晶体管逻辑电路</p>
 ]]></content>
       <categories>
         <category>computer hardware</category>
@@ -596,31 +596,6 @@
 ]]></content>
       <categories>
         <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>concepts and properties of tree</title>
-    <url>/2021/04/21/concepts%20and%20properties%20of%20tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/concepts%20and%20properties%20of%20tree/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
-<h5 id="树的层次（Level），深度（Depth）和高度"><a href="#树的层次（Level），深度（Depth）和高度" class="headerlink" title="树的层次（Level），深度（Depth）和高度"></a>树的层次（Level），深度（Depth）和高度</h5><p>严蔚敏的书规定，根节点所在的层次是第一层。故，深度=高度。</p>
-<h5 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h5><p>若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树，否则为无序树。</p>
-<h5 id="路径和路径长度"><a href="#路径和路径长度" class="headerlink" title="路径和路径长度"></a>路径和路径长度</h5><p>树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数。<br>树的路径长度是从树根到每个结点的路径长度。</p>
-<h3 id="2-Basic-properties"><a href="#2-Basic-properties" class="headerlink" title="2. Basic properties"></a>2. Basic properties</h3><h5 id="任意树的结点数与其最小高度的关系"><a href="#任意树的结点数与其最小高度的关系" class="headerlink" title="任意树的结点数与其最小高度的关系"></a>任意树的结点数与其最小高度的关系</h5><p>具有n个结点的m叉树的最小高度为：<br>$$<br>\lceil\log_m (n(m-1)+1)\rceil<br>$$</p>
-<h5 id="二叉树与度为2的有序树的区别"><a href="#二叉树与度为2的有序树的区别" class="headerlink" title="二叉树与度为2的有序树的区别"></a>二叉树与度为2的有序树的区别</h5><ul>
-<li>度为2的树至少有3个结点，而二叉树可以为空</li>
-<li>度为2的有序树的孩子的左右次序是相对于另一孩子而言的，若某个结点只有一个孩子，则这个孩子就无须区分其左右次序，而二叉树无论孩子数是否为2，均需确定其左右次序，即二叉树的结点次序不是相对另一结点而言，而是确定的。</li>
-</ul>
-<h5 id="二叉树结点关系-常用"><a href="#二叉树结点关系-常用" class="headerlink" title="二叉树结点关系(常用)"></a>二叉树结点关系(常用)</h5><p>非空二叉树上的叶子结点数等于度为2的结点数加1，即<br>$$<br>n_0=n_2+1<br>$$</p>
-<h5 id="某一层的结点数上限"><a href="#某一层的结点数上限" class="headerlink" title="某一层的结点数上限"></a>某一层的结点数上限</h5><p>非空二叉树第k层上至多有<br>$$<br>2^{k-1}个结点<br>$$</p>
-<h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
-<h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
-<h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
-]]></content>
-      <categories>
-        <category>algorithm</category>
       </categories>
   </entry>
   <entry>
@@ -649,6 +624,31 @@
 ]]></content>
       <categories>
         <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>concepts and properties of tree</title>
+    <url>/2021/04/21/concepts%20and%20properties%20of%20tree/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/concepts%20and%20properties%20of%20tree/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
+<h5 id="树的层次（Level），深度（Depth）和高度"><a href="#树的层次（Level），深度（Depth）和高度" class="headerlink" title="树的层次（Level），深度（Depth）和高度"></a>树的层次（Level），深度（Depth）和高度</h5><p>严蔚敏的书规定，根节点所在的层次是第一层。故，深度=高度。</p>
+<h5 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h5><p>若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树，否则为无序树。</p>
+<h5 id="路径和路径长度"><a href="#路径和路径长度" class="headerlink" title="路径和路径长度"></a>路径和路径长度</h5><p>树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数。<br>树的路径长度是从树根到每个结点的路径长度。</p>
+<h3 id="2-Basic-properties"><a href="#2-Basic-properties" class="headerlink" title="2. Basic properties"></a>2. Basic properties</h3><h5 id="任意树的结点数与其最小高度的关系"><a href="#任意树的结点数与其最小高度的关系" class="headerlink" title="任意树的结点数与其最小高度的关系"></a>任意树的结点数与其最小高度的关系</h5><p>具有n个结点的m叉树的最小高度为：<br>$$<br>\lceil\log_m (n(m-1)+1)\rceil<br>$$</p>
+<h5 id="二叉树与度为2的有序树的区别"><a href="#二叉树与度为2的有序树的区别" class="headerlink" title="二叉树与度为2的有序树的区别"></a>二叉树与度为2的有序树的区别</h5><ul>
+<li>度为2的树至少有3个结点，而二叉树可以为空</li>
+<li>度为2的有序树的孩子的左右次序是相对于另一孩子而言的，若某个结点只有一个孩子，则这个孩子就无须区分其左右次序，而二叉树无论孩子数是否为2，均需确定其左右次序，即二叉树的结点次序不是相对另一结点而言，而是确定的。</li>
+</ul>
+<h5 id="二叉树结点关系-常用"><a href="#二叉树结点关系-常用" class="headerlink" title="二叉树结点关系(常用)"></a>二叉树结点关系(常用)</h5><p>非空二叉树上的叶子结点数等于度为2的结点数加1，即<br>$$<br>n_0=n_2+1<br>$$</p>
+<h5 id="某一层的结点数上限"><a href="#某一层的结点数上限" class="headerlink" title="某一层的结点数上限"></a>某一层的结点数上限</h5><p>非空二叉树第k层上至多有<br>$$<br>2^{k-1}个结点<br>$$</p>
+<h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
+<h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
+<h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
       </categories>
   </entry>
   <entry>
@@ -684,25 +684,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Function pointer</title>
-    <url>/2021/04/21/function%20pointer/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/function%20pointer/1.jpg" alt="1"></p>
-<a id="more"></a>
-
-<h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-  </entry>
-  <entry>
     <title>SRAM and DRAM basic unit circuity  working principle</title>
     <url>/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/</url>
     <content><![CDATA[<p><img src="/2021/04/21/explanation%20on%20SRAM%20and%20DRAM%20basic%20unit%20circuity%20%20working%20principle/0.jpg" alt="0"></p>
@@ -724,6 +705,25 @@
 ]]></content>
       <categories>
         <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>function pointer</title>
+    <url>/2021/04/21/function%20pointer/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/function%20pointer/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h4 id="1-Declare-function-pointer"><a href="#1-Declare-function-pointer" class="headerlink" title="1. Declare function pointer"></a>1. Declare function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">format: <span class="keyword">return</span> type (*funtionPointerName)(<span class="built_in">list</span> of parameter types)</span><br><span class="line">example:</span><br><span class="line"><span class="keyword">int</span> (*pfunction) (<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br><span class="line">assign value:</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line">pfunctioin=sum;</span><br><span class="line">call function through pointer:</span><br><span class="line"><span class="keyword">int</span> result=pfunction(<span class="number">4</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-Declare-array-of-function-pointer"><a href="#2-Declare-array-of-function-pointer" class="headerlink" title="2.Declare array of function pointer"></a>2.Declare array of function pointer</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*pfun[<span class="number">3</span>])(<span class="keyword">int</span>,<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Function-pointer-as-an-argument-of-other-functions"><a href="#3-Function-pointer-as-an-argument-of-other-functions" class="headerlink" title="3. Function pointer as an argument of other functions"></a>3. Function pointer as an argument of other functions</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">any_function</span><span class="params">(<span class="keyword">int</span>(*pfun)(<span class="keyword">int</span> a,<span class="keyword">int</span> b),<span class="keyword">int</span> x.<span class="keyword">int</span> y)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> ,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">//call any_function</span></span><br><span class="line">any_function(sum,<span class="number">4</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>C</category>
       </categories>
   </entry>
   <entry>
@@ -892,6 +892,22 @@
       </categories>
   </entry>
   <entry>
+    <title>proving process of number relationship between child and parent in tree</title>
+    <url>/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
+<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
+<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
+<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
+<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
     <title>signal types in control bus</title>
     <url>/2021/04/21/signal%20types%20in%20control%20bus/</url>
     <content><![CDATA[<p><img src="/2021/04/21/signal%20types%20in%20control%20bus/0.jpg" alt="0"></p>
@@ -914,22 +930,6 @@
 ]]></content>
       <categories>
         <category>computer hardware</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>proving process of number relationship between child and parent in tree</title>
-    <url>/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/</url>
-    <content><![CDATA[<p><img src="/2021/04/21/proving%20process%20of%20number%20relationship%20between%20child%20and%20parent%20in%20Tree/0.jpg" alt="0"></p>
-<a id="more"></a>
-
-<h3 id="性质表述："><a href="#性质表述：" class="headerlink" title="性质表述："></a>性质表述：</h3><p>如果对一棵有n个结点的完全二叉树的结点按层序编号（从左到右），则对任一结点i，有<br>（1）如果i=1，则结点i是二叉树的根，无双亲；如果i&gt;1，则其双亲PARENT(i)是结点<br>$$<br>\lfloor i/2 \rfloor<br>$$<br>（2）如果2i&gt;n，则结点i无左孩子；否则其左孩子LCHILD(i)是结点2i.</p>
-<p>（3）如果2i+1&gt;n，则结点i无右孩子；否则其右孩子RCHILD(i)是结点2i+1</p>
-<h3 id="证明（数学归纳法）："><a href="#证明（数学归纳法）：" class="headerlink" title="证明（数学归纳法）："></a>证明（数学归纳法）：</h3><p>对于i=1，由完全二叉树的定义，其左孩子结点是2，若2&gt;n则左结点不存在，否则2是它的左孩子结点；同理对结点3也成立<br>对于i&gt;1，分两种情况讨论；（1）若结点i是第j层的第一个结点，那么其左孩子结点应为第j+1层的第一个结点，编号为<br>$$<br>2^j-1+1=2^j=2(2^{j-1})=2i<br>$$<br>同样，若2i&gt;n则i的左孩子不存在，反之存在；同理其有孩子结点为2i+1.</p>
-<p>（2）若结点i是第j层的某一个结点（不一定第一个结点），由（1）可知，其左右孩子节点分别为2i，2i+1.则对于第i+1个结点，</p>
-<p>其左孩子为2i+1+1=2(i+1)，右孩子结点为2(i+1)+1.证毕。</p>
-]]></content>
-      <categories>
-        <category>algorithm</category>
       </categories>
   </entry>
   <entry>
