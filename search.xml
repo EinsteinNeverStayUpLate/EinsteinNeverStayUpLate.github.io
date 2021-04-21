@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Basic concepts and properties of Tree</title>
-    <url>/2020/10/06/Basic%20concepts%20and%20properties%20of%20Tree/</url>
-    <content><![CDATA[<h1 id="Basic-concepts-and-properties-of-Tree"><a href="#Basic-concepts-and-properties-of-Tree" class="headerlink" title="Basic concepts and properties of Tree"></a>Basic concepts and properties of Tree</h1><h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
-<h5 id="树的层次（Level），深度（Depth）和高度"><a href="#树的层次（Level），深度（Depth）和高度" class="headerlink" title="树的层次（Level），深度（Depth）和高度"></a>树的层次（Level），深度（Depth）和高度</h5><p>严蔚敏的书规定，根节点所在的层次是第一层。故，深度=高度。</p>
-<h5 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h5><p>若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树，否则为无序树。</p>
-<h5 id="路径和路径长度"><a href="#路径和路径长度" class="headerlink" title="路径和路径长度"></a>路径和路径长度</h5><p>树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数。<br>树的路径长度是从树根到每个结点的路径长度。</p>
-<h3 id="2-Basic-properties"><a href="#2-Basic-properties" class="headerlink" title="2. Basic properties"></a>2. Basic properties</h3><h5 id="任意树的结点数与其最小高度的关系"><a href="#任意树的结点数与其最小高度的关系" class="headerlink" title="任意树的结点数与其最小高度的关系"></a>任意树的结点数与其最小高度的关系</h5><p>具有n个结点的m叉树的最小高度为：<br>$$<br>\lceil\log_m (n(m-1)+1)\rceil<br>$$</p>
-<h5 id="二叉树与度为2的有序树的区别"><a href="#二叉树与度为2的有序树的区别" class="headerlink" title="二叉树与度为2的有序树的区别"></a>二叉树与度为2的有序树的区别</h5><ul>
-<li>度为2的树至少有3个结点，而二叉树可以为空</li>
-<li>度为2的有序树的孩子的左右次序是相对于另一孩子而言的，若某个结点只有一个孩子，则这个孩子就无须区分其左右次序，而二叉树无论孩子数是否为2，均需确定其左右次序，即二叉树的结点次序不是相对另一结点而言，而是确定的。</li>
-</ul>
-<h5 id="二叉树结点关系-常用"><a href="#二叉树结点关系-常用" class="headerlink" title="二叉树结点关系(常用)"></a>二叉树结点关系(常用)</h5><p>非空二叉树上的叶子结点数等于度为2的结点数加1，即<br>$$<br>n_0=n_2+1<br>$$</p>
-<h5 id="某一层的结点数上限"><a href="#某一层的结点数上限" class="headerlink" title="某一层的结点数上限"></a>某一层的结点数上限</h5><p>非空二叉树第k层上至多有<br>$$<br>2^{k-1}个结点<br>$$</p>
-<h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
-<h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
-<h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Bus</title>
     <url>/2020/05/14/Bus/</url>
     <content><![CDATA[<h1 id="BUS"><a href="#BUS" class="headerlink" title="BUS"></a>BUS</h1><p>what is bus：</p>
@@ -513,13 +494,6 @@
 <li>复位：初始化所有部件</li>
 <li>传输响应：表示数据已被接受，或已将数据送至数据总线上。</li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>What are MOS and TTL</title>
-    <url>/2020/05/07/What%20are%20MOS%20and%20TTL/</url>
-    <content><![CDATA[<h1 id="What-are-MOS-and-TTL"><a href="#What-are-MOS-and-TTL" class="headerlink" title="What are MOS and TTL"></a>What are MOS and TTL</h1><p>MOS：金属氧化半导体场效应晶体管</p>
-<p>TTL：Transistor-Transistor logic 晶体管-晶体管逻辑电路</p>
 ]]></content>
   </entry>
   <entry>
@@ -1399,6 +1373,38 @@
 ]]></content>
       <categories>
         <category>computer hardware</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>MOS and TTL</title>
+    <url>/2020/05/07/MOS%20and%20TTL/</url>
+    <content><![CDATA[<h1 id="What-are-MOS-and-TTL"><a href="#What-are-MOS-and-TTL" class="headerlink" title="What are MOS and TTL"></a>What are MOS and TTL</h1><p>MOS：金属氧化半导体场效应晶体管</p>
+<p>TTL：Transistor-Transistor logic 晶体管-晶体管逻辑电路</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>concepts and properties of tree</title>
+    <url>/2021/04/21/concepts%20and%20properties%20of%20tree/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/concepts%20and%20properties%20of%20tree/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<h3 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1. Basic concepts"></a>1. Basic concepts</h3><h5 id="节点和树的度（Degree）"><a href="#节点和树的度（Degree）" class="headerlink" title="节点和树的度（Degree）"></a>节点和树的度（Degree）</h5><p>树中一个结点的孩子个数称为该节点的度。树中节点的最大度数称为树的度。</p>
+<h5 id="树的层次（Level），深度（Depth）和高度"><a href="#树的层次（Level），深度（Depth）和高度" class="headerlink" title="树的层次（Level），深度（Depth）和高度"></a>树的层次（Level），深度（Depth）和高度</h5><p>严蔚敏的书规定，根节点所在的层次是第一层。故，深度=高度。</p>
+<h5 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h5><p>若将树中结点的各子树看成从左至右有次序的（即不能互换），则称该树为有序树，否则为无序树。</p>
+<h5 id="路径和路径长度"><a href="#路径和路径长度" class="headerlink" title="路径和路径长度"></a>路径和路径长度</h5><p>树中两个结点之间的路径是由这两个结点之间所经过的结点序列构成的，而路径长度是路径上所经过的边的个数。<br>树的路径长度是从树根到每个结点的路径长度。</p>
+<h3 id="2-Basic-properties"><a href="#2-Basic-properties" class="headerlink" title="2. Basic properties"></a>2. Basic properties</h3><h5 id="任意树的结点数与其最小高度的关系"><a href="#任意树的结点数与其最小高度的关系" class="headerlink" title="任意树的结点数与其最小高度的关系"></a>任意树的结点数与其最小高度的关系</h5><p>具有n个结点的m叉树的最小高度为：<br>$$<br>\lceil\log_m (n(m-1)+1)\rceil<br>$$</p>
+<h5 id="二叉树与度为2的有序树的区别"><a href="#二叉树与度为2的有序树的区别" class="headerlink" title="二叉树与度为2的有序树的区别"></a>二叉树与度为2的有序树的区别</h5><ul>
+<li>度为2的树至少有3个结点，而二叉树可以为空</li>
+<li>度为2的有序树的孩子的左右次序是相对于另一孩子而言的，若某个结点只有一个孩子，则这个孩子就无须区分其左右次序，而二叉树无论孩子数是否为2，均需确定其左右次序，即二叉树的结点次序不是相对另一结点而言，而是确定的。</li>
+</ul>
+<h5 id="二叉树结点关系-常用"><a href="#二叉树结点关系-常用" class="headerlink" title="二叉树结点关系(常用)"></a>二叉树结点关系(常用)</h5><p>非空二叉树上的叶子结点数等于度为2的结点数加1，即<br>$$<br>n_0=n_2+1<br>$$</p>
+<h5 id="某一层的结点数上限"><a href="#某一层的结点数上限" class="headerlink" title="某一层的结点数上限"></a>某一层的结点数上限</h5><p>非空二叉树第k层上至多有<br>$$<br>2^{k-1}个结点<br>$$</p>
+<h5 id="对于完全二叉树，确定结点数n，即确定高度"><a href="#对于完全二叉树，确定结点数n，即确定高度" class="headerlink" title="对于完全二叉树，确定结点数n，即确定高度"></a>对于完全二叉树，确定结点数n，即确定高度</h5><p>$$<br>h=\lceil\log_2(n+1)\rceil或 \lfloor\log_2n\rfloor+1<br>$$</p>
+<h5 id="完全二叉树某一结点的深度"><a href="#完全二叉树某一结点的深度" class="headerlink" title="完全二叉树某一结点的深度"></a>完全二叉树某一结点的深度</h5><p>编号为i的结点所在的深度为<br>$$<br>\lfloor\log_2i\rfloor+1<br>$$</p>
+<h5 id="完全二叉树奇偶结点数"><a href="#完全二叉树奇偶结点数" class="headerlink" title="完全二叉树奇偶结点数"></a>完全二叉树奇偶结点数</h5><p>若n为奇数，则每个分支节点都有左孩子和右孩子；若n为偶数，则编号最大的分支节点（编号为n/2）只有左孩子，没有右孩子，其余分支节点左，右孩子都有。</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
       </categories>
   </entry>
 </search>
