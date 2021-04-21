@@ -917,9 +917,12 @@
       </categories>
   </entry>
   <entry>
-    <title>计算机组成与设计：硬件软件接口(Computer Organization and Design  The HardwareSoftware Interface Fifth Edition)名词及重点摘录</title>
-    <url>/2020/04/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="计算机组成与设计：硬件-软件接口-Computer-Organization-and-Design-The-Hardware-Software-Interface-Fifth-Edition-名词及重点摘录"><a href="#计算机组成与设计：硬件-软件接口-Computer-Organization-and-Design-The-Hardware-Software-Interface-Fifth-Edition-名词及重点摘录" class="headerlink" title="计算机组成与设计：硬件/软件接口(Computer Organization and Design : The Hardware/Software Interface Fifth Edition)名词及重点摘录"></a>计算机组成与设计：硬件/软件接口(Computer Organization and Design : The Hardware/Software Interface Fifth Edition)名词及重点摘录</h1><p>服务器(server)：用于为多用户运行大型程序的计算机，通常由多个用户并行使用，并且一般通过网络访问。</p>
+    <title>计组：软硬件接口 名词及重点摘录</title>
+    <url>/2021/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3(Computer%20Organization%20and%20Design%20%20The%20HardwareSoftware%20Interface%20Fifth%20Edition)%E5%90%8D%E8%AF%8D%E5%8F%8A%E9%87%8D%E7%82%B9%E6%91%98%E5%BD%95/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>服务器(server)：用于为多用户运行大型程序的计算机，通常由多个用户并行使用，并且一般通过网络访问。</p>
 <p>云计算(Cloud Computing)：在网络上提供服务的大服务器集群，它依赖于称为仓储规模计算机(Warehouse Scale Computer ,WSC)的巨型数据中心。一些运营商根据应用需求出租不同的服务器。</p>
 <p>软件即服务(Software as a Service,SaaS)：在网络上以服务的方式提供软件和数据。其运行方式通常不是在本地设备上运行所有的二进制代码，而是通过诸如运行在本地客户端的浏览器的小程序登录到远程服务器上执行。典型的例子是Web搜索和社交网络。</p>
 <p>程序性能影响因素：程序所用算法的有效性，用来建立程序并将其翻译成机器指令的软件系统，计算机执行机器指令的有效性。</p>
@@ -937,6 +940,9 @@
 <p>响应时间（response time）：也叫执行时间（execution time），是计算机完成某任务所需的总时间，包括硬盘访问，内存访问，I/O活动，操作系统开销和CPU执行时间等。</p>
 <p>吞吐率（throughput）：也叫带宽（bandwidth），性能的另一种度量参数，表示单位时间内完成的任务数量。</p>
 ]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
   </entry>
   <entry>
     <title>x86 instruction</title>
