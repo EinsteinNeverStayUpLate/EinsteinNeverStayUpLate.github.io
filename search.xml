@@ -1394,8 +1394,11 @@
   </entry>
   <entry>
     <title>develpment aspects of microprocessors</title>
-    <url>/2020/04/25/develpment%20aspects%20of%20microprocessors/</url>
-    <content><![CDATA[<h1 id="Some-important-develpment-aspects-of-microprocessors"><a href="#Some-important-develpment-aspects-of-microprocessors" class="headerlink" title="Some important develpment aspects of microprocessors"></a>Some important develpment aspects of microprocessors</h1><p>从21世纪初来看，当前通用微处理器的发展重点将在以下几个方面：</p>
+    <url>/2021/04/21/develpment%20aspects%20of%20microprocessors/</url>
+    <content><![CDATA[<p><img src="/2021/04/21/develpment%20aspects%20of%20microprocessors/0.jpg" alt="0"></p>
+<a id="more"></a>
+
+<p>从21世纪初来看，当前通用微处理器的发展重点将在以下几个方面：</p>
 <ul>
 <li>进一步提高复杂度来提高处理器性能</li>
 <li>通过Thread-level/Process-level 并行性的开发提高处理器的性能，即通过开发线程级并行性（Thread-Level Parallelism，TLP）或进程级并行性（Process-Level Parallelism，PLP）来提高性能，简化硬件设计。</li>
@@ -1403,11 +1406,14 @@
 <li>发展嵌入式处理器</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>computer hardware</category>
+      </categories>
   </entry>
   <entry>
     <title>traversal of binary tree</title>
     <url>/2021/04/21/traversal%20of%20binary%20tree/</url>
-    <content><![CDATA[<p>![0][0.jpg]</p>
+    <content><![CDATA[<p><img src="/2021/04/21/traversal%20of%20binary%20tree/0.jpg" alt="0"></p>
 <a id="more"></a>
 
 <h4 id="Chain-storage-definition"><a href="#Chain-storage-definition" class="headerlink" title="Chain storage definition"></a>Chain storage definition</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BitNode,*BiTree;</span><br></pre></td></tr></table></figure>
