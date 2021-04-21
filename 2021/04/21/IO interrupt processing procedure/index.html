@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg">
 <meta property="article:published_time" content="2021-04-21T11:33:21.000Z">
-<meta property="article:modified_time" content="2021-04-21T11:35:40.888Z">
+<meta property="article:modified_time" content="2021-04-21T11:37:48.870Z">
 <meta property="article:author" content="Virux">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2021/04/21/IO%20interrupt%20processing%20procedure/0.jpg">
@@ -181,7 +181,7 @@
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
   <a href="/2021/04/21/IO%20interrupt%20processing%20procedure/" class="article-date">
-     <time datetime="2021-04-21T11:35:40.888Z" itemprop="dateModified">2021-04-21</time>
+     <time datetime="2021-04-21T11:37:48.870Z" itemprop="dateModified">2021-04-21</time>
   </a>
 </div>
 
@@ -207,6 +207,7 @@
 <a id="more"></a>
 
 <p>完整的操作过程如下：</p>
+<p><img src="/2021/04/21/IO%20interrupt%20processing%20procedure/1.png" alt="1"></p>
 <p>​    在执行主程序的过程中，会执行到一条输入指令。接着CPU将设备地址通过地址线送到接口电路中的设备选择电路，然后设备选择电路对该地址进行比较，看是否是该接口所连接的I/O设备，若是则该接口和相对应的设备就被选中，<strong>SEL</strong> 有效。只有SEL有效，接口电路才会开始工作。<br>​    CPU将命令送到接口中进行译码。由图可以看出<em>启动命令</em>和<em>SEL</em>同时有效才会是触发器D和触发器B被设置。触发器B被设置为1，而触发器D被设置为0。 表示设备开始工作，但同时数据并没有准备好。<strong>NOTE</strong>：触发器B的另一个作用是，启动I/O设备开始工作。<br>​    然后I/O设备开始工作，将data送入DBR中，并将触发器B和触发器D进行修改，B改为0而D改为1。接着，如果MASK触发器的非端为1（表示该中断并未被屏蔽），此时INTR就会经过两个1被置为1。<br>​    接着CPU在一条指令的执行阶段结束后，发出中断查询信号。 然后将INTR送入排队器排队，经过排队器排队后，排队器的输出信号只有一个是1，其他都是0。 排队器的输出信号输出到设备编码器，然后CPU发出中断响应信号（INTA）。之后，设备编码器就会形成向量地址，该地址经过数据线传给CPU，传给PC。PC利用改地址去取出中断服务程序的路口地址（无条件跳转）。然后就进入中断服务程序。</p>
 <hr>
 <p>中断服务程序的流程：</p>
@@ -302,7 +303,7 @@
         "dateModified": "2021-04-21",
         "url": "http://yoursite.com/2021/04/21/IO interrupt processing procedure/",
         "description": "",
-        "wordCount": 24
+        "wordCount": 26
     }
 </script>
 
